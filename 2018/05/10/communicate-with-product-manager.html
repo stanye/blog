@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="true">
+    
+    
+    
+    <meta name="baidu-site-verification" content="4FzhJn6cfA" />
+    
+    
+    
+    <title>产品经理如何与技术沟通 | 夜夜空里 | StanYe&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="产品经理">
+    <meta name="description" content="产品经理应该：提出来 讲明白 说服他 验收好 核心的竞争优势就是在技术方面，这个是非技术出身的产品经理最缺的一项技能。技术出身的产品经理跟工程师沟通会比较顺畅，能够深刻体会并理解工程师的思维，提出的设计和需求也会比较接地气，因此不容易跟开发人员产生矛盾。需求策划方面，每一个需求功能点的提出，技术出身的产品经理都可以很快评估出技术实现的可行性，实现所需的大概时间，技术存在的一些风险或问题，因此可以">
+<meta name="keywords" content="产品经理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="产品经理如何与技术沟通">
+<meta property="og:url" content="https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html">
+<meta property="og:site_name" content="夜夜空里">
+<meta property="og:description" content="产品经理应该：提出来 讲明白 说服他 验收好 核心的竞争优势就是在技术方面，这个是非技术出身的产品经理最缺的一项技能。技术出身的产品经理跟工程师沟通会比较顺畅，能够深刻体会并理解工程师的思维，提出的设计和需求也会比较接地气，因此不容易跟开发人员产生矛盾。需求策划方面，每一个需求功能点的提出，技术出身的产品经理都可以很快评估出技术实现的可行性，实现所需的大概时间，技术存在的一些风险或问题，因此可以">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-06T05:33:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="产品经理如何与技术沟通">
+<meta name="twitter:description" content="产品经理应该：提出来 讲明白 说服他 验收好 核心的竞争优势就是在技术方面，这个是非技术出身的产品经理最缺的一项技能。技术出身的产品经理跟工程师沟通会比较顺畅，能够深刻体会并理解工程师的思维，提出的设计和需求也会比较接地气，因此不容易跟开发人员产生矛盾。需求策划方面，每一个需求功能点的提出，技术出身的产品经理都可以很快评估出技术实现的可行性，实现所需的大概时间，技术存在的一些风险或问题，因此可以">
+    
+        <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Stan Ye</h5>
+          <a href="mailto:xiaocooshy@foxmail.com" title="xiaocooshy@foxmail.com" class="mail">xiaocooshy@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/stanye" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://twitter.com/StanYe_Coder" target="_blank" >
+                <i class="icon icon-lg icon-twitter"></i>
+                Twitter
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">产品经理如何与技术沟通</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header page-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">产品经理如何与技术沟通</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-10T11:07:10.000Z" itemprop="datePublished" class="page-time">
+  2018-05-10
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/沟通技巧/">沟通技巧</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    <article class="page-article fade" itemprop="blogPage">
+        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+            <ol>
+<li>产品经理应该：提出来 讲明白 说服他 验收好</li>
+<li>核心的竞争优势就是在技术方面，这个是非技术出身的产品经理最缺的一项技能。技术出身的产品经理跟工程师沟通会比较顺畅，能够深刻体会并理解工程师的思维，提出的设计和需求也会比较接地气，因此不容易跟开发人员产生矛盾。需求策划方面，每一个需求功能点的提出，技术出身的产品经理都可以很快评估出技术实现的可行性，实现所需的大概时间，技术存在的一些风险或问题，因此可以很快将需求点落到实处，大大缩短需求到实现转化所需的周期。<a id="more"></a> </li>
+<li>工程师的思维跟产品经理的思维，关注点和考虑问题的方式存在很大的区别。会太注重并纠结技术层面的问题，而忽视了产品经理应该关注的是整个产品项目的大局。产品前期的设计才是整个项目的重心，后面的运营推广是项目成败的关键。市场及商业嗅觉不敏感，产品设计，运营推广等领域缺乏相关的经验，这方面需要投入大量的时间去培养与磨炼，比如商业嗅觉的培养，数据运维的数据分析，营销推广的策划和布局，这些都不是一朝一夕可以练好的内功，需要基于大量的阅读学习，观察及实操后一步步磨炼出来。</li>
+<li>在产品大方向的把握，设计细节的考量，运营推广思路上面会存在非常多的盲区，导致对整个项目的理解不够透彻</li>
+<li>产品经理在项目推进过程中需要面对老板，工程师，设计师，测试人员，运营，市场等各个领域的人，应该学会换位思考，站在各个不同角色的人的立场去考虑问题，才能协调到更多的资源去配合你完成项目的推进工作。</li>
+<li>不要花太多的时间去纠结或花在研究技术上面，而应该把自己的时间合理地分配到其他的技能的学习上面。产品经理是一个对综合能力要求特别高的职位，需要不断地学习，不断地吸收这个领域的知道养分。不要因为“技术”这棵小树，而放弃了产品的这座大森林。</li>
+<li>做技术时，你经常需要面对的问题是如何解决技术难题；而做了产品，你所面对的大多数问题是如何搞定人。比如，老板提了一个不合理的需求，你应该怎么婉转地打掉；UI设计师跟你闹矛盾，你怎么让她继续配合你工作；项目资源紧缺，开发周期赶不及，你如何才能申请到更多的资源。除了知识面需要扩充好几倍外，做人做事的能力，也要迅速跟上。</li>
+<li>找准自己的定位，分析自己之于团队的价值。沟通是一门艺术。艺术源自生活，不必刻意追求。先试着让身边的人快乐。</li>
+<li>程序考虑问题的出发点大多是：体现自己的技术水平。 我接触的程序员喜欢用高效、简单、先进的技术手段解决问题。通常他们反驳产品都是想令代码更简单更高效，而产品却变得复杂、多步骤甚至多余。产品都希望把简单留给用户，把复杂留给开发。这是个对立面。所以程序员转产品，首先要改变自己的思维，从用户和需求出发，而不是从技术角度.  </li>
+<li>产品工作是感性的，做出一款产品与做出一款好产品的差别无比巨大，大部分所谓的产品经理只能说在从事着一份工作而已，得到个好听又最容易被人吐槽的名头，不代表他真的很厉害.  </li>
+<li>马化腾(Pony)，张小龙，周鸿祎都是程序员出身的、中国最优秀的互联网产品经理。只有当你跨越了傻瓜心态之后，才算是迈出了成功转型产品经理的第一步。</li>
+<li>你永远不要假设用户是聪明的，用户的弱智程度永远超出你想象力的下限。所以，当你设计产品的界面和交互的时候，一定不要拿自己的经验去想当然，一定要假设是在给一个弱智做产品，尽量简化，让产品非常易用才行。</li>
+<li>真正好的产品经理应该是以结果为导向的. </li>
+<li>技术人员如果没有追求完美的心，就无法成为一个优秀的技术人员。然而带有「完美主义综合症」的产品经理是可怕的。</li>
+<li>在这个产品经理，视觉设计，程序员共同参与的产品生产过程中，程序员是最后的环节，当程序员在代码实现的过程中发现了产品逻辑的错误，或者产品设计的问题，是非常被动的。这个时候程序员再要求产品经理更改设计，修正产品交互逻辑，产品经理通常的反应就是：「程序员又和我讨价还价，产品deadline又要延后了」，跟着双方就开始剑拔弩张的对峙。</li>
+<li>产品经理负责搜集和定义产品需求，整理产品逻辑规则，设计产品原型稿和交互，这个阶段并不需要程序员开始写代码，但是从一开始就让程序员，运营，甚至运维工程师都参与进来</li>
+<li>程序员从一开始就了解了产品的来龙去脉，对产品需求和产品要达到的目标非常清楚，这样在和产品经理的配合中，就非常容易理解产品经理提出的很多功能要求，沟通起来非常顺畅；程序员从一开始就参与，并且持续参与产品设计的过程，最大的好处在于从一开始就可以纠正可能出现的产品设计逻辑错误，以及评估技术难以实现的产品功能。这样等到真正进入开发阶段，研发周期是非常可控的，基本不会出现延误。一些有良好产品意识的程序员，可以帮助产品经理从一开始就完善产品逻辑，从实现上修正产品可能遇到的问题，让产品开发过程变得更加有保障。很多产品经理犯的一个重大错误就是：直到原型稿交互稿定稿之后，才交给程序员，之前全无沟通，然后逼着程序员立刻评估一个精确的开发周期。这个时候程序员内心是非常抗拒的。一来我完全不了解这个产品，不知道做这个产品是干啥的？能够解决什么问题？是否有更好的替代解决方案；二来我也不清楚这个产品逻辑是否有需要调整和修正的地方，以及有些技术上需要投入很多资源但是不划算的功能。</li>
+<li>产品经理应该传递一个信息：产品是大家的，需要大家共同合作，一起努力把产品做好，无论是产品，视觉，研发，还是运营，大家都是为了一个共同的目标而努力。</li>
+<li>不需要懂技术，但是逻辑要严谨</li>
+<li>Bug修好了程序就会马上运营，程序员可以接着下一个代码的编写，但是先生生活中可能不太一样，刚吵完一架，可能就没法友好的合作了。</li>
+<li>如果老板同意说，如果PM加需求，要么就砍掉一个差不多规模的旧的，要么就延长期限，我觉得肯定不会打起来。</li>
+<li>戒掉“应该”，“大概”，“也许”，”我想“，”可能“这种模棱两可的词语。</li>
+<li>to be continue</li>
+</ol>
+
+        </div>
+
+        
+        <div class="card page-about-me flex-row">
+            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
+            <div class="content flex-col">
+                <p><strong>Stan Ye</strong></p>
+                <p><em>StanYe's blog</em></p>
+                <p>Better to run than curse the road</p>
+            </div>
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html&title=《产品经理如何与技术沟通》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html&title=《产品经理如何与技术沟通》 — 夜夜空里&source=
+产品经理应该：提出来 讲明白 说服他 验收好
+核心的竞争优势就是在技术方面，这个是非技术出身的产品经理最缺的一项技能。技术出身的产品经理跟工程师沟通会比..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《产品经理如何与技术沟通》 — 夜夜空里&url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html&via=https://blog.eternalyean.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+        
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "eJHT0SdyRu4Tn45IR0PXgCGh-gzGzoHsz",
+            appKey: "sdY8ylxUGyAM71Qk0OSynKov",
+            avatar: "retro",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+    </article>
+    
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        么么哒~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a rel="nofollow" href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Stan Ye &copy; 2015 - 2018</span>
+            <span>
+                
+                <a  rel="nofollow" href="http://www.miitbeian.gov.cn/" target="_blank">豫ICP备16006587号-1</a><br>
+                
+                Power by <a  rel="nofollow" href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html&title=《产品经理如何与技术沟通》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html&title=《产品经理如何与技术沟通》 — 夜夜空里&source=
+产品经理应该：提出来 讲明白 说服他 验收好
+核心的竞争优势就是在技术方面，这个是非技术出身的产品经理最缺的一项技能。技术出身的产品经理跟工程师沟通会比..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《产品经理如何与技术沟通》 — 夜夜空里&url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html&via=https://blog.eternalyean.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvUlEQVR42u3aQW7jMAwF0Nz/0jNAVwNMI3+SYpDF86pwa1lPBUKG5OsVX39+ruTO/9d5zX//5t2dd2+8duHh4eG1tn7e3JmXb6vKPu8nOlA8PDy8Nd45GLx7OH92vn51TTw8PLxv4CUJcTXLTZ7N/x4PDw/v23j5or2tn5NjPDw8vG/jVb/8J/erhYy8ILJSa8HDw8OLedUG2Df8vNjfw8PDwxt01ZMEd9L6mqwQ7RYPDw9vgZcPVOXl1Oow1uQIorCBh4eHd5XXa3FNSrp5sbg6aPWLBQ8PD2+N1xt46o1MTfB50MLDw8Pb41Ux1ZS6V86oBolzMMPDw8Pb4/U+fPOyRa+hlSfuzW4eHh4eXpFX3WKvwd9Mglv/kl9aX3h4eHhrvB61mvL2BrmqAeZhMgIPDw9vwOslzdVW2UaqXS5A4OHh4V3iTRpgSTu/Vx/IBwUejh4PDw9vgZeny3ki2xvVqsaxpBWHh4eHt8HrlQ8KJxcHj0nAiLpneHh4eAu8UQ1jXAHIDz1/Cg8PD2+PV/3gzosOvQJu3jZ7OFA8PDy8NV5eSqiWHpLWfm8cISp54OHh4S3wJml0b0yqWsa9G67w8PDw7vKqH/15upysXC1bVNNuPDw8vLu8Xjv/VlqcFGd75Qk8PDy8Dd6kqJq/Mn9LdTzrYSd4eHh4y7xq2loegYrLDfnhPhw9Hh4e3gKvVzKYt8Qmx3StMo2Hh4fX4uWF1Px+tfRQbaQVMmc8PDy8j/DyZLeXUvcCQO+w8PDw8DZ4+VX9WK8exDyEvCYXHh4eXpHXCwbVskWSsk/GDgolCTw8PLxLvCQY5HdyWPW3F+Yj8PDw8D7IqxYXevd7I18XAgMeHh7eR3jnIJGPSfVWi8Yg8PDw8NZ41UJA3vKfrDM/Gjw8PLwNXu+rfnVUq0qdvGXU38PDw8M7XX8Bdyor8L4OfAcAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
