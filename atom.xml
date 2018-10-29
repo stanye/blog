@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.eternalyean.com/"/>
-  <updated>2018-10-23T06:41:10.588Z</updated>
+  <updated>2018-10-29T02:27:42.436Z</updated>
   <id>https://blog.eternalyean.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.eternalyean.com/2018/10/23/macOS-Mojave-problems-and-solutions.html"/>
     <id>https://blog.eternalyean.com/2018/10/23/macOS-Mojave-problems-and-solutions.html</id>
     <published>2018-10-23T06:11:26.000Z</published>
-    <updated>2018-10-23T06:41:10.588Z</updated>
+    <updated>2018-10-29T02:27:42.436Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><p>搜狗<br> 问题描述：系统升级之后发现断断续续一直鼠标在转圈<br> 解决方案：搜狗升级到<code>4.8</code>之后解决问题</p></li><li><p>zsh<br> 问题描述：升级后使用iTerm出现乱码，原生terminal没问题<br> 解决方案：iTerms2 -&gt; Preferences -&gt; Advanced -&gt; 搜索LC_CTYPE -&gt; value值设置<code>zh_CN.UTF-8</code></p></li><li><p>VSCode<br> 问题描述：字体变细<br> 解决方案：命令行输入<code>defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO</code></p></li><li><p>Wechat和Tim<br> 问题描述：输入框焦点容易丢失，必须手动点击程序<br> 解决方案：待定</p></li><li><p>Git丢失<br> 问题描述：更新后git没了<br> 解决方案：命令行输入<code>xcode-select –install</code></p></li><li><p>Hexo<br> 问题描述：写这篇文字的时候，居然发现生成的页面英文的地方被转成日文<br> 解决方案：_config.yml文件language设置<code>zh-Hans</code></p></li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>搜狗<br> 问题描述：系统升级之后发现断断续续一直鼠标在转圈<br> 解决方案：搜狗升级到<code>4.8</code>之后解决问题</p></li><li><p>zsh<br> 问题描述：升级后使用iTerm出现乱码，原生terminal没问题<br> 解决方案：iTerms2 -&gt; Preferences -&gt; Advanced -&gt; 搜索LC_CTYPE -&gt; value值设置<code>zh_CN.UTF-8</code></p></li><li><p>VSCode<br> 问题描述：字体变细<br> 解决方案：命令行输入<code>defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO</code></p></li><li><p>Wechat和Tim<br> 问题描述：输入框焦点容易丢失，必须手动点击程序<br> 解决方案：升级最新版Wechat和Tim</p></li><li><p>Git丢失<br> 问题描述：更新后git没了<br> 解决方案：命令行输入<code>xcode-select –install</code></p></li><li><p>Hexo<br> 问题描述：写这篇文字的时候，居然发现生成的页面英文的地方被转成日文<br> 解决方案：_config.yml文件language设置<code>zh-Hans</code></p></li></ol>]]></content>
     
     <summary type="html">
     
