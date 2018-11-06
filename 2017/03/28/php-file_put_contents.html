@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="true">
+    
+    
+    
+    <meta name="baidu-site-verification" content="4FzhJn6cfA" />
+    
+    
+    
+    <title>php file_put_contents 函数 | 夜夜空里 | StanYe&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="php">
+    <meta name="description" content="file_put_contents()功能函数（集成了fopen、fwrite、fclose) 将一个字符串写入文件.1int file_put_contents ( string filename, string data [, int flags [, resource context]] ) 和依次调用 fopen()，fwrite() 以及 fclose() 功能一样。参数 data 可以">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php file_put_contents 函数">
+<meta property="og:url" content="https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html">
+<meta property="og:site_name" content="夜夜空里">
+<meta property="og:description" content="file_put_contents()功能函数（集成了fopen、fwrite、fclose) 将一个字符串写入文件.1int file_put_contents ( string filename, string data [, int flags [, resource context]] ) 和依次调用 fopen()，fwrite() 以及 fclose() 功能一样。参数 data 可以">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-06T03:14:35.039Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php file_put_contents 函数">
+<meta name="twitter:description" content="file_put_contents()功能函数（集成了fopen、fwrite、fclose) 将一个字符串写入文件.1int file_put_contents ( string filename, string data [, int flags [, resource context]] ) 和依次调用 fopen()，fwrite() 以及 fclose() 功能一样。参数 data 可以">
+    
+        <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Stan Ye</h5>
+          <a href="mailto:xiaocooshy@foxmail.com" title="xiaocooshy@foxmail.com" class="mail">xiaocooshy@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/stanye" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://twitter.com/StanYe_Coder" target="_blank" >
+                <i class="icon icon-lg icon-twitter"></i>
+                Twitter
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">php file_put_contents 函数</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header page-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">php file_put_contents 函数</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-28T01:21:11.000Z" itemprop="datePublished" class="page-time">
+  2017-03-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/BackEnd/">BackEnd</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    <article class="page-article fade" itemprop="blogPage">
+        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+            <p>file_put_contents()功能函数（集成了fopen、fwrite、fclose) 将一个字符串写入文件.<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int file_put_contents ( string filename, string data [, int flags [, resource context]] )</span><br></pre></td></tr></table></figure></p>
+<p>和依次调用 fopen()，fwrite() 以及 fclose() 功能一样。<br>参数 data 可以是数组，这就相当于 file_put_contents($filename, join(‘’, $array))</p>
+<ol>
+<li>filename 要被写入数据的文件名。 </li>
+<li>data 要写入的数据。类型可以是 string，array 或者是 stream 资源（如上面所说的那样）。 </li>
+<li>flags 可以是 FILE_USE_INCLUDE_PATH，FILE_APPEND 和／或 LOCK_EX（获得一个独占锁定），然而使用 FILE_USE_INCLUDE_PATH 时要特别谨慎。 </li>
+<li>context 一个 context 资源。</li>
+</ol>
+
+        </div>
+
+        
+        <div class="card page-about-me flex-row">
+            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
+            <div class="content flex-col">
+                <p><strong>Stan Ye</strong></p>
+                <p><em>StanYe's blog</em></p>
+                <p>Better to run than curse the road</p>
+            </div>
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html&title=《php file_put_contents 函数》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html&title=《php file_put_contents 函数》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《php file_put_contents 函数》 — 夜夜空里&url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html&via=https://blog.eternalyean.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+        
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'true' == 'true',
+            appId: "eJHT0SdyRu4Tn45IR0PXgCGh-gzGzoHsz",
+            appKey: "sdY8ylxUGyAM71Qk0OSynKov",
+            avatar: "retro",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+    </article>
+    
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        么么哒~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a rel="nofollow" href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Stan Ye &copy; 2015 - 2018</span>
+            <span>
+                
+                <a  rel="nofollow" href="http://www.miitbeian.gov.cn/" target="_blank">豫ICP备16006587号-1</a><br>
+                
+                Power by <a  rel="nofollow" href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html&title=《php file_put_contents 函数》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html&title=《php file_put_contents 函数》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《php file_put_contents 函数》 — 夜夜空里&url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html&via=https://blog.eternalyean.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3aQW7cMBAEQP//0wmQU4BEUveQVNZI6bSwFxKLB3G2Z76+4uvHr2vl8+9/+fM793+5usO2Cw8PD2+09KsrWUqyiPu73a8qeeLl0/Hw8PCO8drD4H6J999PnphTH+6Ah4eH9095yePz42SFhIeHh/ddeLMSOd8aPDw8vO/FS8KIJGZNrjaSeClrwcPDw4t57zTA9n7+uP4eHh7ef8Nbea3fF775QZJHFfU68fDw8A7w8oZW245aKabbaONh5Xh4eHhbee3ruw0jZiHCLMD9ywbh4eHhHeCtx6nrAUe93PabeHh4eFt5+RBVO1CVL3p2bBS/FfDw8PAO8NqlJ4XyLIpN2Mmd8fDw8M7xEmRyeCQbkS+xfc8//BcPDw/vAK8tsleCjLxJlh9Ldf6Bh4eHt8BLyuJk0Gp25+R4aIe08PDw8E7zVl7QK1Hv7Dhph2Xx8PDwTvDyqLQNEZLmVs7OAwg8PDy8d3h5Y37XGEESHG/YaDw8PLxjvDwamOXES43/+ImXvxXw8PDwtvLWhwBmYwcrxXo9WICHh4e3lddGsW382r7o29Dh4YDBw8PDe5HXtqCGJ1JZvtdbj4eHh3eAl5eqSeybFM2zQjwZaxheeHh4eCPeSmibN7HaWCH5HLHx8PDwjvHaG7WRQb5Zs9L8ocuHh4eHt5U3K51no1dtGT0bMtjwywAPDw8vhuXsYVMqvk9eWEfnHh4eHt4x3uxUaV/iS8Xx3hwaDw8PbwSbvab3DmPlT9k2U4aHh4c34q0fHkUjatNgQR5z4OHh4Z3jtXHA+hbkpXMbBOPh4eG9yZsNY82aZyeikEskHh4e3gfwZsFBsvR8GCsZOMDDw8P7BN6sudXmIrMQeUNJjYeHh3cgjEjK5bzRNdugPBzBw8PDO8fbO1Y1i25XRhbauBkPDw9vgfcTNZs1yv4qoHIAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

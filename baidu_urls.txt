@@ -5,3 +5,8 @@ https://blog.eternalyean.com/2018/05/30/skeleton-screen.html
 https://blog.eternalyean.com/2018/05/10/Technical-product-manager.html
 https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager-pdf.html
 https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html
+https://blog.eternalyean.com/2017/04/29/sql-using.html
+https://blog.eternalyean.com/2017/04/03/css-fix-table-wrap.html
+https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html
+https://blog.eternalyean.com/2017/03/27/sql-join.html
+https://blog.eternalyean.com/2016/07/15/regex-used.html
