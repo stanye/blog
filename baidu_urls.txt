@@ -5,6 +5,7 @@ https://blog.eternalyean.com/2018/05/30/skeleton-screen.html
 https://blog.eternalyean.com/2018/05/10/Technical-product-manager.html
 https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager-pdf.html
 https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html
+https://blog.eternalyean.com/2017/05/16/vue-update-array.html
 https://blog.eternalyean.com/2017/05/03/mysql-duplicate-checking.html
 https://blog.eternalyean.com/2017/04/29/php-&-cite.html
 https://blog.eternalyean.com/2017/04/29/sql-using.html

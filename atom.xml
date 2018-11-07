@@ -210,6 +210,34 @@
   </entry>
   
   <entry>
+    <title>Vue更新数组状态方法</title>
+    <link href="https://blog.eternalyean.com/2017/05/16/vue-update-array.html"/>
+    <id>https://blog.eternalyean.com/2017/05/16/vue-update-array.html</id>
+    <published>2017-05-16T06:58:53.000Z</published>
+    <updated>2018-11-07T07:03:08.436Z</updated>
+    
+    <content type="html"><![CDATA[<p>直接修改数组检测不到变化：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vm.Arr[index] = newItem;</span><br><span class="line">vm.Arr.length = newLength;</span><br></pre></td></tr></table></figure><p>由于JavaScript的限制，采用以下方法:</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// way 1</span></span><br><span class="line">Vue.set(old.Arr, index, newItem);</span><br><span class="line"><span class="comment">// way 2</span></span><br><span class="line">old.Arr.splice(index, <span class="number">1</span>, newItem);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;直接修改数组检测不到变化：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/sp
+      
+    
+    </summary>
+    
+      <category term="FrontEnd" scheme="https://blog.eternalyean.com/categories/FrontEnd/"/>
+    
+    
+      <category term="vue" scheme="https://blog.eternalyean.com/tags/vue/"/>
+    
+      <category term="array" scheme="https://blog.eternalyean.com/tags/array/"/>
+    
+  </entry>
+  
+  <entry>
     <title>mysql查重</title>
     <link href="https://blog.eternalyean.com/2017/05/03/mysql-duplicate-checking.html"/>
     <id>https://blog.eternalyean.com/2017/05/03/mysql-duplicate-checking.html</id>
