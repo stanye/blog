@@ -36,25 +36,25 @@
     
     
     
-    <title>sql note | 夜夜空里 | StanYe&#39;s blog</title>
+    <title>css两行截取 | 夜夜空里 | StanYe&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="mysql,sql">
-    <meta name="description" content="left-join/right join/inner join left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录.right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录. inner join(等值联接) 只返回两个表中联结字段相等的行. left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表">
-<meta name="keywords" content="mysql,sql">
+    <meta name="keywords" content="css">
+    <meta name="description" content="css两行截取解决办法： 12345overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sql note">
-<meta property="og:url" content="https://blog.eternalyean.com/2017/03/27/sql-join.html">
+<meta property="og:title" content="css两行截取">
+<meta property="og:url" content="https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html">
 <meta property="og:site_name" content="夜夜空里">
-<meta property="og:description" content="left-join/right join/inner join left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录.right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录. inner join(等值联接) 只返回两个表中联结字段相等的行. left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表">
+<meta property="og:description" content="css两行截取解决办法： 12345overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T03:48:25.664Z">
+<meta property="og:updated_time" content="2018-11-07T03:16:27.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sql note">
-<meta name="twitter:description" content="left-join/right join/inner join left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录.right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录. inner join(等值联接) 只返回两个表中联结字段相等的行. left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表">
+<meta name="twitter:title" content="css两行截取">
+<meta name="twitter:description" content="css两行截取解决办法： 12345overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">
     
         <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/atom.xml">
     
@@ -142,7 +142,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">sql note</div>
+        <div class="flex-col header-title ellipsis">css两行截取</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -164,15 +164,15 @@
 <header class="content-header page-header">
 
     <div class="container fade-scale">
-        <h1 class="title">sql note</h1>
+        <h1 class="title">css两行截取</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-03-27T10:30:22.000Z" itemprop="datePublished" class="page-time">
-  2017-03-27
+                <time datetime="2017-04-03T08:30:22.000Z" itemprop="datePublished" class="page-time">
+  2017-04-03
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/BackEnd/">BackEnd</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/FrontEnd/">FrontEnd</a></li></ul>
 
             
         </h5>
@@ -187,24 +187,8 @@
 <div class="container body-wrap">
     <article class="page-article fade" itemprop="blogPage">
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
-            <h2 id="left-join-right-join-inner-join"><a href="#left-join-right-join-inner-join" class="headerlink" title="left-join/right join/inner join"></a>left-join/right join/inner join</h2><ol>
-<li>left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录.right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录. inner join(等值联接) 只返回两个表中联结字段相等的行.</li>
-<li>left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表为准的.左表(A)的记录将会全部表示出来,而右表(B)只会显示符合搜索条件的记录.B表记录不足的地方均为NULL.LEFT JOIN操作用于在任何的 FROM 子句中，组合来源表的记录。使用 LEFT JOIN 运算来创建一个左边外部联接。左边外部联接将包含了从第一个（左边）开始的两个表中的全部记录，即使在第二个（右边）表中并没有相符值的记录</li>
-<li>right join和left join的结果刚好相反,这次是以右表(B)为基础的,A表不足的地方用NULL填充.</li>
-<li>inner join并不以谁为基础,它只显示符合条件的记录</li>
-</ol>
-<h2 id="limit"><a href="#limit" class="headerlink" title="limit"></a>limit</h2><ol>
-<li>取出第一条记录。</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>第二条记录</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>从第11条到31条（共计20条）</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">10</span>,<span class="number">20</span></span><br></pre></td></tr></table></figure>
+            <p>css两行截取解决办法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">-webkit-line-clamp</span>: 2;</span><br><span class="line"><span class="selector-tag">-webkit-box-orient</span>: <span class="selector-tag">vertical</span>;</span><br></pre></td></tr></table></figure>
         </div>
 
         
@@ -223,7 +207,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2017/03/27/sql-join.html&title=《sql note》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html&title=《css两行截取》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -233,22 +217,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2017/03/27/sql-join.html&title=《sql note》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html&title=《css两行截取》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2017/03/27/sql-join.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《sql note》 — 夜夜空里&url=https://blog.eternalyean.com/2017/03/27/sql-join.html&via=https://blog.eternalyean.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《css两行截取》 — 夜夜空里&url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html&via=https://blog.eternalyean.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2017/03/27/sql-join.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -388,7 +372,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2017/03/27/sql-join.html&title=《sql note》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html&title=《css两行截取》 — 夜夜空里&pic=https://blog.eternalyean.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -398,22 +382,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2017/03/27/sql-join.html&title=《sql note》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html&title=《css两行截取》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2017/03/27/sql-join.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《sql note》 — 夜夜空里&url=https://blog.eternalyean.com/2017/03/27/sql-join.html&via=https://blog.eternalyean.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《css两行截取》 — 夜夜空里&url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html&via=https://blog.eternalyean.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2017/03/27/sql-join.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -424,7 +408,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3ay47CMAwFUP7/p5ntoFHDtV1GIjldoVLanC6MH3k84uN5cfz99urM+p75r0YHBgbG1zKey+PqmoRX/e3v8/naMDAwzmFcRbD153XoXC+r+u2bNWNgYGAEYTQPjusUEAMDA+OugHu1uOiRy6dgYGBgTIrY/MGF4rNVJGNgYJzGyLvu///5I/MNDAyMr2L0CtG7zk9W8nI3DAyMrRl5gLsLMy96LwtpDAyMrRmTpfda/1VG/gowMDB2ZVTbbfMQuX5BvW0ZGBgYezPWF1Xb8RPw6P8BAwNjU0avsOyNPHvBdL3Cl64hBgbGpox8oXnDK0rgBiXrmxCMgYGxHeOuZlkCzvHlbR8YGBgHMPJHrsH5IGF9h+qIAgMDY2/GZDDQS+ny5l01JcXAwNib8elKcBRG5ztEMDAwNmVU07gqspoaljdbYGBgbMSopoC9hlqeFFZ3iGBgYJzGyEPevAGXh+koQGNgYGzNqLbG8jFAtX3WK3fLe0YwMDC+ljFp2SeJYBIobxhOYGBgHMCYkPLBQNL6z1NJDAyM0xh5aZqkfb1tXoUWGwYGxjGMXrGal76991oelGJgYGzNqA4Lk8CaBNnqqynsGcHAwNiUMWl15bwk7OaBGwMD40zGXYEvD8rVVPINEgMDA6OVXebXTJJODAwMjLw07RWxvQHnDQEXAwPjCxnVB1RHBfl4ICmkMTAwTmNUtzh8ovTtFa4YGBgHMH4AV8GyUE/0iYgAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3aQW4DIRBEUd//0kSysogUg6uqmcTTfFaWHRveLCo0zeMhj/Ecyqfjx1A+/f3+eq7SgAEDxm0ZYznWS5lNOVtohf1mXhgwYBzAUGJUmVihVn55+j4MGDBgTCbQt3T1aIYBAwaMSuCu39eX/s//N2DAgPHxDKWIVUrZ9cT6b15Yi8OAAeOGDLcx8JevL+xvwIAB4yaMUR7uLEqRbK8BBgwYrRlu8alv9ZQSV2mCGkEMAwaMpozsUoXyrexwzb3M8eL/BgwYMJoy9PjLGHqsh40BGDBgtGboLcnsuH/XdQ1p8woDBoymDPdrSiDqcexG8JuDNhgwYDRl1A/RKrHrAoxfgAEDRjuGG2pu/GXNS5cHAwaM3gwl4CqBmG3vskM9GDBgdGUohahSjrqhXLneIVXkMGDAaMpwW5WVA3296DVut8GAAaMpQ59yHXl6E9R9NEY0w4AB4wDGrqZjdhfCPfKDAQPGCYxsK+b+jf443Fj/fg0DBozWjKxYdQM0u3amrwoGDBjnMNzGgNsA2PsgjD0pDBgwGjGyjVq2+XMP10otARgwYLRgVCL46vP5UhzDgAGjBWOYIwtid9NpF7EwYMBozch2We41MmXR7lzhlhEGDBi3ZWRXvrIwXUeq8ul0PTBgwDiA4Yasu4HbVRhPvwUDBgwYhc2cUgZnbQYYMGDAyC6H1Y/YNtTZMGDAaMpwmwFZAVxZuhS4MGDAaMrIGgNuUeoWt/rjhgEDRmvGF66IiYeDxt0lAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

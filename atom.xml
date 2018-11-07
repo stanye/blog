@@ -237,6 +237,32 @@
   </entry>
   
   <entry>
+    <title>css两行截取</title>
+    <link href="https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html"/>
+    <id>https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html</id>
+    <published>2017-04-03T08:30:22.000Z</published>
+    <updated>2018-11-07T03:16:27.704Z</updated>
+    
+    <content type="html"><![CDATA[<p>css两行截取解决办法：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">-webkit-line-clamp</span>: 2;</span><br><span class="line"><span class="selector-tag">-webkit-box-orient</span>: <span class="selector-tag">vertical</span>;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;css两行截取解决办法：&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/sp
+      
+    
+    </summary>
+    
+      <category term="FrontEnd" scheme="https://blog.eternalyean.com/categories/FrontEnd/"/>
+    
+    
+      <category term="css" scheme="https://blog.eternalyean.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>table文字溢出控制</title>
     <link href="https://blog.eternalyean.com/2017/04/03/css-fix-table-wrap.html"/>
     <id>https://blog.eternalyean.com/2017/04/03/css-fix-table-wrap.html</id>
@@ -294,7 +320,7 @@
     <link href="https://blog.eternalyean.com/2017/03/27/sql-join.html"/>
     <id>https://blog.eternalyean.com/2017/03/27/sql-join.html</id>
     <published>2017-03-27T10:30:22.000Z</published>
-    <updated>2018-11-06T03:27:19.919Z</updated>
+    <updated>2018-11-06T03:48:25.664Z</updated>
     
     <content type="html"><![CDATA[<h2 id="left-join-right-join-inner-join"><a href="#left-join-right-join-inner-join" class="headerlink" title="left-join/right join/inner join"></a>left-join/right join/inner join</h2><ol><li>left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录.right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录. inner join(等值联接) 只返回两个表中联结字段相等的行.</li><li>left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表为准的.左表(A)的记录将会全部表示出来,而右表(B)只会显示符合搜索条件的记录.B表记录不足的地方均为NULL.LEFT JOIN操作用于在任何的 FROM 子句中，组合来源表的记录。使用 LEFT JOIN 运算来创建一个左边外部联接。左边外部联接将包含了从第一个（左边）开始的两个表中的全部记录，即使在第二个（右边）表中并没有相符值的记录</li><li>right join和left join的结果刚好相反,这次是以右表(B)为基础的,A表不足的地方用NULL填充.</li><li>inner join并不以谁为基础,它只显示符合条件的记录</li></ol><h2 id="limit"><a href="#limit" class="headerlink" title="limit"></a>limit</h2><ol><li>取出第一条记录。</li></ol><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure><ol start="2"><li>第二条记录</li></ol><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure><ol start="3"><li>从第11条到31条（共计20条）</li></ol><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">10</span>,<span class="number">20</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -307,7 +333,7 @@
     
     </summary>
     
-      <category term="DB" scheme="https://blog.eternalyean.com/categories/DB/"/>
+      <category term="BackEnd" scheme="https://blog.eternalyean.com/categories/BackEnd/"/>
     
     
       <category term="mysql" scheme="https://blog.eternalyean.com/tags/mysql/"/>
