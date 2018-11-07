@@ -581,7 +581,60 @@ RESTful API http://www.ruanyifeng.com/blog/2014/05/restful_api
         </li>
     
         <li class="post-list-item fade">
-            <article id="page-php-&amp;-cite"
+            <article id="page-mysql-duplicate-checking"
+  class="article-card article-type-page" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017-05-03 14:30:20" datetime="2017-05-03T06:30:20.000Z"  itemprop="datePublished">2017-05-03</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/BackEnd/">BackEnd</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/05/03/mysql-duplicate-checking.html">mysql查重</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        mysql查重：
+
+单字段
+1select * from member where mobile in (select mobile from member group by mobile  having count(mobile) &gt; 1)
+
+单字段查重删除
+1delete from member where mobile in (select mobile from member ...
+    
+
+        <a href="/2017/05/03/mysql-duplicate-checking.html" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="page-hexo-page-2017-04-29-php-&amp;-cite.html"
   class="article-card article-type-page" itemprop="blogPost">
 
     <div class="post-meta">
@@ -672,54 +725,6 @@ RESTful API http://www.ruanyifeng.com/blog/2014/05/restful_api
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/using/">using</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="page-hexo-page-2017-04-04-mysql-grant.html"
-  class="article-card article-type-page" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-04-04 11:22:52" datetime="2017-04-04T03:22:52.000Z"  itemprop="datePublished">2017-04-04</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/BackEnd/">BackEnd</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/04/04/mysql-grant.html">mysql给表赋权</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        mysql赋权：
-1grant drop on sch_m.common_member to dev@'localhost'
-    
-
-        <a href="/2017/04/04/mysql-grant.html" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
 
     </div>
     
