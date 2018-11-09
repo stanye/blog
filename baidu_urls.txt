@@ -7,7 +7,7 @@ https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager-pdf.htm
 https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html
 https://blog.eternalyean.com/2017/05/16/vue-update-array.html
 https://blog.eternalyean.com/2017/05/03/mysql-duplicate-checking.html
-https://blog.eternalyean.com/2017/04/29/php-&-cite.html
+https://blog.eternalyean.com/2017/04/29/php-cite.html
 https://blog.eternalyean.com/2017/04/29/sql-using.html
 https://blog.eternalyean.com/2017/04/04/mysql-grant.html
 https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html
