@@ -5,9 +5,9 @@
   <subtitle>StanYe&#39;s blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.eternalyean.com/"/>
-  <updated>2019-02-28T08:00:08.951Z</updated>
-  <id>https://blog.eternalyean.com/</id>
+  <link href="https://stanye.com/blog/"/>
+  <updated>2018-10-29T02:27:42.436Z</updated>
+  <id>https://stanye.com/blog/</id>
   
   <author>
     <name>Stan Ye</name>
@@ -17,37 +17,9 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2019年计划</title>
-    <link href="https://blog.eternalyean.com/2019/01/02/2019-01-02-year%20plan.html"/>
-    <id>https://blog.eternalyean.com/2019/01/02/2019-01-02-year plan.html</id>
-    <published>2019-01-02T11:11:26.000Z</published>
-    <updated>2019-02-28T08:00:08.951Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>完成P/LEGO 30%</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;完成P/LEGO 30%&lt;/li&gt;
-&lt;/ol&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Plan" scheme="https://blog.eternalyean.com/categories/Plan/"/>
-    
-    
-      <category term="gameoflife" scheme="https://blog.eternalyean.com/tags/gameoflife/"/>
-    
-  </entry>
-  
-  <entry>
     <title>升级macOS Mojave后问题汇总及解决办法</title>
-    <link href="https://blog.eternalyean.com/2018/10/23/macOS-Mojave-problems-and-solutions.html"/>
-    <id>https://blog.eternalyean.com/2018/10/23/macOS-Mojave-problems-and-solutions.html</id>
+    <link href="https://stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html"/>
+    <id>https://stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</id>
     <published>2018-10-23T06:11:26.000Z</published>
     <updated>2018-10-29T02:27:42.436Z</updated>
     
@@ -65,17 +37,17 @@
     
     </summary>
     
-      <category term="MacOS" scheme="https://blog.eternalyean.com/categories/MacOS/"/>
+      <category term="MacOS" scheme="https://stanye.com/blog/categories/MacOS/"/>
     
     
-      <category term="Mojave" scheme="https://blog.eternalyean.com/tags/Mojave/"/>
+      <category term="Mojave" scheme="https://stanye.com/blog/tags/Mojave/"/>
     
   </entry>
   
   <entry>
     <title>E3游戏WishList</title>
-    <link href="https://blog.eternalyean.com/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html"/>
-    <id>https://blog.eternalyean.com/2018/06/11/E3游戏WishList.html</id>
+    <link href="https://stanye.com/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html"/>
+    <id>https://stanye.com/blog/2018/06/11/E3游戏WishList.html</id>
     <published>2018-06-11T04:26:25.000Z</published>
     <updated>2018-06-13T03:57:58.000Z</updated>
     
@@ -95,17 +67,17 @@
     
     </summary>
     
-      <category term="Game" scheme="https://blog.eternalyean.com/categories/Game/"/>
+      <category term="Game" scheme="https://stanye.com/blog/categories/Game/"/>
     
     
-      <category term="E3" scheme="https://blog.eternalyean.com/tags/E3/"/>
+      <category term="E3" scheme="https://stanye.com/blog/tags/E3/"/>
     
   </entry>
   
   <entry>
     <title>leetcode - 350. 两个数组的交集 II</title>
-    <link href="https://blog.eternalyean.com/2018/06/06/leetcode-350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II.html"/>
-    <id>https://blog.eternalyean.com/2018/06/06/leetcode-350-两个数组的交集-II.html</id>
+    <link href="https://stanye.com/blog/2018/06/06/leetcode-350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II.html"/>
+    <id>https://stanye.com/blog/2018/06/06/leetcode-350-两个数组的交集-II.html</id>
     <published>2018-06-06T03:41:43.000Z</published>
     <updated>2018-10-12T02:37:07.044Z</updated>
     
@@ -124,19 +96,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://blog.eternalyean.com/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="leetcode" scheme="https://blog.eternalyean.com/tags/leetcode/"/>
+      <category term="leetcode" scheme="https://stanye.com/blog/tags/leetcode/"/>
     
-      <category term="algorithm" scheme="https://blog.eternalyean.com/tags/algorithm/"/>
+      <category term="algorithm" scheme="https://stanye.com/blog/tags/algorithm/"/>
     
   </entry>
   
   <entry>
     <title>Skeleton Screen - 骨架屏设计</title>
-    <link href="https://blog.eternalyean.com/2018/05/30/skeleton-screen.html"/>
-    <id>https://blog.eternalyean.com/2018/05/30/skeleton-screen.html</id>
+    <link href="https://stanye.com/blog/2018/05/30/skeleton-screen.html"/>
+    <id>https://stanye.com/blog/2018/05/30/skeleton-screen.html</id>
     <published>2018-05-30T03:00:00.000Z</published>
     <updated>2018-06-06T05:32:43.000Z</updated>
     
@@ -152,17 +124,17 @@
     
     </summary>
     
-      <category term="产品设计" scheme="https://blog.eternalyean.com/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="skeleton screen" scheme="https://blog.eternalyean.com/tags/skeleton-screen/"/>
+      <category term="skeleton screen" scheme="https://stanye.com/blog/tags/skeleton-screen/"/>
     
   </entry>
   
   <entry>
     <title>技术型产品经理需要了解的知识点</title>
-    <link href="https://blog.eternalyean.com/2018/05/10/Technical-product-manager.html"/>
-    <id>https://blog.eternalyean.com/2018/05/10/Technical-product-manager.html</id>
+    <link href="https://stanye.com/blog/2018/05/10/Technical-product-manager.html"/>
+    <id>https://stanye.com/blog/2018/05/10/Technical-product-manager.html</id>
     <published>2018-05-10T11:11:22.000Z</published>
     <updated>2018-10-23T06:03:36.922Z</updated>
     
@@ -178,17 +150,17 @@
     
     </summary>
     
-      <category term="沟通技巧" scheme="https://blog.eternalyean.com/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+      <category term="沟通技巧" scheme="https://stanye.com/blog/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="产品经理" scheme="https://blog.eternalyean.com/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+      <category term="产品经理" scheme="https://stanye.com/blog/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>产品经理沟通技巧</title>
-    <link href="https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager-pdf.html"/>
-    <id>https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager-pdf.html</id>
+    <link href="https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html"/>
+    <id>https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html</id>
     <published>2018-05-10T11:07:10.000Z</published>
     <updated>2018-06-06T05:33:38.000Z</updated>
     
@@ -206,17 +178,17 @@
     
     </summary>
     
-      <category term="沟通技巧" scheme="https://blog.eternalyean.com/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+      <category term="沟通技巧" scheme="https://stanye.com/blog/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="产品经理" scheme="https://blog.eternalyean.com/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+      <category term="产品经理" scheme="https://stanye.com/blog/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>产品经理如何与技术沟通</title>
-    <link href="https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html"/>
-    <id>https://blog.eternalyean.com/2018/05/10/communicate-with-product-manager.html</id>
+    <link href="https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html"/>
+    <id>https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html</id>
     <published>2018-05-10T11:07:10.000Z</published>
     <updated>2018-06-06T05:33:15.000Z</updated>
     
@@ -230,17 +202,17 @@
     
     </summary>
     
-      <category term="沟通技巧" scheme="https://blog.eternalyean.com/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+      <category term="沟通技巧" scheme="https://stanye.com/blog/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="产品经理" scheme="https://blog.eternalyean.com/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+      <category term="产品经理" scheme="https://stanye.com/blog/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>Vue更新数组状态方法</title>
-    <link href="https://blog.eternalyean.com/2017/05/16/vue-update-array.html"/>
-    <id>https://blog.eternalyean.com/2017/05/16/vue-update-array.html</id>
+    <link href="https://stanye.com/blog/2017/05/16/vue-update-array.html"/>
+    <id>https://stanye.com/blog/2017/05/16/vue-update-array.html</id>
     <published>2017-05-16T06:58:53.000Z</published>
     <updated>2018-11-07T07:03:08.436Z</updated>
     
@@ -256,19 +228,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://blog.eternalyean.com/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="vue" scheme="https://blog.eternalyean.com/tags/vue/"/>
+      <category term="vue" scheme="https://stanye.com/blog/tags/vue/"/>
     
-      <category term="array" scheme="https://blog.eternalyean.com/tags/array/"/>
+      <category term="array" scheme="https://stanye.com/blog/tags/array/"/>
     
   </entry>
   
   <entry>
     <title>mysql查重</title>
-    <link href="https://blog.eternalyean.com/2017/05/03/mysql-duplicate-checking.html"/>
-    <id>https://blog.eternalyean.com/2017/05/03/mysql-duplicate-checking.html</id>
+    <link href="https://stanye.com/blog/2017/05/03/mysql-duplicate-checking.html"/>
+    <id>https://stanye.com/blog/2017/05/03/mysql-duplicate-checking.html</id>
     <published>2017-05-03T06:30:20.000Z</published>
     <updated>2018-11-07T06:55:53.824Z</updated>
     
@@ -286,17 +258,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://blog.eternalyean.com/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://blog.eternalyean.com/tags/mysql/"/>
+      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>php&amp;引用</title>
-    <link href="https://blog.eternalyean.com/2017/04/29/php-cite.html"/>
-    <id>https://blog.eternalyean.com/2017/04/29/php-cite.html</id>
+    <link href="https://stanye.com/blog/2017/04/29/php-cite.html"/>
+    <id>https://stanye.com/blog/2017/04/29/php-cite.html</id>
     <published>2017-04-29T11:10:39.000Z</published>
     <updated>2018-11-09T05:51:26.911Z</updated>
     
@@ -312,17 +284,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://blog.eternalyean.com/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="php" scheme="https://blog.eternalyean.com/tags/php/"/>
+      <category term="php" scheme="https://stanye.com/blog/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>使用using关键字对连接进行简化</title>
-    <link href="https://blog.eternalyean.com/2017/04/29/sql-using.html"/>
-    <id>https://blog.eternalyean.com/2017/04/29/sql-using.html</id>
+    <link href="https://stanye.com/blog/2017/04/29/sql-using.html"/>
+    <id>https://stanye.com/blog/2017/04/29/sql-using.html</id>
     <published>2017-04-29T06:39:10.000Z</published>
     <updated>2018-11-06T03:44:36.252Z</updated>
     
@@ -337,19 +309,19 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://blog.eternalyean.com/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://blog.eternalyean.com/tags/mysql/"/>
+      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
     
-      <category term="using" scheme="https://blog.eternalyean.com/tags/using/"/>
+      <category term="using" scheme="https://stanye.com/blog/tags/using/"/>
     
   </entry>
   
   <entry>
     <title>mysql给表赋权</title>
-    <link href="https://blog.eternalyean.com/2017/04/04/mysql-grant.html"/>
-    <id>https://blog.eternalyean.com/2017/04/04/mysql-grant.html</id>
+    <link href="https://stanye.com/blog/2017/04/04/mysql-grant.html"/>
+    <id>https://stanye.com/blog/2017/04/04/mysql-grant.html</id>
     <published>2017-04-04T03:22:52.000Z</published>
     <updated>2018-11-07T03:24:01.133Z</updated>
     
@@ -365,17 +337,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://blog.eternalyean.com/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://blog.eternalyean.com/tags/mysql/"/>
+      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>css两行截取</title>
-    <link href="https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html"/>
-    <id>https://blog.eternalyean.com/2017/04/03/css-cut-2-line.html</id>
+    <link href="https://stanye.com/blog/2017/04/03/css-cut-2-line.html"/>
+    <id>https://stanye.com/blog/2017/04/03/css-cut-2-line.html</id>
     <published>2017-04-03T08:30:22.000Z</published>
     <updated>2018-11-07T03:16:27.704Z</updated>
     
@@ -391,17 +363,17 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://blog.eternalyean.com/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="css" scheme="https://blog.eternalyean.com/tags/css/"/>
+      <category term="css" scheme="https://stanye.com/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>table文字溢出控制</title>
-    <link href="https://blog.eternalyean.com/2017/04/03/css-fix-table-wrap.html"/>
-    <id>https://blog.eternalyean.com/2017/04/03/css-fix-table-wrap.html</id>
+    <link href="https://stanye.com/blog/2017/04/03/css-fix-table-wrap.html"/>
+    <id>https://stanye.com/blog/2017/04/03/css-fix-table-wrap.html</id>
     <published>2017-04-03T04:30:22.000Z</published>
     <updated>2018-11-06T03:32:49.035Z</updated>
     
@@ -417,19 +389,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://blog.eternalyean.com/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="css" scheme="https://blog.eternalyean.com/tags/css/"/>
+      <category term="css" scheme="https://stanye.com/blog/tags/css/"/>
     
-      <category term="table" scheme="https://blog.eternalyean.com/tags/table/"/>
+      <category term="table" scheme="https://stanye.com/blog/tags/table/"/>
     
   </entry>
   
   <entry>
     <title>php file_put_contents 函数</title>
-    <link href="https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html"/>
-    <id>https://blog.eternalyean.com/2017/03/28/php-file_put_contents.html</id>
+    <link href="https://stanye.com/blog/2017/03/28/php-file_put_contents.html"/>
+    <id>https://stanye.com/blog/2017/03/28/php-file_put_contents.html</id>
     <published>2017-03-28T01:21:11.000Z</published>
     <updated>2018-11-06T03:14:35.039Z</updated>
     
@@ -444,17 +416,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://blog.eternalyean.com/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="php" scheme="https://blog.eternalyean.com/tags/php/"/>
+      <category term="php" scheme="https://stanye.com/blog/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>sql note</title>
-    <link href="https://blog.eternalyean.com/2017/03/27/sql-join.html"/>
-    <id>https://blog.eternalyean.com/2017/03/27/sql-join.html</id>
+    <link href="https://stanye.com/blog/2017/03/27/sql-join.html"/>
+    <id>https://stanye.com/blog/2017/03/27/sql-join.html</id>
     <published>2017-03-27T10:30:22.000Z</published>
     <updated>2018-11-06T03:48:25.664Z</updated>
     
@@ -469,19 +441,19 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://blog.eternalyean.com/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://blog.eternalyean.com/tags/mysql/"/>
+      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
     
-      <category term="sql" scheme="https://blog.eternalyean.com/tags/sql/"/>
+      <category term="sql" scheme="https://stanye.com/blog/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>regex in my program</title>
-    <link href="https://blog.eternalyean.com/2016/07/15/regex-used.html"/>
-    <id>https://blog.eternalyean.com/2016/07/15/regex-used.html</id>
+    <link href="https://stanye.com/blog/2016/07/15/regex-used.html"/>
+    <id>https://stanye.com/blog/2016/07/15/regex-used.html</id>
     <published>2016-07-15T03:41:43.000Z</published>
     <updated>2018-11-06T02:47:19.060Z</updated>
     
@@ -498,10 +470,10 @@
     
     </summary>
     
-      <category term="Tools" scheme="https://blog.eternalyean.com/categories/Tools/"/>
+      <category term="Tools" scheme="https://stanye.com/blog/categories/Tools/"/>
     
     
-      <category term="regex" scheme="https://blog.eternalyean.com/tags/regex/"/>
+      <category term="regex" scheme="https://stanye.com/blog/tags/regex/"/>
     
   </entry>
   
