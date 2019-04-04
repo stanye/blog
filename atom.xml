@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://stanye.com/blog/"/>
-  <updated>2018-10-29T02:27:42.436Z</updated>
+  <updated>2019-04-04T11:17:19.854Z</updated>
   <id>https://stanye.com/blog/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用git rebase对commits进行（合并/拆分/修改作者信息）</title>
+    <link href="https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html"/>
+    <id>https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</id>
+    <published>2019-04-04T09:55:32.000Z</published>
+    <updated>2019-04-04T11:17:19.854Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>1. 对多个commits合并</strong></p><p>  首先查看历史信息<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline</span><br></pre></td></tr></table></figure></p><p>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsfqgbdqj30sm04amyb.jpg" alt=""></p><p>  想合并前两条<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i Head~2</span><br><span class="line">// 或者</span><br><span class="line">git rebase -i 33bda27 // 前一条</span><br></pre></td></tr></table></figure></p><p>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qshl2y4zj30w40cwtb9.jpg" alt=""></p><p>  将第二条的<code>pick</code>改成<code>squash</code><br>  <img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsm45qlmj30oe080gn1.jpg" alt=""></p><p>  保存, 修改提交信息, 再保存，查看<code>git log --oneline</code>, 确认修改完成<br>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg" alt=""></p><p>  使用<code>git push</code>提交（视情况加<code>-f</code>force）</p><p><strong>2. 对单个commits拆分</strong></p><p>  以合并的结果做拆分演示<br>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg" alt=""></p><p>  想拆分第一条<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i Head~1</span><br><span class="line">// 或者</span><br><span class="line">git rebase -i 33bda27 // 前一条</span><br></pre></td></tr></table></figure></p><p>  <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1qswmccq5j30qq06ygms.jpg" alt=""></p><p>  将第一条的<code>pick</code>改成<code>edit</code>, 后保存并退出<br>  <img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsx3nnh5j30o6086dh3.jpg" alt=""></p><p>  发现此时属于rebase阶段<br>  <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt1h5nv2j30xa07cq46.jpg" alt=""></p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^ // 拉取之后的提交到版本库的文件到暂存区, 改操作不影响工作区</span><br></pre></td></tr></table></figure><p>  <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt3ut291j30vw0awwgz.jpg" alt=""></p><p>  使用<code>git add</code>和<code>git commit</code>分文件进行提交, 生成不同的commits</p><p>  提交完成后使用<code>git rebase --continue</code>, 完成rebase.</p><p>  使用<code>git push</code>提交（视情况加<code>-f</code>force）</p><p><strong>3. 更改作者信息</strong></p><p>上述rebase步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend --author &quot;aaa &lt;bbb@cc.com&gt;&quot; // 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p><p><strong>4. one more thing</strong></p><p><code>git commit</code>加<code>-s</code>参数可以加上Signed-off-by信息</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;1. 对多个commits合并&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  首先查看历史信息&lt;br&gt;  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;l
+      
+    
+    </summary>
+    
+      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="git" scheme="https://stanye.com/blog/tags/git/"/>
+    
+      <category term="git rebase" scheme="https://stanye.com/blog/tags/git-rebase/"/>
+    
+  </entry>
+  
+  <entry>
     <title>升级macOS Mojave后问题汇总及解决办法</title>
     <link href="https://stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html"/>
     <id>https://stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</id>
     <published>2018-10-23T06:11:26.000Z</published>
-    <updated>2018-10-29T02:27:42.436Z</updated>
+    <updated>2019-04-04T10:18:15.864Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>搜狗<br> 问题描述：系统升级之后发现断断续续一直鼠标在转圈<br> 解决方案：搜狗升级到<code>4.8</code>之后解决问题</p></li><li><p>zsh<br> 问题描述：升级后使用iTerm出现乱码，原生terminal没问题<br> 解决方案：iTerms2 -&gt; Preferences -&gt; Advanced -&gt; 搜索LC_CTYPE -&gt; value值设置<code>zh_CN.UTF-8</code></p></li><li><p>VSCode<br> 问题描述：字体变细<br> 解决方案：命令行输入<code>defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO</code></p></li><li><p>Wechat和Tim<br> 问题描述：输入框焦点容易丢失，必须手动点击程序<br> 解决方案：升级最新版Wechat和Tim</p></li><li><p>Git丢失<br> 问题描述：更新后git没了<br> 解决方案：命令行输入<code>xcode-select –install</code></p></li><li><p>Hexo<br> 问题描述：写这篇文字的时候，居然发现生成的页面英文的地方被转成日文<br> 解决方案：_config.yml文件language设置<code>zh-Hans</code></p></li></ol>]]></content>
     
@@ -37,10 +65,12 @@
     
     </summary>
     
-      <category term="MacOS" scheme="https://stanye.com/blog/categories/MacOS/"/>
+      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
       <category term="Mojave" scheme="https://stanye.com/blog/tags/Mojave/"/>
+    
+      <category term="MacOS" scheme="https://stanye.com/blog/tags/MacOS/"/>
     
   </entry>
   
@@ -136,7 +166,7 @@
     <link href="https://stanye.com/blog/2018/05/10/Technical-product-manager.html"/>
     <id>https://stanye.com/blog/2018/05/10/Technical-product-manager.html</id>
     <published>2018-05-10T11:11:22.000Z</published>
-    <updated>2018-10-23T06:03:36.922Z</updated>
+    <updated>2019-04-04T10:15:52.946Z</updated>
     
     <content type="html"><![CDATA[<ol><li>MVC<br>MVC是一个框架模式，它强制性的使应用程序的输入、处理和输出分开。以JAVA为例，最典型的MVC就是JSP + SERVLET+ JAVABEAN的模式。通俗的讲，程序可以有一种方式的写法，都在JSP的代码中处理所有事情。但是这样回答来极大的耦合问题，所以才去MVC模式把视觉（前台）、后台、数据库拆分开来处理。减少偶尔、增加复用性等。</li><li>URL 路由</li><li>模板<br> 一段代码经常被重复使用，我们的工程师们会把它封装成一个文件，然后在需要使用的时候去调用它。我们在设计产品的时候其实常用到这个思维，比如设计权限模块，你需要做的是把一个系统中的公司、分公司、部门等进行拆分，封装成不同的功能。</li><li>RESTful API <a href="http://www.ruanyifeng.com/blog/2014/05/restful_api" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2014/05/restful_api</a><a id="more"></a> </li><li>MySQL</li><li>Bootstrap</li><li>Redis, 用Memcached或Redis来做缓存，提高应用性能</li><li>版本管理Git、svn</li><li>Markdown</li><li>前后端分离</li><li>微信H5开发</li><li>Docker</li><li>机器学习</li><li>Chrome 调试<br>你能够感知到的一般都是你所能看到的，这些BUG都是很简单就能修复的。</li><li>CURL 测试 API</li><li>数据分析埋点</li><li>学前端不要写脚本抢月饼，学后端记得做好权限检查</li><li>http的基本原理</li><li>app和h5的区别以及通信。</li><li>web前端的基本概念。</li><li>后台的基本知识</li><li>常用的技术术语，比如SDK，插件，接口，协议等等</li><li>数据库的基础知识<br>一方面，有助于与技术的沟通及产品的实现；另一方面，特别是在创业型公司，查询后台不完善甚至压根没有，很多时候需要出数据（如了解交易量、转化率等），如果自己不会的话就得麻烦开发大哥了。但是，都很忙的。一次两次还好，次数多了早晚要被嫌弃。有人说提需求开发数据平台，在人力紧张需求优先级低的情况下谁给你开发？<br>select…from…where…group by….order by..</li><li>前端和后端的关系</li><li>HTTP与HTTPs的区别</li><li>比如get和post</li><li>比如算法到底是个啥意思</li><li>比如接口是个啥意思（天天说对接，对接什么玩意）</li><li>XML和Json都是什么</li><li>html5里有什么值得利用的新特性</li><li>他们按f12调出来的是什么、可以干什么<br>研发资源非常珍贵。</li><li>base64编码能帮你们做到什么</li><li>数据库的一些基本概念</li><li>域名、URL、IP到底都是什么。</li><li>主要是网站产品主要依靠浏览器<br>编程语言开发的php,java或者Python。<br>产品项目中使用开发框架，是团队自己研发的框架，还是使用市面上比较流行的框架。<br>其次是数据库的选择，根据你们的业务需求是使用mysql这种关系型数据库还是mongodb这类非关系型数据库<br>最后就是服务器，服务器一般关心的问题就是稳定性，安全性，还有负载了<br>根据不同需求选择服务器，使用什么样的服务器？自己管理的，还是云。<br>云的话还要了解一些云服务和产品的内容，比如RDS，负载均衡，内容分发。<br>手机APP这样的产品需求跨平台性以及其他细节问题。</li><li>技术特性技术的生命周期：<br>技术生命周期一般就2~3年，服务器操作系统生命周期会更长一些，，<br>关键问题是这个问题本身就不太现实，我们很难预测2~3年以后我们的产品的样子。<br>作为PM你不用了解具体的实现方式，开发效率和健壮性怎么样，是不是符合我现阶段产品开发的需求。</li><li>不管怎么说作为PM掌控产品全局你要知道整个项目的技术开发成本是怎样的。<br>程序员是个喜欢创造的工种，如果你只是设计好了让他们照着设计做他们会玩的很没乐趣的。要让他们也参与其中你会发现你的项目会比你想象中的进展要好。</li><li>会写代码是加分项；不了解大局上来就聊代码，是越俎代庖,你需要知道水可以用来泡茶，做汤。不需要知道水是H2O,水有哪些种类，什么水泡茶最好，什么水做汤更赞。忌不懂技术,忌懂技术.</li><li><a href="https://www.codecademy.com/zh/" target="_blank" rel="noopener">https://www.codecademy.com/zh/</a></li><li>对技术架构或某些技术问题的看法，立刻遭到赞扬：“你很懂技术嘛！”这时马上打着哈哈说：“懂个p啊，我连hello world都不会写，完全是纸上谈兵。”于是嬉笑声中，一群人把手里的箭收起来了。</li><li>产品经理懂技术 ＝ 流氓会武术。</li><li>你怎么实现我不管，我就要这个<br>这个功能不就是xxx么，你直接说要多久把<br>这次的需求很简单，只要做xxx就行了，prd你看下哈<br>你的产品架构，其实也是技术架构！一定不能乱<br>前端要做哪些？字段、样式、交互（操作前、操作中、操作后）、边界条件（字数、图片尺寸等等<br>对前端说：我们这边新增了哪几个页面，ui设计稿什么样的，交互是什么样的…前端done!<br>对后段说：我们这次的产品大逻辑什么，新增了哪些字段，最重要和复杂的逻辑是哪些，可能要哪边的接口，那边的技术已经帮你找好了….后端done!<br>对qa说：这次的迭代和之前有什么不同，最重要的测试点是什么，有哪些风险要测下，回头上线的时候跟我说下我们一起看下…qa done!</li><li><a href="http://www.cnblogs.com/dunnice/articles/2733430.html" target="_blank" rel="noopener">http://www.cnblogs.com/dunnice/articles/2733430.html</a></li><li>前端=html+css+js=&gt;结构+字段+样式+交互<br>程序=算法+数据结构<br><a href="https://www.zhihu.com/question/26743347" target="_blank" rel="noopener">https://www.zhihu.com/question/26743347</a><br><a href="https://www.zhihu.com/question/21380252" target="_blank" rel="noopener">https://www.zhihu.com/question/21380252</a><br>数据驱动产品的发展～</li><li>不同系统的兼容性问题<pre><code>不同版本的兼容性问题不同屏幕尺寸的兼容性问题android 和 ios 系统的规范android 和 ios 打包发布流程</code></pre></li><li>‘技术无法实现’的潜台词可能是<br>给的资源不够， 完成不了<br>你的优先级低， 不想给你做<br>看你不爽， 不想给你做<br>这功能太傻不应该做<br>最后才是真的技术无法实现</li><li>HTML5和NATIVE的特点和区别，哪些在微信中能做，哪些不能做</li><li>如果你知道如果将用户的操作分成0.01秒为单位的节点，并将所有的用户行为都预测出来。你就是产品经理。</li><li>在一个项目里面 产品经理看懂一个api 难道不是只要看api说明就行了 为什么要懂技术<br>你知道了 都能做什么 然后不就是你排列组合的天下了<br>如果你看的api没说明 让程序员补去</li></ol>]]></content>
     
@@ -150,10 +180,10 @@
     
     </summary>
     
-      <category term="沟通技巧" scheme="https://stanye.com/blog/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="产品经理" scheme="https://stanye.com/blog/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+      <category term="PM" scheme="https://stanye.com/blog/tags/PM/"/>
     
   </entry>
   
@@ -162,7 +192,7 @@
     <link href="https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html"/>
     <id>https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html</id>
     <published>2018-05-10T11:07:10.000Z</published>
-    <updated>2018-06-06T05:33:38.000Z</updated>
+    <updated>2019-04-04T10:15:28.275Z</updated>
     
     <content type="html"><![CDATA[<div class="row">    <embed src="https://docs-cloud.taoke.com/files/6f62ef56afc0f53e81361e3a9a297004b1747a40/626c3bf4ba54bf4019cc18f64acac1c1p9w4re/91pxb.com/1528262906/86d9b50e487e89bc0bf33c5e71edff0c/71c9ad67fad30c9fa66c0e6b2d831a82.2018-05-10.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
     
@@ -178,10 +208,12 @@
     
     </summary>
     
-      <category term="沟通技巧" scheme="https://stanye.com/blog/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="产品经理" scheme="https://stanye.com/blog/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+      <category term="PM" scheme="https://stanye.com/blog/tags/PM/"/>
+    
+      <category term="ppt" scheme="https://stanye.com/blog/tags/ppt/"/>
     
   </entry>
   
@@ -190,7 +222,7 @@
     <link href="https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html"/>
     <id>https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html</id>
     <published>2018-05-10T11:07:10.000Z</published>
-    <updated>2018-06-06T05:33:15.000Z</updated>
+    <updated>2019-04-04T10:14:40.620Z</updated>
     
     <content type="html"><![CDATA[<ol><li>产品经理应该：提出来 讲明白 说服他 验收好</li><li>核心的竞争优势就是在技术方面，这个是非技术出身的产品经理最缺的一项技能。技术出身的产品经理跟工程师沟通会比较顺畅，能够深刻体会并理解工程师的思维，提出的设计和需求也会比较接地气，因此不容易跟开发人员产生矛盾。需求策划方面，每一个需求功能点的提出，技术出身的产品经理都可以很快评估出技术实现的可行性，实现所需的大概时间，技术存在的一些风险或问题，因此可以很快将需求点落到实处，大大缩短需求到实现转化所需的周期。<a id="more"></a> </li><li>工程师的思维跟产品经理的思维，关注点和考虑问题的方式存在很大的区别。会太注重并纠结技术层面的问题，而忽视了产品经理应该关注的是整个产品项目的大局。产品前期的设计才是整个项目的重心，后面的运营推广是项目成败的关键。市场及商业嗅觉不敏感，产品设计，运营推广等领域缺乏相关的经验，这方面需要投入大量的时间去培养与磨炼，比如商业嗅觉的培养，数据运维的数据分析，营销推广的策划和布局，这些都不是一朝一夕可以练好的内功，需要基于大量的阅读学习，观察及实操后一步步磨炼出来。</li><li>在产品大方向的把握，设计细节的考量，运营推广思路上面会存在非常多的盲区，导致对整个项目的理解不够透彻</li><li>产品经理在项目推进过程中需要面对老板，工程师，设计师，测试人员，运营，市场等各个领域的人，应该学会换位思考，站在各个不同角色的人的立场去考虑问题，才能协调到更多的资源去配合你完成项目的推进工作。</li><li>不要花太多的时间去纠结或花在研究技术上面，而应该把自己的时间合理地分配到其他的技能的学习上面。产品经理是一个对综合能力要求特别高的职位，需要不断地学习，不断地吸收这个领域的知道养分。不要因为“技术”这棵小树，而放弃了产品的这座大森林。</li><li>做技术时，你经常需要面对的问题是如何解决技术难题；而做了产品，你所面对的大多数问题是如何搞定人。比如，老板提了一个不合理的需求，你应该怎么婉转地打掉；UI设计师跟你闹矛盾，你怎么让她继续配合你工作；项目资源紧缺，开发周期赶不及，你如何才能申请到更多的资源。除了知识面需要扩充好几倍外，做人做事的能力，也要迅速跟上。</li><li>找准自己的定位，分析自己之于团队的价值。沟通是一门艺术。艺术源自生活，不必刻意追求。先试着让身边的人快乐。</li><li>程序考虑问题的出发点大多是：体现自己的技术水平。 我接触的程序员喜欢用高效、简单、先进的技术手段解决问题。通常他们反驳产品都是想令代码更简单更高效，而产品却变得复杂、多步骤甚至多余。产品都希望把简单留给用户，把复杂留给开发。这是个对立面。所以程序员转产品，首先要改变自己的思维，从用户和需求出发，而不是从技术角度.  </li><li>产品工作是感性的，做出一款产品与做出一款好产品的差别无比巨大，大部分所谓的产品经理只能说在从事着一份工作而已，得到个好听又最容易被人吐槽的名头，不代表他真的很厉害.  </li><li>马化腾(Pony)，张小龙，周鸿祎都是程序员出身的、中国最优秀的互联网产品经理。只有当你跨越了傻瓜心态之后，才算是迈出了成功转型产品经理的第一步。</li><li>你永远不要假设用户是聪明的，用户的弱智程度永远超出你想象力的下限。所以，当你设计产品的界面和交互的时候，一定不要拿自己的经验去想当然，一定要假设是在给一个弱智做产品，尽量简化，让产品非常易用才行。</li><li>真正好的产品经理应该是以结果为导向的. </li><li>技术人员如果没有追求完美的心，就无法成为一个优秀的技术人员。然而带有「完美主义综合症」的产品经理是可怕的。</li><li>在这个产品经理，视觉设计，程序员共同参与的产品生产过程中，程序员是最后的环节，当程序员在代码实现的过程中发现了产品逻辑的错误，或者产品设计的问题，是非常被动的。这个时候程序员再要求产品经理更改设计，修正产品交互逻辑，产品经理通常的反应就是：「程序员又和我讨价还价，产品deadline又要延后了」，跟着双方就开始剑拔弩张的对峙。</li><li>产品经理负责搜集和定义产品需求，整理产品逻辑规则，设计产品原型稿和交互，这个阶段并不需要程序员开始写代码，但是从一开始就让程序员，运营，甚至运维工程师都参与进来</li><li>程序员从一开始就了解了产品的来龙去脉，对产品需求和产品要达到的目标非常清楚，这样在和产品经理的配合中，就非常容易理解产品经理提出的很多功能要求，沟通起来非常顺畅；程序员从一开始就参与，并且持续参与产品设计的过程，最大的好处在于从一开始就可以纠正可能出现的产品设计逻辑错误，以及评估技术难以实现的产品功能。这样等到真正进入开发阶段，研发周期是非常可控的，基本不会出现延误。一些有良好产品意识的程序员，可以帮助产品经理从一开始就完善产品逻辑，从实现上修正产品可能遇到的问题，让产品开发过程变得更加有保障。很多产品经理犯的一个重大错误就是：直到原型稿交互稿定稿之后，才交给程序员，之前全无沟通，然后逼着程序员立刻评估一个精确的开发周期。这个时候程序员内心是非常抗拒的。一来我完全不了解这个产品，不知道做这个产品是干啥的？能够解决什么问题？是否有更好的替代解决方案；二来我也不清楚这个产品逻辑是否有需要调整和修正的地方，以及有些技术上需要投入很多资源但是不划算的功能。</li><li>产品经理应该传递一个信息：产品是大家的，需要大家共同合作，一起努力把产品做好，无论是产品，视觉，研发，还是运营，大家都是为了一个共同的目标而努力。</li><li>不需要懂技术，但是逻辑要严谨</li><li>Bug修好了程序就会马上运营，程序员可以接着下一个代码的编写，但是先生生活中可能不太一样，刚吵完一架，可能就没法友好的合作了。</li><li>如果老板同意说，如果PM加需求，要么就砍掉一个差不多规模的旧的，要么就延长期限，我觉得肯定不会打起来。</li><li>戒掉“应该”，“大概”，“也许”，”我想“，”可能“这种模棱两可的词语。</li><li>to be continue</li></ol>]]></content>
     
@@ -202,10 +234,10 @@
     
     </summary>
     
-      <category term="沟通技巧" scheme="https://stanye.com/blog/categories/%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7/"/>
+      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="产品经理" scheme="https://stanye.com/blog/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+      <category term="PM" scheme="https://stanye.com/blog/tags/PM/"/>
     
   </entry>
   
@@ -455,7 +487,7 @@
     <link href="https://stanye.com/blog/2016/07/15/regex-used.html"/>
     <id>https://stanye.com/blog/2016/07/15/regex-used.html</id>
     <published>2016-07-15T03:41:43.000Z</published>
-    <updated>2018-11-06T02:47:19.060Z</updated>
+    <updated>2019-04-04T10:16:50.743Z</updated>
     
     <content type="html"><![CDATA[<ol><li>匹配&gt;&lt; <code>&gt;[\s]+&lt;</code></li><li>密码校验<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD_PATTERN = <span class="string">"^(?![a-zA-z]+$)(?!\\d+$)(?![!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]+$)[a-zA-Z\\d!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]&#123;6,16&#125;$"</span>;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
@@ -470,7 +502,7 @@
     
     </summary>
     
-      <category term="Tools" scheme="https://stanye.com/blog/categories/Tools/"/>
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
     
     
       <category term="regex" scheme="https://stanye.com/blog/tags/regex/"/>

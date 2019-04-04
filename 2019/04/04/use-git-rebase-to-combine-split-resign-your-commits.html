@@ -36,25 +36,35 @@
     
     
     
-    <title>regex in my program | 夜夜空里 | StanYe&#39;s blog</title>
+    <title>使用git rebase对commits进行（合并/拆分/修改作者信息） | 夜夜空里 | StanYe&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="regex">
-    <meta name="description" content="匹配&amp;gt;&amp;lt; &amp;gt;[\s]+&amp;lt; 密码校验1public static final String PASSWORD_PATTERN = &quot;^(?![a-zA-z]+$)(?!\\d+$)(?![!\&quot;#$%&amp;amp;#$%&amp;amp;amp;&apos;()*+,-./:;&amp;amp;#$%&amp;amp;amp;&apos;()*+,-./:;&amp;amp;lt;=&amp;amp;#$%&amp;amp;amp;&apos;()*+,">
-<meta name="keywords" content="regex">
+    <meta name="keywords" content="git,git rebase">
+    <meta name="description" content="1. 对多个commits合并   首先查看历史信息  1git log --oneline      想合并前两条  123git rebase -i Head~2// 或者git rebase -i 33bda27 // 前一条      将第二条的pick改成squash     保存, 修改提交信息, 再保存，查看git log --oneline, 确认修改完成     使用git pu">
+<meta name="keywords" content="git,git rebase">
 <meta property="og:type" content="article">
-<meta property="og:title" content="regex in my program">
-<meta property="og:url" content="https://stanye.com/blog/2016/07/15/regex-used.html">
+<meta property="og:title" content="使用git rebase对commits进行（合并&#x2F;拆分&#x2F;修改作者信息）">
+<meta property="og:url" content="https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html">
 <meta property="og:site_name" content="夜夜空里">
-<meta property="og:description" content="匹配&amp;gt;&amp;lt; &amp;gt;[\s]+&amp;lt; 密码校验1public static final String PASSWORD_PATTERN = &quot;^(?![a-zA-z]+$)(?!\\d+$)(?![!\&quot;#$%&amp;amp;#$%&amp;amp;amp;&apos;()*+,-./:;&amp;amp;#$%&amp;amp;amp;&apos;()*+,-./:;&amp;amp;lt;=&amp;amp;#$%&amp;amp;amp;&apos;()*+,">
+<meta property="og:description" content="1. 对多个commits合并   首先查看历史信息  1git log --oneline      想合并前两条  123git rebase -i Head~2// 或者git rebase -i 33bda27 // 前一条      将第二条的pick改成squash     保存, 修改提交信息, 再保存，查看git log --oneline, 确认修改完成     使用git pu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-04T10:16:50.743Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsfqgbdqj30sm04amyb.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g1qshl2y4zj30w40cwtb9.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsm45qlmj30oe080gn1.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1qswmccq5j30qq06ygms.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsx3nnh5j30o6086dh3.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt1h5nv2j30xa07cq46.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt3ut291j30vw0awwgz.jpg">
+<meta property="og:updated_time" content="2019-04-04T11:17:19.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="regex in my program">
-<meta name="twitter:description" content="匹配&amp;gt;&amp;lt; &amp;gt;[\s]+&amp;lt; 密码校验1public static final String PASSWORD_PATTERN = &quot;^(?![a-zA-z]+$)(?!\\d+$)(?![!\&quot;#$%&amp;amp;#$%&amp;amp;amp;&apos;()*+,-./:;&amp;amp;#$%&amp;amp;amp;&apos;()*+,-./:;&amp;amp;lt;=&amp;amp;#$%&amp;amp;amp;&apos;()*+,">
+<meta name="twitter:title" content="使用git rebase对commits进行（合并&#x2F;拆分&#x2F;修改作者信息）">
+<meta name="twitter:description" content="1. 对多个commits合并   首先查看历史信息  1git log --oneline      想合并前两条  123git rebase -i Head~2// 或者git rebase -i 33bda27 // 前一条      将第二条的pick改成squash     保存, 修改提交信息, 再保存，查看git log --oneline, 确认修改完成     使用git pu">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsfqgbdqj30sm04amyb.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/blog/atom.xml">
     
@@ -142,7 +152,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">regex in my program</div>
+        <div class="flex-col header-title ellipsis">使用git rebase对commits进行（合并/拆分/修改作者信息）</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -164,15 +174,15 @@
 <header class="content-header page-header">
 
     <div class="container fade-scale">
-        <h1 class="title">regex in my program</h1>
+        <h1 class="title">使用git rebase对commits进行（合并/拆分/修改作者信息）</h1>
         <h5 class="subtitle">
             
-                <time datetime="2016-07-15T03:41:43.000Z" itemprop="datePublished" class="page-time">
-  2016-07-15
+                <time datetime="2019-04-04T09:55:32.000Z" itemprop="datePublished" class="page-time">
+  2019-04-04
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/BackEnd/">BackEnd</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/IT技巧/">IT技巧</a></li></ul>
 
             
         </h5>
@@ -187,10 +197,29 @@
 <div class="container body-wrap">
     <article class="page-article fade" itemprop="blogPage">
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
-            <ol>
-<li>匹配&gt;&lt; <code>&gt;[\s]+&lt;</code></li>
-<li>密码校验<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD_PATTERN = <span class="string">"^(?![a-zA-z]+$)(?!\\d+$)(?![!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]+$)[a-zA-Z\\d!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]&#123;6,16&#125;$"</span>;</span><br></pre></td></tr></table></figure></li>
-</ol>
+            <p><strong>1. 对多个commits合并</strong></p>
+<p>  首先查看历史信息<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline</span><br></pre></td></tr></table></figure></p>
+<p>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsfqgbdqj30sm04amyb.jpg" alt=""></p>
+<p>  想合并前两条<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i Head~2</span><br><span class="line">// 或者</span><br><span class="line">git rebase -i 33bda27 // 前一条</span><br></pre></td></tr></table></figure></p>
+<p>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qshl2y4zj30w40cwtb9.jpg" alt=""></p>
+<p>  将第二条的<code>pick</code>改成<code>squash</code><br>  <img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsm45qlmj30oe080gn1.jpg" alt=""></p>
+<p>  保存, 修改提交信息, 再保存，查看<code>git log --oneline</code>, 确认修改完成<br>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg" alt=""></p>
+<p>  使用<code>git push</code>提交（视情况加<code>-f</code>force）</p>
+<p><strong>2. 对单个commits拆分</strong></p>
+<p>  以合并的结果做拆分演示<br>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg" alt=""></p>
+<p>  想拆分第一条<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i Head~1</span><br><span class="line">// 或者</span><br><span class="line">git rebase -i 33bda27 // 前一条</span><br></pre></td></tr></table></figure></p>
+<p>  <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1qswmccq5j30qq06ygms.jpg" alt=""></p>
+<p>  将第一条的<code>pick</code>改成<code>edit</code>, 后保存并退出<br>  <img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsx3nnh5j30o6086dh3.jpg" alt=""></p>
+<p>  发现此时属于rebase阶段<br>  <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt1h5nv2j30xa07cq46.jpg" alt=""></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^ // 拉取之后的提交到版本库的文件到暂存区, 改操作不影响工作区</span><br></pre></td></tr></table></figure>
+<p>  <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt3ut291j30vw0awwgz.jpg" alt=""></p>
+<p>  使用<code>git add</code>和<code>git commit</code>分文件进行提交, 生成不同的commits</p>
+<p>  提交完成后使用<code>git rebase --continue</code>, 完成rebase.</p>
+<p>  使用<code>git push</code>提交（视情况加<code>-f</code>force）</p>
+<p><strong>3. 更改作者信息</strong></p>
+<p>上述rebase步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend --author &quot;aaa &lt;bbb@cc.com&gt;&quot; // 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p>
+<p><strong>4. one more thing</strong></p>
+<p><code>git commit</code>加<code>-s</code>参数可以加上Signed-off-by信息</p>
 
         </div>
 
@@ -210,7 +239,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2016/07/15/regex-used.html&title=《regex in my program》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html&title=《使用git rebase对commits进行（合并/拆分/修改作者信息）》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -220,22 +249,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2016/07/15/regex-used.html&title=《regex in my program》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html&title=《使用git rebase对commits进行（合并/拆分/修改作者信息）》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2016/07/15/regex-used.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《regex in my program》 — 夜夜空里&url=https://stanye.com/blog/2016/07/15/regex-used.html&via=https://stanye.com/blog" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《使用git rebase对commits进行（合并/拆分/修改作者信息）》 — 夜夜空里&url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html&via=https://stanye.com/blog" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2016/07/15/regex-used.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -375,7 +404,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2016/07/15/regex-used.html&title=《regex in my program》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html&title=《使用git rebase对commits进行（合并/拆分/修改作者信息）》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -385,22 +414,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2016/07/15/regex-used.html&title=《regex in my program》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html&title=《使用git rebase对commits进行（合并/拆分/修改作者信息）》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2016/07/15/regex-used.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《regex in my program》 — 夜夜空里&url=https://stanye.com/blog/2016/07/15/regex-used.html&via=https://stanye.com/blog" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《使用git rebase对commits进行（合并/拆分/修改作者信息）》 — 夜夜空里&url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html&via=https://stanye.com/blog" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2016/07/15/regex-used.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -411,7 +440,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aS27DMAwFwNz/0um2RVvlkVQCWB6visC1NFoQ/OjxiJ/nr+f77+v3ky9X/6v5YGBgXJbxXD5rxvwgkmNa7w0DA+M+jCQU/hcW86C5BqzXfbFnDAwMjCD4VmHr3zEwMDD2MvIStxqsMTAwMKpFbF5wVhtwH63FMTAwLsjIm2Wf//st8w0MDIxLMZ7FZz5O6H3txXcwMDCOZuQBLh9qTkrf6hUNDAyM+zDyJatNtGpZm4wKyjksBgbGoYx5O2wSpkdXOjAwMI5jTFr51QSx13RLVsfAwLgPY52Q7Ur18mK1MOzEwMC4GSNJ0d5xkSJPEAsjTAwMjIMYeTKXLNyrpHuNth8BFwMD4waMXcvnW9zV5sPAwDibUb1sMR9bVpPChISBgXE2I3m1OraclL69oIyBgXE2o9oy6405kzI1HzxEd0YwMDCOZiRhd1eB2it6o4CLgYFxEKNXglbHjb1LGIWjwcDAOJqRh9deSlctbkdjBgwMjBswkoyrXFK2DitJRv/YFQYGxm0YvVHlrlZaNd0snzoGBsbFGZNw2WvtJcPLZCcYGBhnM3rJWRKsq+ld0vh7kRRiYGAcyuiFyOoIs7p8svVmuMfAwLgso9fkSrY4Hx6Ur1xgYGAczagOBiYXvOZF7Lb5BgYGxqGM5P1q038DFQMDA6NFSq5o7EpeMTAw7sBIithJoz/ZenSpYt5uw8DAuCCjVzpWL3L13qk2+DAwMI5jfAHFdWC+dy4NtAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADIUlEQVR42u3aQW7jQAwEwPz/095rgMRKk5wFLKrmFNiyNSUfOiTn6yter2/r5+vvrq9eef2p6h4OLGxsbOybsF+X69011xvtvX4NSPaQWLCxsbG3svNoqZLysMnD7N1980DFxsbGfjK7R82D7br8SK7HxsbGxj7LTuLqupCY7BMbGxv7Oez8lnkTvxo8SWspKZMO99KwsbGxP55dDZtP/vu/zLexsbGxP5j9Kq5q4z4Pp+oQd6TAxsbGXsTOAyDfdD7QrZY3veHx2/1jY2NjL2JXN5e/0mtR5feqjh/KhQo2Njb2rdjVr5sUCXkJkZcr1btjY2NjP4Gdb3QSORPw5KFgY2Nj72BPQmteSFSP5iQ/T7RPbGxs7EXsZENn20blcWwQYM2jPNjY2Ngr2NWhabWVk3xDL7omrSVsbGzsrez5EZmcmsdbHqJ5mwkbGxt7Hztv3EweSh6BvdjLwwwbGxv7aexqyyYfA/TaVXlw/jEVwcbGxl7EzqOi2kiajw3ydwvxiY2Njb2aPYmZ3nGfXuBVS6M/piLY2NjYt2X3AqAK6DWequVQ+b7Y2NjY69jzA5Hz4uFUaRQtbGxs7BXsU82a+aC3WhT1CqFfBr3Y2NjYN2cn260el+yFUF7wTIbHhV8JGxsb+ybsvCmTN4Z6cZJ/26u4ohTFxsbGXsGubvHUSKDXisoLpEL5gY2NjX1Ddh5Xk9CqDonzcmU05MDGxsZexM7bMb3R73wAMGk2RWUJNjY29iJ29cRLb3ybA3rHfQpBi42Njb2UXW3uTI7sJMOJfJU/hY2Njb2CPfmnv9cqSq7vlTeFyMTGxsZ+DHvSrM8DaVJg9GIYGxsbex87H8fmjfi82MjbQMdKFGxsbOwV7Fdx9cJj8pv0jmxiY2NjP4dd3VC19ZMPd/NypXdkZzQzwcbGxv54dhJapwa0p+Kw1wLDxsbG3s3OW/b5jfOHOPmGZmGDjY2Njd1qGyXb6h3QKe8WGxsbG7tVtOSHI3tHhZJ2GDY2NvZW9tmSoBo8+bC2+u6BXho2Njb2x7N7ZUPe1q/yegd08oeLjY2NvYj9D7YF9xNMm7gRAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

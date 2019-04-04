@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://stanye.com/blog/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</loc>
+    <lastmod>2019-04-04T11:17:19.854Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</loc>
+    <lastmod>2019-04-04T10:18:15.864Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2016/07/15/regex-used.html</loc>
+    <lastmod>2019-04-04T10:16:50.743Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/05/10/Technical-product-manager.html</loc>
+    <lastmod>2019-04-04T10:15:52.946Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager-pdf.html</loc>
+    <lastmod>2019-04-04T10:15:28.275Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager.html</loc>
+    <lastmod>2019-04-04T10:14:40.620Z</lastmod>
+  </url>  <url>
     <loc>https://stanye.com/blog/blog/2017/04/29/php-cite.html</loc>
     <lastmod>2018-11-09T05:51:26.911Z</lastmod>
   </url>  <url>
@@ -28,26 +46,11 @@
     <loc>https://stanye.com/blog/blog/2017/03/28/php-file_put_contents.html</loc>
     <lastmod>2018-11-06T03:14:35.039Z</lastmod>
   </url>  <url>
-    <loc>https://stanye.com/blog/blog/2016/07/15/regex-used.html</loc>
-    <lastmod>2018-11-06T02:47:19.060Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</loc>
-    <lastmod>2018-10-29T02:27:42.436Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/05/10/Technical-product-manager.html</loc>
-    <lastmod>2018-10-23T06:03:36.922Z</lastmod>
-  </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/06/06/leetcode-350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II.html</loc>
     <lastmod>2018-10-12T02:37:07.044Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html</loc>
     <lastmod>2018-06-13T03:57:58.000Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager-pdf.html</loc>
-    <lastmod>2018-06-06T05:33:38.000Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager.html</loc>
-    <lastmod>2018-06-06T05:33:15.000Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/05/30/skeleton-screen.html</loc>
     <lastmod>2018-06-06T05:32:43.000Z</lastmod>
