@@ -7,5 +7,5 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Sitemap: https://blog.eternalyean.com/sitemap.xml
-Sitemap: https://blog.eternalyean.com/baidusitemap.xml
+Sitemap: https://stanye.com/sitemap.xml
+Sitemap: https://stanye.com/baidusitemap.xml
