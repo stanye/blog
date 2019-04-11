@@ -209,10 +209,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        php的引用–在变量或者函数、对象等前面加上&amp;符号,允许两个变量来指向同一个内容
-123456$a = "111";$b = &amp;$a;echo $a; // 这里输出:111echo $b; // 这里输出:111$b="222";echo $a; // 这里$a的值变为222 所以输出222 echo $b;//这里输出222
-￼
-1234567function demo(...
+        <p>php的引用–在变量或者函数、对象等前面加上&amp;符号,允许两个变量来指向同一个内容<br>
     
 
         <a href="/blog/2017/04/29/php-cite.html" class="post-more waves-effect waves-button">
@@ -259,9 +256,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名123select aname, bname  from a inner join b  using(category)
-在使用using是需要注意以下几个问题   1、在select子句中只能指定该列名，不能使用表名或别名   2、在using子句中也只能单独使用列名对于多与两个表的连接
-12345select...
+        <p>USING进行简化：<br>   1、查询必须是等连接的<br>   2、等连接中的列必须是同名<br>
     
 
         <a href="/blog/2017/04/29/sql-using.html" class="post-more waves-effect waves-button">
@@ -308,8 +303,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        mysql赋权：
-1grant drop on sch_m.common_member to dev@'localhost'
+        <p>mysql赋权：<br>
     
 
         <a href="/blog/2017/04/04/mysql-grant.html" class="post-more waves-effect waves-button">
@@ -356,8 +350,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        css两行截取解决办法：
-12345overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
+        <p>css两行截取解决办法：<br>
     
 
         <a href="/blog/2017/04/03/css-cut-2-line.html" class="post-more waves-effect waves-button">
@@ -404,8 +397,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        table换行解决办法：
-1234567891011table &#123;    width:100px;    table-layout:fixed;&#125;td &#123;    width:100%;    word-break:keep-all;    white-space:nowrap;    overflow:hidden;    text-overflow:ellip...
+        <p>table换行解决办法：<br>
     
 
         <a href="/blog/2017/04/03/css-fix-table-wrap.html" class="post-more waves-effect waves-button">
@@ -452,8 +444,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        file_put_contents()功能函数（集成了fopen、fwrite、fclose) 将一个字符串写入文件.1int file_put_contents ( string filename, string data [, int flags [, resource context]] )
-和依次调用 fopen()，fwrite() 以及 fclose() 功能一样。参数 data...
+        <p>file_put_contents()功能函数（集成了fopen、fwrite、fclose) 将一个字符串写入文件.<br>
     
 
         <a href="/blog/2017/03/28/php-file_put_contents.html" class="post-more waves-effect waves-button">
@@ -500,9 +491,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        left-join/right join/inner join
-left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录.right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录. inner join(等值联接) 只返回两个表中联结字段相等的行.
-left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是...
+        <h2 id="left-join-right-join-inner-join"><a href="#left-join-right-join-inner-join" class="headerlink" title="left-join/right join/inner join"></a>left-join/right join/inner join</h2>
     
 
         <a href="/blog/2017/03/27/sql-join.html" class="post-more waves-effect waves-button">
@@ -549,9 +538,7 @@ left join是以A表的记录为基础的,A可以看成左表,B可以看成右表
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
-匹配&gt;&lt; &gt;[\s]+&lt;
-密码校验1public static final String PASSWORD_PATTERN = "^(?![a-zA-z]+$)(?!\\d+$)(?![!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()...
+        <p>用到的一些正则记录：<br>
     
 
         <a href="/blog/2016/07/15/regex-used.html" class="post-more waves-effect waves-button">

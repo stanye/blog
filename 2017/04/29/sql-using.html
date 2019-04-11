@@ -43,18 +43,18 @@
     
     
     <meta name="keywords" content="mysql,using">
-    <meta name="description" content="USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名123select aname, bname  from a inner join b  using(category) 在使用using是需要注意以下几个问题   1、在select子句中只能指定该列名，不能使用表名或别名   2、在using子句中也只能单独使用列名对于多与两个表的连接 12345select c.">
+    <meta name="description" content="USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名">
 <meta name="keywords" content="mysql,using">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用using关键字对连接进行简化">
 <meta property="og:url" content="https://stanye.com/blog/2017/04/29/sql-using.html">
 <meta property="og:site_name" content="夜夜空里">
-<meta property="og:description" content="USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名123select aname, bname  from a inner join b  using(category) 在使用using是需要注意以下几个问题   1、在select子句中只能指定该列名，不能使用表名或别名   2、在using子句中也只能单独使用列名对于多与两个表的连接 12345select c.">
+<meta property="og:description" content="USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T03:44:36.252Z">
+<meta property="og:updated_time" content="2019-04-11T03:10:47.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用using关键字对连接进行简化">
-<meta name="twitter:description" content="USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名123select aname, bname  from a inner join b  using(category) 在使用using是需要注意以下几个问题   1、在select子句中只能指定该列名，不能使用表名或别名   2、在using子句中也只能单独使用列名对于多与两个表的连接 12345select c.">
+<meta name="twitter:description" content="USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名">
     
         <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/blog/atom.xml">
     
@@ -187,9 +187,8 @@
 <div class="container body-wrap">
     <article class="page-article fade" itemprop="blogPage">
         <div class="post-content page-content" id="page-content" itemprop="pageContent">
-            <p>USING进行简化：<br>   1、查询必须是等连接的<br>   2、等连接中的列必须是同名<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> aname, bname  </span><br><span class="line"><span class="keyword">from</span> a <span class="keyword">inner</span> <span class="keyword">join</span> b  </span><br><span class="line"><span class="keyword">using</span>(<span class="keyword">category</span>)</span><br></pre></td></tr></table></figure></p>
-<p>在使用using是需要注意以下几个问题<br>   1、在select子句中只能指定该列名，不能使用表名或别名<br>   2、在using子句中也只能单独使用列名<br>对于多与两个表的连接</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> c.c_name, p.p_name , f.f_name</span><br><span class="line"><span class="keyword">from</span> ctable c, ptable p, ftable f</span><br><span class="line"><span class="keyword">where</span> c.user_id = f.user_id</span><br><span class="line"><span class="keyword">and</span> p.p_id = f.p_id  </span><br><span class="line"><span class="keyword">and</span> p.type_id = f.type_id;</span><br></pre></td></tr></table></figure>
+            <p>USING进行简化：<br>   1、查询必须是等连接的<br>   2、等连接中的列必须是同名<br><a id="more"></a><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> aname, bname  </span><br><span class="line"><span class="keyword">from</span> a <span class="keyword">inner</span> <span class="keyword">join</span> b  </span><br><span class="line"><span class="keyword">using</span>(<span class="keyword">category</span>)</span><br></pre></td></tr></table></figure></p>
+<p>在使用using是需要注意以下几个问题<br>   1、在select子句中只能指定该列名，不能使用表名或别名<br>   2、在using子句中也只能单独使用列名<br>对于多与两个表的连接<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> c.c_name, p.p_name , f.f_name</span><br><span class="line"><span class="keyword">from</span> ctable c, ptable p, ftable f</span><br><span class="line"><span class="keyword">where</span> c.user_id = f.user_id</span><br><span class="line"><span class="keyword">and</span> p.p_id = f.p_id  </span><br><span class="line"><span class="keyword">and</span> p.type_id = f.type_id;</span><br></pre></td></tr></table></figure></p>
 <p>使用using对上面的sql语句进行重写</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> c.c_name, p.p_name, f.type  </span><br><span class="line"><span class="keyword">from</span> ctable c <span class="keyword">inner</span> <span class="keyword">join</span> ftable f  </span><br><span class="line"><span class="keyword">using</span>(user_id)  </span><br><span class="line"><span class="keyword">inner</span> <span class="keyword">join</span> ptable p  </span><br><span class="line"><span class="keyword">using</span>(p_id)  </span><br><span class="line"><span class="keyword">inner</span> <span class="keyword">join</span> ftable f  </span><br><span class="line"><span class="keyword">using</span>(type_id);</span><br></pre></td></tr></table></figure>
         </div>
@@ -220,7 +219,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2017/04/29/sql-using.html&title=《使用using关键字对连接进行简化》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2017/04/29/sql-using.html&title=《使用using关键字对连接进行简化》 — 夜夜空里&source=USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -383,7 +382,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2017/04/29/sql-using.html&title=《使用using关键字对连接进行简化》 — 夜夜空里&source=夜夜空里 - StanYe's blog  - Better to run than curse the road." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2017/04/29/sql-using.html&title=《使用using关键字对连接进行简化》 — 夜夜空里&source=USING进行简化：   1、查询必须是等连接的   2、等连接中的列必须是同名" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
