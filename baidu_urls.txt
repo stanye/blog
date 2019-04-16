@@ -4,8 +4,8 @@ https://stanye.com/blog/2018/06/11/E3游戏WishList.html
 https://stanye.com/blog/2018/06/06/leetcode-350-两个数组的交集-II.html
 https://stanye.com/blog/2018/05/30/skeleton-screen.html
 https://stanye.com/blog/2018/05/10/Technical-product-manager.html
-https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html
 https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html
+https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html
 https://stanye.com/blog/2017/05/16/vue-update-array.html
 https://stanye.com/blog/2017/05/03/mysql-duplicate-checking.html
 https://stanye.com/blog/2017/04/29/php-cite.html

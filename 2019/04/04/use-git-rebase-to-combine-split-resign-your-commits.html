@@ -60,7 +60,7 @@
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsx3nnh5j30o6086dh3.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt1h5nv2j30xa07cq46.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt3ut291j30vw0awwgz.jpg">
-<meta property="og:updated_time" content="2019-04-11T02:53:20.626Z">
+<meta property="og:updated_time" content="2019-04-16T09:06:40.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用git rebase对commits进行（合并&#x2F;拆分&#x2F;修改作者信息）">
 <meta name="twitter:description" content="这几天做开源项目，项目负责人对commits要求很高，故总结了合并/拆分commits以及修改提交信息等相关.">
@@ -219,7 +219,10 @@
 <p>  使用<code>git push</code>提交（视情况加<code>-f</code>force）</p>
 <p><strong>3. 更改作者信息</strong></p>
 <p>上述rebase步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend --author &quot;aaa &lt;bbb@cc.com&gt;&quot; // 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p>
-<p><strong>4. one more thing</strong></p>
+<p><strong>4. 如何rebase第一条（root）</strong></p>
+<p>上述rebase起始步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i --root// 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p>
+<p>PS：如果想修改root的提交信息呢<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;sha1-of-root&gt; // checkout到第一条</span><br><span class="line"></span><br><span class="line">git commit --amend --author &quot;aaa &lt;bbb@cc.com&gt;&quot; // 要修改的作者名字和邮箱</span><br><span class="line">// OR</span><br><span class="line">git commit --amend --reset-author</span><br><span class="line"></span><br><span class="line">git rebase --onto HEAD HEAD master</span><br></pre></td></tr></table></figure></p>
+<p><strong>5. one more thing</strong></p>
 <p><code>git commit</code>加<code>-s</code>参数可以加上Signed-off-by信息</p>
 
         </div>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://stanye.com/blog/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</loc>
+    <lastmod>2019-04-16T09:06:40.108Z</lastmod>
+  </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html</loc>
     <lastmod>2019-04-12T06:21:21.695Z</lastmod>
   </url>  <url>
@@ -51,8 +54,5 @@
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager-pdf.html</loc>
     <lastmod>2019-04-11T03:04:44.121Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</loc>
-    <lastmod>2019-04-11T02:53:20.626Z</lastmod>
   </url>
 </urlset>
