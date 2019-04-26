@@ -60,7 +60,7 @@
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsx3nnh5j30o6086dh3.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt1h5nv2j30xa07cq46.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g1qt3ut291j30vw0awwgz.jpg">
-<meta property="og:updated_time" content="2019-04-16T09:06:40.108Z">
+<meta property="og:updated_time" content="2019-04-26T08:50:41.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用git rebase对commits进行（合并&#x2F;拆分&#x2F;修改作者信息）">
 <meta name="twitter:description" content="这几天做开源项目，项目负责人对commits要求很高，故总结了合并/拆分commits以及修改提交信息等相关.">
@@ -171,7 +171,7 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
         <h1 class="title">使用git rebase对commits进行（合并/拆分/修改作者信息）</h1>
@@ -195,19 +195,45 @@
 
 
 <div class="container body-wrap">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-对多个commits合并"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 对多个commits合并</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-对单个commits拆分"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 对单个commits拆分</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-更改作者信息"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 更改作者信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-如何rebase第一条（root）"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 如何rebase第一条（root）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-one-more-thing"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. one more thing</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-use-git-rebase-to-combine-split-resign-your-commits"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">使用git rebase对commits进行（合并/拆分/修改作者信息）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-04 17:55:32" datetime="2019-04-04T09:55:32.000Z"  itemprop="datePublished">2019-04-04</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/IT技巧/">IT技巧</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
             <p>这几天做开源项目，项目负责人对commits要求很高，故总结了合并/拆分commits以及修改提交信息等相关.<br><a id="more"></a></p>
-<p><strong>1. 对多个commits合并</strong></p>
-<p>  首先查看历史信息<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline</span><br></pre></td></tr></table></figure></p>
+<h2 id="1-对多个commits合并"><a href="#1-对多个commits合并" class="headerlink" title="1. 对多个commits合并"></a><strong>1. 对多个commits合并</strong></h2><p>  首先查看历史信息<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline</span><br></pre></td></tr></table></figure></p>
 <p>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsfqgbdqj30sm04amyb.jpg" alt=""></p>
 <p>  想合并前两条<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i Head~2</span><br><span class="line">// 或者</span><br><span class="line">git rebase -i 33bda27 // 前一条</span><br></pre></td></tr></table></figure></p>
 <p>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qshl2y4zj30w40cwtb9.jpg" alt=""></p>
 <p>  将第二条的<code>pick</code>改成<code>squash</code><br>  <img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsm45qlmj30oe080gn1.jpg" alt=""></p>
 <p>  保存, 修改提交信息, 再保存，查看<code>git log --oneline</code>, 确认修改完成<br>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg" alt=""></p>
 <p>  使用<code>git push</code>提交（视情况加<code>-f</code>force）</p>
-<p><strong>2. 对单个commits拆分</strong></p>
-<p>  以合并的结果做拆分演示<br>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg" alt=""></p>
+<h2 id="2-对单个commits拆分"><a href="#2-对单个commits拆分" class="headerlink" title="2. 对单个commits拆分"></a><strong>2. 对单个commits拆分</strong></h2><p>  以合并的结果做拆分演示<br>  <img src="https://ws4.sinaimg.cn/large/006tNc79gy1g1qsrwrseij30n0042gme.jpg" alt=""></p>
 <p>  想拆分第一条<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i Head~1</span><br><span class="line">// 或者</span><br><span class="line">git rebase -i 33bda27 // 前一条</span><br></pre></td></tr></table></figure></p>
 <p>  <img src="https://ws1.sinaimg.cn/large/006tNc79gy1g1qswmccq5j30qq06ygms.jpg" alt=""></p>
 <p>  将第一条的<code>pick</code>改成<code>edit</code>, 后保存并退出<br>  <img src="https://ws2.sinaimg.cn/large/006tNc79gy1g1qsx3nnh5j30o6086dh3.jpg" alt=""></p>
@@ -217,24 +243,46 @@
 <p>  使用<code>git add</code>和<code>git commit</code>分文件进行提交, 生成不同的commits</p>
 <p>  提交完成后使用<code>git rebase --continue</code>, 完成rebase.</p>
 <p>  使用<code>git push</code>提交（视情况加<code>-f</code>force）</p>
-<p><strong>3. 更改作者信息</strong></p>
-<p>上述rebase步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend --author &quot;aaa &lt;bbb@cc.com&gt;&quot; // 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p>
-<p><strong>4. 如何rebase第一条（root）</strong></p>
-<p>上述rebase起始步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i --root// 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-更改作者信息"><a href="#3-更改作者信息" class="headerlink" title="3. 更改作者信息"></a><strong>3. 更改作者信息</strong></h2><p>上述rebase步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend --author &quot;aaa &lt;bbb@cc.com&gt;&quot; // 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-如何rebase第一条（root）"><a href="#4-如何rebase第一条（root）" class="headerlink" title="4. 如何rebase第一条（root）"></a><strong>4. 如何rebase第一条（root）</strong></h2><p>上述rebase起始步骤中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i --root// 要修改的作者名字和邮箱</span><br></pre></td></tr></table></figure></p>
 <p>PS：如果想修改root的提交信息呢<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;sha1-of-root&gt; // checkout到第一条</span><br><span class="line"></span><br><span class="line">git commit --amend --author &quot;aaa &lt;bbb@cc.com&gt;&quot; // 要修改的作者名字和邮箱</span><br><span class="line">// OR</span><br><span class="line">git commit --amend --reset-author</span><br><span class="line"></span><br><span class="line">git rebase --onto HEAD HEAD master</span><br></pre></td></tr></table></figure></p>
-<p><strong>5. one more thing</strong></p>
-<p><code>git commit</code>加<code>-s</code>参数可以加上Signed-off-by信息</p>
+<h2 id="5-one-more-thing"><a href="#5-one-more-thing" class="headerlink" title="5. one more thing"></a><strong>5. one more thing</strong></h2><p><code>git commit</code>加<code>-s</code>参数可以加上Signed-off-by信息</p>
 
         </div>
 
+        <blockquote class="post-copyright">
+    
+    <div class="content">
         
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/blog/img/avatar.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>Stan Ye</strong></p>
-                <p><em>StanYe's blog</em></p>
-                <p>Better to run than curse the road</p>
-            </div>
+<span class="post-time">
+    Last updated: <time datetime="2019-04-26T08:50:41.966Z" itemprop="dateUpdated">2019-04-26 16:50:41</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html" target="_blank" rel="external">https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://stanye.com/blog">
+            <img src="/blog/img/avatar.jpg" alt="Stan Ye">
+            Stan Ye
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/git-rebase/">git rebase</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -285,16 +333,32 @@
 
 
         </div>
-        
+    </div>
 
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/blog/2019/04/26/aliyun-centos-fix.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">aliyun-centos-fix</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">升级macOS Mojave后问题汇总及解决办法</h4>
+      </a>
+    </div>
+  
+</nav>
 
 
 
-        
+    
 
 
 
@@ -336,8 +400,8 @@
 
 
 
-    </article>
-    
+</article>
+
 <div id="reward" class="page-modal reward-lay">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
@@ -363,6 +427,7 @@
         
     </div>
 </div>
+
 
 
 </div>

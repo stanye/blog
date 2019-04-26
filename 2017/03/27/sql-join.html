@@ -51,7 +51,7 @@
 <meta property="og:site_name" content="夜夜空里">
 <meta property="og:description" content="left-join/right join/inner join">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T03:09:24.050Z">
+<meta property="og:updated_time" content="2019-04-26T08:53:39.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql note">
 <meta name="twitter:description" content="left-join/right join/inner join">
@@ -161,7 +161,7 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
         <h1 class="title">sql note</h1>
@@ -185,8 +185,36 @@
 
 
 <div class="container body-wrap">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#left-join-right-join-inner-join"><span class="post-toc-number">1.</span> <span class="post-toc-text">left-join/right join/inner join</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#limit"><span class="post-toc-number">2.</span> <span class="post-toc-text">limit</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-sql-join"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">sql note</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-03-27 18:30:22" datetime="2017-03-27T10:30:22.000Z"  itemprop="datePublished">2017-03-27</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/BackEnd/">BackEnd</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="left-join-right-join-inner-join"><a href="#left-join-right-join-inner-join" class="headerlink" title="left-join/right join/inner join"></a>left-join/right join/inner join</h2><a id="more"></a>
 <ol>
 <li>left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录.right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录. inner join(等值联接) 只返回两个表中联结字段相等的行.</li>
@@ -195,27 +223,51 @@
 <li>inner join并不以谁为基础,它只显示符合条件的记录</li>
 </ol>
 <h2 id="limit"><a href="#limit" class="headerlink" title="limit"></a>limit</h2><ol>
-<li>取出第一条记录。</li>
+<li><p>取出第一条记录。</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二条记录</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从第11条到31条（共计20条）</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">10</span>,<span class="number">20</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>第二条记录</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>从第11条到31条（共计20条）</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> tablename <span class="keyword">limit</span> <span class="number">10</span>,<span class="number">20</span></span><br></pre></td></tr></table></figure>
+
         </div>
 
+        <blockquote class="post-copyright">
+    
+    <div class="content">
         
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/blog/img/avatar.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>Stan Ye</strong></p>
-                <p><em>StanYe's blog</em></p>
-                <p>Better to run than curse the road</p>
-            </div>
+<span class="post-time">
+    Last updated: <time datetime="2019-04-26T08:53:39.763Z" itemprop="dateUpdated">2019-04-26 16:53:39</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/blog/2017/03/27/sql-join.html" target="_blank" rel="external">https://stanye.com/blog/2017/03/27/sql-join.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://stanye.com/blog">
+            <img src="/blog/img/avatar.jpg" alt="Stan Ye">
+            Stan Ye
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/sql/">sql</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -266,16 +318,32 @@
 
 
         </div>
-        
+    </div>
 
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/blog/2017/03/28/php-file_put_contents.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">php file_put_contents 函数</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2016/07/15/regex-used.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">regex in my program</h4>
+      </a>
+    </div>
+  
+</nav>
 
 
 
-        
+    
 
 
 
@@ -317,8 +385,8 @@
 
 
 
-    </article>
-    
+</article>
+
 <div id="reward" class="page-modal reward-lay">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
@@ -344,6 +412,7 @@
         
     </div>
 </div>
+
 
 
 </div>

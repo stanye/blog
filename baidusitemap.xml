@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stanye.com/blog/blog/2019/04/26/aliyun-centos-fix.html</loc>
-    <lastmod>2019-04-26T08:39:31.525Z</lastmod>
+    <loc>https://stanye.com/blog/blog/2017/03/27/sql-join.html</loc>
+    <lastmod>2019-04-26T08:53:39.763Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2017/04/29/php-cite.html</loc>
+    <lastmod>2019-04-26T08:52:25.490Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2017/05/03/mysql-duplicate-checking.html</loc>
+    <lastmod>2019-04-26T08:52:07.639Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</loc>
+    <lastmod>2019-04-26T08:51:24.283Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</loc>
-    <lastmod>2019-04-16T09:06:40.108Z</lastmod>
+    <lastmod>2019-04-26T08:50:41.966Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html</loc>
-    <lastmod>2019-04-12T06:21:21.695Z</lastmod>
+    <lastmod>2019-04-26T08:49:27.948Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager-pdf.html</loc>
+    <lastmod>2019-04-26T08:48:07.002Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2019/04/26/aliyun-centos-fix.html</loc>
+    <lastmod>2019-04-26T08:39:31.525Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2017/04/29/sql-using.html</loc>
     <lastmod>2019-04-11T03:10:47.968Z</lastmod>
@@ -19,9 +34,6 @@
     <loc>https://stanye.com/blog/blog/2018/05/10/Technical-product-manager.html</loc>
     <lastmod>2019-04-11T03:10:01.165Z</lastmod>
   </url>  <url>
-    <loc>https://stanye.com/blog/blog/2017/03/27/sql-join.html</loc>
-    <lastmod>2019-04-11T03:09:24.050Z</lastmod>
-  </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/05/30/skeleton-screen.html</loc>
     <lastmod>2019-04-11T03:09:19.369Z</lastmod>
   </url>  <url>
@@ -31,17 +43,8 @@
     <loc>https://stanye.com/blog/blog/2017/03/28/php-file_put_contents.html</loc>
     <lastmod>2019-04-11T03:08:59.547Z</lastmod>
   </url>  <url>
-    <loc>https://stanye.com/blog/blog/2017/04/29/php-cite.html</loc>
-    <lastmod>2019-04-11T03:08:51.273Z</lastmod>
-  </url>  <url>
     <loc>https://stanye.com/blog/blog/2017/04/04/mysql-grant.html</loc>
     <lastmod>2019-04-11T03:08:48.884Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2017/05/03/mysql-duplicate-checking.html</loc>
-    <lastmod>2019-04-11T03:08:41.930Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</loc>
-    <lastmod>2019-04-11T03:08:35.319Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/06/06/leetcode-350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II.html</loc>
     <lastmod>2019-04-11T03:08:29.353Z</lastmod>
@@ -54,8 +57,5 @@
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager.html</loc>
     <lastmod>2019-04-11T03:07:51.939Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager-pdf.html</loc>
-    <lastmod>2019-04-11T03:04:44.121Z</lastmod>
   </url>
 </urlset>
