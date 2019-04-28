@@ -11,6 +11,7 @@ https://stanye.com/blog/2017/05/16/vue-update-array.html
 https://stanye.com/blog/2017/05/03/mysql-duplicate-checking.html
 https://stanye.com/blog/2017/04/29/php-cite.html
 https://stanye.com/blog/2017/04/29/sql-using.html
+https://stanye.com/blog/2017/04/28/mysql-simple-usage.html
 https://stanye.com/blog/2017/04/04/mysql-grant.html
 https://stanye.com/blog/2017/04/03/css-cut-2-line.html
 https://stanye.com/blog/2017/04/03/css-fix-table-wrap.html

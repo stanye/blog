@@ -322,6 +322,31 @@
   </entry>
   
   <entry>
+    <title>mysql-simple-usage</title>
+    <link href="https://stanye.com/blog/2017/04/28/mysql-simple-usage.html"/>
+    <id>https://stanye.com/blog/2017/04/28/mysql-simple-usage.html</id>
+    <published>2017-04-28T06:16:57.000Z</published>
+    <updated>2019-04-28T06:58:53.622Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="连接mysql"><a href="#连接mysql" class="headerlink" title="连接mysql"></a>连接mysql</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h&#123;server host address&#125; -u&#123;username&#125; －p&#123;password&#125;</span><br></pre></td></tr></table></figure><h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u&#123;username&#125; -p&#123;oldpassword&#125; password&#123;newpassword&#125;</span><br></pre></td></tr></table></figure><h2 id="增加新用户"><a href="#增加新用户" class="headerlink" title="增加新用户"></a>增加新用户</h2><p>  已经进入mysql<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant select on &#123;dbname&#125;.* to &#123;username&#125;@&#123;host&#125; identified by &quot;&#123;password&#125;&quot;</span><br></pre></td></tr></table></figure></p><p>  但是为了防止host远程可以连接，一般只开放host配置到localhost，即先登录到服务器，再连接本机mysql</p><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// 显示数据库</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">// 显示表</span><br><span class="line">use &#123;某个database&#125;;</span><br><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">// 显示某个表结构</span><br><span class="line">desc &#123;表名&#125;;</span><br><span class="line"></span><br><span class="line">// 建库</span><br><span class="line">create database &#123;dbname&#125;;</span><br><span class="line"></span><br><span class="line">// 建表</span><br><span class="line">create table &#123;tablename&#125; (&#123;`id`....,`name`...&#125;);</span><br><span class="line"></span><br><span class="line">// 删库</span><br><span class="line">drop database &#123;dbname&#125;;</span><br><span class="line"></span><br><span class="line">// 删表</span><br><span class="line">drop table &#123;tablename&#125;;</span><br><span class="line"></span><br><span class="line">// 增删改查等不做赘述</span><br><span class="line"></span><br><span class="line">// 增加字段</span><br><span class="line">alter table dbname add column &#123;字段名&#125;</span><br><span class="line"></span><br><span class="line">// 修改字段</span><br><span class="line">alter table dbname change &#123;字段名&#125; &#123;新字段名&#125;</span><br><span class="line"></span><br><span class="line">// 删除字段</span><br><span class="line">alter table dbname drop column &#123;字段名&#125;</span><br></pre></td></tr></table></figure><h2 id="导出数据"><a href="#导出数据" class="headerlink" title="导出数据"></a>导出数据</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump &#123;dbname&#125; &gt; jiaoben.mysql</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;连接mysql&quot;&gt;&lt;a href=&quot;#连接mysql&quot; class=&quot;headerlink&quot; title=&quot;连接mysql&quot;&gt;&lt;/a&gt;连接mysql&lt;/h2&gt;  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td clas
+      
+    
+    </summary>
+    
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+    
+    
+      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>mysql给表赋权</title>
     <link href="https://stanye.com/blog/2017/04/04/mysql-grant.html"/>
     <id>https://stanye.com/blog/2017/04/04/mysql-grant.html</id>
