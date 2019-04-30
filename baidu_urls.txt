@@ -8,6 +8,7 @@ https://stanye.com/blog/2018/05/10/Technical-product-manager.html
 https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html
 https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html
 https://stanye.com/blog/2018/04/30/high-concurrency-experience.html
+https://stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html
 https://stanye.com/blog/2017/05/16/vue-update-array.html
 https://stanye.com/blog/2017/05/03/mysql-duplicate-checking.html
 https://stanye.com/blog/2017/04/29/php-cite.html
@@ -18,4 +19,5 @@ https://stanye.com/blog/2017/04/03/css-cut-2-line.html
 https://stanye.com/blog/2017/04/03/css-fix-table-wrap.html
 https://stanye.com/blog/2017/03/28/php-file_put_contents.html
 https://stanye.com/blog/2017/03/27/sql-join.html
+https://stanye.com/blog/2016/09/30/jquery-scrollTop.html
 https://stanye.com/blog/2016/07/15/regex-used.html

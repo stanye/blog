@@ -234,9 +234,9 @@
     <link href="https://stanye.com/blog/2018/04/30/high-concurrency-experience.html"/>
     <id>https://stanye.com/blog/2018/04/30/high-concurrency-experience.html</id>
     <published>2018-04-30T06:41:42.000Z</published>
-    <updated>2019-04-30T06:58:27.955Z</updated>
+    <updated>2019-04-30T07:09:01.648Z</updated>
     
-    <content type="html"><![CDATA[<p>用户数增长，公司项目遇到并发的难题。网上学习几点如下：<br><a id="more"></a></p><h2 id="处理高并发的业务逻辑"><a href="#处理高并发的业务逻辑" class="headerlink" title="处理高并发的业务逻辑"></a>处理高并发的业务逻辑</h2><ul><li>前端: 异步请求 + 资源静态化 + cdn</li><li>后端: 请求队列 + 轮询分发 + 负载均衡 + 共享缓存</li><li>数据层: redis + 数据分表 + 写队列</li><li>存储: raid阵列 + 热备</li><li>网络: dns轮询 + DDOS防护</li></ul><h2 id="如何学习高并发"><a href="#如何学习高并发" class="headerlink" title="如何学习高并发"></a>如何学习高并发</h2><p>redis, nginx, keeplive, DRBD, heartbeat这些工具在虚拟机上面跑起来.<br>因为有些工具运行的配置要求太高, 必须多台服务器配合才能完成. 总监那边选型TiDB，已经和老板申报了机器.</p><h2 id="模拟高并发"><a href="#模拟高并发" class="headerlink" title="模拟高并发"></a>模拟高并发</h2><p><a href="http://tengine.taobao.org/document_cn/benchmark_cn.html" target="_blank" rel="noopener">tengine</a></p><p>公司内则用php写了一些针对要测试的功能点的脚本</p>]]></content>
+    <content type="html"><![CDATA[<p>用户数增长，公司项目遇到并发的难题。网上学习几点如下：<br><a id="more"></a></p><h2 id="处理高并发的业务逻辑"><a href="#处理高并发的业务逻辑" class="headerlink" title="处理高并发的业务逻辑"></a>处理高并发的业务逻辑</h2><ul><li>前端: 异步请求 + 资源静态化 + cdn</li><li>后端: 请求队列 + 轮询分发 + 负载均衡 + 共享缓存</li><li>数据层: redis + 数据分表 + 写队列</li><li>存储: raid阵列 + 热备</li><li>网络: dns轮询 + DDOS防护</li></ul><p>简而言之就是分区、分表、分库，后端算法优化，公共数据缓存，服务器上负载均衡，前端减少连接数、瘦身</p><h2 id="如何学习高并发"><a href="#如何学习高并发" class="headerlink" title="如何学习高并发"></a>如何学习高并发</h2><p>redis, nginx, keeplive, DRBD, heartbeat这些工具在虚拟机上面跑起来.<br>因为有些工具运行的配置要求太高, 必须多台服务器配合才能完成. 总监那边选型TiDB，已经和老板申报了机器.</p><h2 id="模拟高并发"><a href="#模拟高并发" class="headerlink" title="模拟高并发"></a>模拟高并发</h2><p><a href="http://tengine.taobao.org/document_cn/benchmark_cn.html" target="_blank" rel="noopener">tengine</a></p><p>公司内则用php写了一些针对要测试的功能点的脚本</p><h2 id="如何向别人吹我们的系统"><a href="#如何向别人吹我们的系统" class="headerlink" title="如何向别人吹我们的系统"></a>如何向别人吹我们的系统</h2><ol><li>采用了复杂的分层方案，以保证良好的性能和水平扩展性。要点如下:</li></ol><ul><li>动静分离: 通过CDN系统分发静态资源: js, css, 图片, 音频, 视频等资源</li><li>应用集群: 通过负载均衡技术，实现的应用服务器集群，具有很高的并发处理能力和扩展性。可以根据实际需要迅速扩充服务器，部署应用之后即可直接上线提供服务。</li><li>缓存集群: 通过一致性Hash算法实现实现缓存分片，保证缓存系统的响应速度和可扩展性。通过主从复制，保证缓存系统的可靠性。</li><li>读写分离: 读写分离，保证两者都具有具有良好的性能。采用写直达技术，保证缓存和数据库数据的一致性。</li><li>数据库集群: 采用分布式数据库集群技术（垂直和水平切分技术，复制技术），保证数据库系统的性能、稳定性和可扩展性。</li><li>消息队列和辅助任务集群: 长时间运行的任务，先入队列，再由系统调度到后台任务集群中运行，可保证前端页面的响应性能，并为大型的分析作业提供运行环境，并具有很高的扩展能力。</li></ul><ol start="2"><li>充分测试:</li></ol><ul><li>持续集成: 持续的自动化测试。</li><li>压力测试: 系统功能模块在上线之前，会经过充分的性能和压力测试，只有在功能、性能和吞吐量达到预期设计指标后，才会上线运行。</li></ul><ol start="3"><li>部署和监控方案:</li></ol><ul><li>红蓝部署: 保证系统升级和发布的稳定性，出现问题时，可迅速回退。</li><li>容灾机制: 自动备份机制，降低灾难性事件（如自然灾害等）对系统的影响。</li><li>监控方案: 完善的自动监控和报警方案，可以提前发现和报告异常情况，并提醒运维团队及时处理相关问题。</li></ul>]]></content>
     
     <summary type="html">
     
@@ -250,6 +250,31 @@
       <category term="redis" scheme="https://stanye.com/blog/tags/redis/"/>
     
       <category term="nginx" scheme="https://stanye.com/blog/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rm-input-type-number-arrows</title>
+    <link href="https://stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html"/>
+    <id>https://stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html</id>
+    <published>2017-06-05T07:18:18.000Z</published>
+    <updated>2019-04-30T07:21:00.837Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// chrome</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-webkit-outer-spin-button</span>,</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::-webkit-inner-spin-button</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-appearance</span>: none <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// firefox</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type="number"]</span> &#123;</span><br><span class="line">  <span class="attribute">-moz-appearance</span>:textfield;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="不用type-number"><a href="#不用type-number" class="headerlink" title="不用type=number"></a>不用type=number</h2><p>将<code>type=&quot;number&quot;</code>改为<code>type=&quot;tel&quot;</code>, 同样是数字键盘，但是没有箭头。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;css&quot;&gt;&lt;a href=&quot;#css&quot; class=&quot;headerlink&quot; title=&quot;css&quot;&gt;&lt;/a&gt;css&lt;/h2&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
+      
+    
+    </summary>
+    
+      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+    
+    
+      <category term="css" scheme="https://stanye.com/blog/tags/css/"/>
     
   </entry>
   
@@ -485,13 +510,40 @@
   </entry>
   
   <entry>
+    <title>jQuery判断页面滚动到底/到顶</title>
+    <link href="https://stanye.com/blog/2016/09/30/jquery-scrollTop.html"/>
+    <id>https://stanye.com/blog/2016/09/30/jquery-scrollTop.html</id>
+    <published>2016-09-30T07:12:19.000Z</published>
+    <updated>2019-04-30T07:17:21.179Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 垂直滚动条</span></span><br><span class="line">$(<span class="built_in">document</span>).scrollTop()</span><br><span class="line"><span class="comment">// 水平滚动条</span></span><br><span class="line">$(<span class="built_in">document</span>).scrollLeft()</span><br><span class="line"><span class="comment">// 页面高度</span></span><br><span class="line">$(<span class="built_in">document</span>).height()</span><br><span class="line"><span class="comment">// 浏览器窗口高度</span></span><br><span class="line">$(<span class="built_in">window</span>).height()</span><br></pre></td></tr></table></figure><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 到顶</span></span><br><span class="line">$(<span class="built_in">document</span>).scrollTop() == <span class="number">0</span></span><br><span class="line"><span class="comment">// 到底</span></span><br><span class="line">$(<span class="built_in">document</span>).scrollTop() &gt;= $(<span class="built_in">document</span>).height() - $(<span class="built_in">window</span>).height()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+    
+    
+      <category term="jquery" scheme="https://stanye.com/blog/tags/jquery/"/>
+    
+      <category term="javascript" scheme="https://stanye.com/blog/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>regex in my program</title>
     <link href="https://stanye.com/blog/2016/07/15/regex-used.html"/>
     <id>https://stanye.com/blog/2016/07/15/regex-used.html</id>
     <published>2016-07-15T03:41:43.000Z</published>
-    <updated>2019-04-11T03:09:14.027Z</updated>
+    <updated>2019-04-30T07:34:26.683Z</updated>
     
-    <content type="html"><![CDATA[<p>用到的一些正则记录：<br><a id="more"></a></p><ol><li>匹配&gt;&lt; <code>&gt;[\s]+&lt;</code></li><li>密码校验<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD_PATTERN = <span class="string">"^(?![a-zA-z]+$)(?!\\d+$)(?![!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]+$)[a-zA-Z\\d!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]&#123;6,16&#125;$"</span>;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>用到的一些正则记录：<br><a id="more"></a></p><ol><li>匹配&gt;&lt; <code>&gt;[\s]+&lt;</code></li><li><p>匹配反斜杠(匹配一个反斜杠要用四个反斜杠)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\\\</span><br></pre></td></tr></table></figure><ol><li>字符串里面表示斜杠就需要两个斜杠<code>\\</code></li><li>正则表达式里的斜杠需要转意，是用<code>\\</code>标示。</li><li>第一个斜杠是转义符，第二个斜杠是斜杠本身，第三个斜杠是转义符，第四个斜杠是斜杠本身</li></ol></li><li><p>密码校验</p></li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD_PATTERN = <span class="string">"^(?![a-zA-z]+$)(?!\\d+$)(?![!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]+$)[a-zA-Z\\d!\"#$%&amp;#$%&amp;amp;'()*+,-./:;&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;#$%&amp;amp;'()*+,-./:;&amp;lt;=&amp;gt;?@\\[\\]^_`&#123;|&#125;~]&#123;6,16&#125;$"</span>;</span><br></pre></td></tr></table></figure><ol start="4"><li><p>input标签验证</p><p> <code>`</code>html<br> // 只能输入英文<br> <input type="text" onkeyup="value=value.replace(/[^a-zA-Z]/g,'')"><br> // 无法粘贴<br> <input type="text" onkeydown="fncKeyStop(event)" onpaste="return false"><br> // 屏蔽右键<br> <input type="text" oncontextmenu="return false"><br> // 只能输入数字<br> <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')"><br> // 只能输入数字，小数点：<br> <input type="text" onkeyup="value=value.replace(/[^\d\.]/g,'')"> /&gt;<br> // 只能输入数字，小数点，下划线：<br> <input type="text" onkeyup="value=value.replace(/[^\d\._]/g,'')"><br> // 只能输入汉字：<br> &lt;input</p><pre><code>type=&quot;text&quot;onkeyup=&quot;value=value.replace(/[^\u4E00-\u9FA5]/g,&apos;&apos;)&quot; onbeforepaste=&quot;clipboardData.setData(&apos;text&apos;,clipboardData.getData(&apos;text&apos;).replace(/[^\u4E00-\u9FA5]/g,&apos;&apos;))&quot;&gt;</code></pre><p> // 禁止输入法输入：</p> <input type="text" style="ime-mode: disabled"></li></ol>]]></content>
     
     <summary type="html">
     
