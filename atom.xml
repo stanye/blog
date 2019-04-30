@@ -230,6 +230,30 @@
   </entry>
   
   <entry>
+    <title>high-concurrency-experience</title>
+    <link href="https://stanye.com/blog/2018/04/30/high-concurrency-experience.html"/>
+    <id>https://stanye.com/blog/2018/04/30/high-concurrency-experience.html</id>
+    <published>2018-04-30T06:41:42.000Z</published>
+    <updated>2019-04-30T06:58:27.955Z</updated>
+    
+    <content type="html"><![CDATA[<p>用户数增长，公司项目遇到并发的难题。网上学习几点如下：<br><a id="more"></a></p><h2 id="处理高并发的业务逻辑"><a href="#处理高并发的业务逻辑" class="headerlink" title="处理高并发的业务逻辑"></a>处理高并发的业务逻辑</h2><ul><li>前端: 异步请求 + 资源静态化 + cdn</li><li>后端: 请求队列 + 轮询分发 + 负载均衡 + 共享缓存</li><li>数据层: redis + 数据分表 + 写队列</li><li>存储: raid阵列 + 热备</li><li>网络: dns轮询 + DDOS防护</li></ul><h2 id="如何学习高并发"><a href="#如何学习高并发" class="headerlink" title="如何学习高并发"></a>如何学习高并发</h2><p>redis, nginx, keeplive, DRBD, heartbeat这些工具在虚拟机上面跑起来.<br>因为有些工具运行的配置要求太高, 必须多台服务器配合才能完成. 总监那边选型TiDB，已经和老板申报了机器.</p><h2 id="模拟高并发"><a href="#模拟高并发" class="headerlink" title="模拟高并发"></a>模拟高并发</h2><p><a href="http://tengine.taobao.org/document_cn/benchmark_cn.html" target="_blank" rel="noopener">tengine</a></p><p>公司内则用php写了一些针对要测试的功能点的脚本</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用户数增长，公司项目遇到并发的难题。网上学习几点如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+    
+    
+      <category term="redis" scheme="https://stanye.com/blog/tags/redis/"/>
+    
+      <category term="nginx" scheme="https://stanye.com/blog/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue更新数组状态方法</title>
     <link href="https://stanye.com/blog/2017/05/16/vue-update-array.html"/>
     <id>https://stanye.com/blog/2017/05/16/vue-update-array.html</id>
