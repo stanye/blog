@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="true">
+    
+    
+    
+    <meta name="baidu-site-verification" content="CplTHeEkDu" />
+    
+    
+    
+    <title>学习TS的一些知识点总结2 | 夜夜空里 | StanYe&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#279ce8">
+    
+    
+    <meta name="keywords" content="javascript,typescript">
+    <meta name="description" content="接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于">
+<meta name="keywords" content="javascript,typescript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习TS的一些知识点总结2">
+<meta property="og:url" content="https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html">
+<meta property="og:site_name" content="夜夜空里">
+<meta property="og:description" content="接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-10T10:15:19.762Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习TS的一些知识点总结2">
+<meta name="twitter:description" content="接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于">
+    
+        <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/blog/atom.xml">
+    
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+    <link rel="stylesheet" href="/blog/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="/blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/blog/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Stan Ye</h5>
+          <a href="mailto:xiaocooshy@foxmail.com" title="xiaocooshy@foxmail.com" class="mail">xiaocooshy@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/stanye" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://twitter.com/StanYe_Coder" target="_blank" >
+                <i class="icon icon-lg icon-twitter"></i>
+                Twitter
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">学习TS的一些知识点总结2</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">学习TS的一些知识点总结2</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-23T08:56:26.000Z" itemprop="datePublished" class="page-time">
+  2018-12-23
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/FrontEnd/">FrontEnd</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类Class"><span class="post-toc-number">1.</span> <span class="post-toc-text">类Class</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象Object"><span class="post-toc-number">2.</span> <span class="post-toc-text">对象Object</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#面向对象OOP-Object-Oriented-Programming"><span class="post-toc-number">3.</span> <span class="post-toc-text">面向对象OOP(Object Oriented Programming)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#封装Encapsulation"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">封装Encapsulation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#继承Inheritance"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">继承Inheritance</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多态Polymorphism"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">多态Polymorphism</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#存取器-getter-amp-setter"><span class="post-toc-number">4.</span> <span class="post-toc-text">存取器(getter &amp; setter)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#修饰符-Modifiers"><span class="post-toc-number">5.</span> <span class="post-toc-text">修饰符(Modifiers)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#抽象类-Abstract-Class"><span class="post-toc-number">6.</span> <span class="post-toc-text">抽象类(Abstract Class)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#接口-Interfaces"><span class="post-toc-number">7.</span> <span class="post-toc-text">接口(Interfaces)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实现-implements"><span class="post-toc-number">8.</span> <span class="post-toc-text">实现(implements)</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-some-basic-knowledge-while-learning-typescript"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">学习TS的一些知识点总结2</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-23 16:56:26" datetime="2018-12-23T08:56:26.000Z"  itemprop="datePublished">2018-12-23</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/FrontEnd/">FrontEnd</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于<br><a id="more"></a><br>Java和PHP，有一定的亲和力</p>
+<h2 id="类Class"><a href="#类Class" class="headerlink" title="类Class"></a>类Class</h2><ul>
+<li>定义事物抽象特点，包含属性和方法</li>
+<li><code>constructor</code> 构造函数, <code>new</code> 的时候自动调用</li>
+<li><code>extends</code> 继承</li>
+<li><code>super</code> 调用父类的构造函数和方法</li>
+<li>实例属性ES7支持在 <code>constructor</code> 外也可以定义</li>
+</ul>
+<h2 id="对象Object"><a href="#对象Object" class="headerlink" title="对象Object"></a>对象Object</h2><h2 id="面向对象OOP-Object-Oriented-Programming"><a href="#面向对象OOP-Object-Oriented-Programming" class="headerlink" title="面向对象OOP(Object Oriented Programming)"></a>面向对象OOP(Object Oriented Programming)</h2><h3 id="封装Encapsulation"><a href="#封装Encapsulation" class="headerlink" title="封装Encapsulation"></a>封装Encapsulation</h3><h3 id="继承Inheritance"><a href="#继承Inheritance" class="headerlink" title="继承Inheritance"></a>继承Inheritance</h3><h3 id="多态Polymorphism"><a href="#多态Polymorphism" class="headerlink" title="多态Polymorphism"></a>多态Polymorphism</h3><h2 id="存取器-getter-amp-setter"><a href="#存取器-getter-amp-setter" class="headerlink" title="存取器(getter &amp; setter)"></a>存取器(getter &amp; setter)</h2><pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Mobile</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(mobile) &#123;</span><br><span class="line">    <span class="keyword">this</span>.mobile = mobile;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  get mobile() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'iPhone6s'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  set mobile(name) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'setter: '</span> + name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Mobile(<span class="string">'P10'</span>); <span class="comment">// setter: P10</span></span><br><span class="line">a.mobile = <span class="string">'P10 pro'</span>; <span class="comment">// setter: P10 pro</span></span><br><span class="line"><span class="built_in">console</span>.log(a.mobile); <span class="comment">// iPhone6s</span></span><br></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>想起了之前学vue中双向绑定的原理是什么(靠Object.defineProperty() get set方法)</p>
+</blockquote>
+<h2 id="修饰符-Modifiers"><a href="#修饰符-Modifiers" class="headerlink" title="修饰符(Modifiers)"></a>修饰符(Modifiers)</h2><ul>
+<li><code>static</code> 修饰静态变量(ES7)和方法(ES6)</li>
+<li><code>TS</code> 访问修饰符(Access Modifiers): <code>public</code> 、<code>protected</code> 、 <code>private</code></li>
+</ul>
+<h2 id="抽象类-Abstract-Class"><a href="#抽象类-Abstract-Class" class="headerlink" title="抽象类(Abstract Class)"></a>抽象类(Abstract Class)</h2><ul>
+<li>抽象类不允许被实例化</li>
+<li>抽象方法必须在子类定义</li>
+</ul>
+<h2 id="接口-Interfaces"><a href="#接口-Interfaces" class="headerlink" title="接口(Interfaces)"></a>接口(Interfaces)</h2><ul>
+<li>描述对象的形象(Sharp)</li>
+<li>提取公共实现(implements)</li>
+</ul>
+<h2 id="实现-implements"><a href="#实现-implements" class="headerlink" title="实现(implements)"></a>实现(implements)</h2><ul>
+<li>公共特性提取成接口（interfaces），用 <code>implements</code> 关键字来实现</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-05-10T10:15:19.762Z" itemprop="dateUpdated">2019-05-10 18:15:19</time>
+</span><br>
+
+
+        
+        转载请注明https://stanye.com/blog(虽然感觉没人会转/(ㄒoㄒ)/~~)
+        
+    </div>
+    
+    <footer>
+        <a href="https://stanye.com/blog">
+            <img src="/blog/img/avatar.jpg" alt="Stan Ye">
+            Stan Ye
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/typescript/">typescript</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html&title=《学习TS的一些知识点总结2》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html&title=《学习TS的一些知识点总结2》 — 夜夜空里&source=接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《学习TS的一些知识点总结2》 — 夜夜空里&url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html&via=https://stanye.com/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">使用git rebase对commits进行（合并/拆分/修改作者信息）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2018/11/12/js-basic.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">学习TS的一些知识点总结</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'true' == 'true',
+            appId: "eJHT0SdyRu4Tn45IR0PXgCGh-gzGzoHsz",
+            appKey: "sdY8ylxUGyAM71Qk0OSynKov",
+            avatar: "retro",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        么么哒~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/blog/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/blog/img/wechat.jpg" data-alipay="/blog/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a rel="nofollow" href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Stan Ye &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a  rel="nofollow" href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html&title=《学习TS的一些知识点总结2》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html&title=《学习TS的一些知识点总结2》 — 夜夜空里&source=接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《学习TS的一些知识点总结2》 — 夜夜空里&url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html&via=https://stanye.com/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADOUlEQVR42u3a227CMBAEUP7/p+lrJdpkZg1ScE6eKsLFx0hdPLuPR3w9X67fj78+57/Xvj5+/Cmvz/lvbY9PXNjY2Nhfwn4eXgn7eInH25Rs3+zuydqwsbGxt2Pny80LW3v3mNRu5YkRGxsb+/bslSUeH0vyTcHGxsbG/jS7fYf14oSNjY19Z3Z+JGiDpFkYlLcEPp6lYWNjY1+enXdFr//3R/rb2NjY2BdmP8trJVTKF9e+T63AxsbG3oidF4C8cbvSGF55Zr5+bGxs7P3Y7QfPik0eIeWbOyuE2NjY2Dux8yLUMmbthDwqysOmP+5iY2Njb8fOP6AtM23jdrZxbYsaGxsbe2/2uzaihc0Gfdp3xsbGxr4De31Qpi0n+RbkTd8oVMLGxsbeiD1rGORBT57Pv2uEKJpUwsbGxt6C3QY9eaugbc22JXO9QGJjY2PvwW7/xRfBzagFm7/nrC39R6iEjY2N/eXs2fDNrLS045JtY6CNn7CxsbH3YCfRTFui2mNJsk2zL+BkZAcbGxt7I3ZLbRuus8ZDHvTnpRQbGxv7PuzkGDA7DCQb1G5KPdyJjY2NvR175cf9LAxaH+VpG8lLXWVsbGzsL2G30U8eGM1aEW0hLFrL2NjY2NuxZ0uZBUB59N8eUZJ11gkWNjY29uXZSWC0MoizEkXlZWx4aMHGxsbegp3H7vlBZf1VbfHLt6nuNmBjY2Nfnr0ydrNSctaHcpIGxskmYmNjY2/Ezg8hs3KVHzxmhbA9UGFjY2PvxF4vEkmJykd/8umadswIGxsbe1f2bIwm/6E/C5LawjZsOWBjY2Nvyl4Zo8mfM4uuEnzdG8HGxsbejt0eQpIiNIv+ZwNDhQUbGxt7O3a7uDz6WS8/6+3nk/42NjY29teyn+XVBk/JEaUth3nZO2kMYGNjY2/BXqp7oxZvfgjJAW1DGhsbG3s/9uwo0gY9Scshbxi3kRY2Njb2HdjJz/18cCfZsjbWzzc6CqSwsbGxb8zOt6MNldojTXsXGxsbG7stMHmIPxsVyoMwbGxs7Duw80Ufl6X1EZzjr6G9+4YsDRsbG/vy7HZx7YhPssQcM4uWhl8SNjY29tXZP1KKkc1Mod9RAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/blog/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/blog/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/blog/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
