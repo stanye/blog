@@ -36,25 +36,27 @@
     
     
     
-    <title>aliyun-centos-fix | 夜夜空里 | StanYe&#39;s blog</title>
+    <title>记录博客切换成gitalk的Error/no Issues问题 | 夜夜空里 | StanYe&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#279ce8">
     
     
-    <meta name="keywords" content="centOS,aliyun">
-    <meta name="description" content="这几天体验了下安骑士, 发现裸奔有些警告, 做了一些修复.">
-<meta name="keywords" content="centOS,aliyun">
+    <meta name="keywords" content="gitalk,hexo-indigo-theme,hexo">
+    <meta name="description" content="常见问题不做累述，记录几个配置心得">
+<meta name="keywords" content="gitalk,hexo-indigo-theme,hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="aliyun-centos-fix">
-<meta property="og:url" content="https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html">
+<meta property="og:title" content="记录博客切换成gitalk的Error&#x2F;no Issues问题">
+<meta property="og:url" content="https://stanye.com/blog/2019/05/13/switch-to-gitalk.html">
 <meta property="og:site_name" content="夜夜空里">
-<meta property="og:description" content="这几天体验了下安骑士, 发现裸奔有些警告, 做了一些修复.">
+<meta property="og:description" content="常见问题不做累述，记录几个配置心得">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-13T08:29:46.582Z">
+<meta property="og:image" content="https://i.loli.net/2019/05/13/5cd94943e02c979364.png">
+<meta property="og:updated_time" content="2019-05-13T11:07:45.628Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="aliyun-centos-fix">
-<meta name="twitter:description" content="这几天体验了下安骑士, 发现裸奔有些警告, 做了一些修复.">
+<meta name="twitter:title" content="记录博客切换成gitalk的Error&#x2F;no Issues问题">
+<meta name="twitter:description" content="常见问题不做累述，记录几个配置心得">
+<meta name="twitter:image" content="https://i.loli.net/2019/05/13/5cd94943e02c979364.png">
     
         <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/blog/atom.xml">
     
@@ -142,7 +144,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">aliyun-centos-fix</div>
+        <div class="flex-col header-title ellipsis">记录博客切换成gitalk的Error/no Issues问题</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -164,15 +166,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">aliyun-centos-fix</h1>
+        <h1 class="title">记录博客切换成gitalk的Error/no Issues问题</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-04-26T08:22:09.000Z" itemprop="datePublished" class="page-time">
-  2019-04-26
+                <time datetime="2019-05-13T10:05:38.000Z" itemprop="datePublished" class="page-time">
+  2019-05-13
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/BackEnd/">BackEnd</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/IT技巧/">IT技巧</a></li></ul>
 
             
         </h5>
@@ -189,21 +191,21 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#禁止root直接登录"><span class="post-toc-number">1.</span> <span class="post-toc-text">禁止root直接登录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#默认登录端口检测"><span class="post-toc-number">2.</span> <span class="post-toc-text">默认登录端口检测</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置用户密码"><span class="post-toc-number">3.</span> <span class="post-toc-text">设置用户密码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#密码时间"><span class="post-toc-number">4.</span> <span class="post-toc-text">密码时间</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#太长不看版"><span class="post-toc-number">1.</span> <span class="post-toc-text">太长不看版</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">2.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于gitalk"><span class="post-toc-number">3.</span> <span class="post-toc-text">关于gitalk</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建OAuth-Application"><span class="post-toc-number">4.</span> <span class="post-toc-text">创建OAuth Application</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置"><span class="post-toc-number">5.</span> <span class="post-toc-text">配置</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-aliyun-centos-fix"
+<article id="post-switch-to-gitalk"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">aliyun-centos-fix</h1>
+        <h1 class="post-card-title">记录博客切换成gitalk的Error/no Issues问题</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-04-26 16:22:09" datetime="2019-04-26T08:22:09.000Z"  itemprop="datePublished">2019-04-26</time>
+            <time class="post-time" title="2019-05-13 18:05:38" datetime="2019-05-13T10:05:38.000Z"  itemprop="datePublished">2019-05-13</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/BackEnd/">BackEnd</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/IT技巧/">IT技巧</a></li></ul>
 
 
 
@@ -215,26 +217,47 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>这几天体验了下安骑士, 发现裸奔有些警告, 做了一些修复.<br><a id="more"></a></p>
-<h2 id="禁止root直接登录"><a href="#禁止root直接登录" class="headerlink" title="禁止root直接登录"></a>禁止root直接登录</h2><ol>
-<li>创建一个账号www</li>
-<li>修改<code>/etc/ssh/sshd_config</code>, <code>PermitRootLogin</code>改成<code>no</code></li>
+            <p>常见问题不做累述，记录几个配置心得<br><a id="more"></a></p>
+<h2 id="太长不看版"><a href="#太长不看版" class="headerlink" title="太长不看版"></a>太长不看版</h2><blockquote>
+<p>我的主域名是<code>stanye.com</code>, 我的博客域名是<code>stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是OAuth申请的时候填的的都是<code>https://stanye.com/</code>(对应没域名的<code>stanye.github.io</code>)</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的博客当前配置:</p>
+<ol>
+<li>使用<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>搭建博客</li>
+<li>使用的主题是<a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">hexo-theme-indigo</a></li>
+<li>使用的<code>valine</code>评论, 想要切换到<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">gitalk</a></li>
+<li>使用了<code>github pages</code> / 使用了自己的<code>域名</code> / blog仓库<code>不是</code>github pages<code>主仓库</code></li>
 </ol>
-<h2 id="默认登录端口检测"><a href="#默认登录端口检测" class="headerlink" title="默认登录端口检测"></a>默认登录端口检测</h2><p>修改<code>/etc/ssh/sshd_config</code>, 去掉<code>Port 22</code>注释#，并修改22为其它值</p>
-<h2 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a>设置用户密码</h2><ol>
-<li>修改<code>/etc/security/pwquality.conf</code></li>
-<li>去掉<code>minlen</code>注释，设置最小密码长度10</li>
-<li>去掉<code>dcredit</code>注释，设置数字位数为负数建议-1(最少包含1位数字)</li>
-<li>去掉<code>ucredit</code>注释，设置大写字母位数为负数-1(最少包含1位大写字母)</li>
-<li>去掉<code>lcredit</code>注释，设置小写字母位数为负数-1(最少包含1位小写字母)</li>
-<li>去掉<code>ocredit</code>注释，设置特殊字符位数为负数-1(最少包含1位特殊字符)</li>
-</ol>
-<h2 id="密码时间"><a href="#密码时间" class="headerlink" title="密码时间"></a>密码时间</h2><ol>
-<li>修改<code>/etc/login.defs</code></li>
-<li>密码失效时间, 365天</li>
-<li>最小间隔时间, 7天</li>
-</ol>
-
+<h2 id="关于gitalk"><a href="#关于gitalk" class="headerlink" title="关于gitalk"></a>关于gitalk</h2><p>Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。使用 Github 帐号登录，界面干净整洁，最喜欢的一点是支持 MarkDown语法</p>
+<p>主要特性：</p>
+<ul>
+<li>使用 Github 登录</li>
+<li>支持多语言 [en, zh-CN, zh-TW, es-ES, fr]</li>
+<li>支持个人或组织</li>
+<li>无干扰模式（设置 distractionFreeMode 为 true 开启）</li>
+<li>快捷键提交评论 （cmd|ctrl + enter）</li>
+<li>支持MarkDown语法</li>
+</ul>
+<h2 id="创建OAuth-Application"><a href="#创建OAuth-Application" class="headerlink" title="创建OAuth Application"></a>创建OAuth Application</h2><p>用github账号创建了一个账号应用, 用户授权登录gitalk, <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击申请</a></p>
+<blockquote>
+<p>以我的域名<code>stanye.com</code>为例</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2019/05/13/5cd94943e02c979364.png" alt="图片" title="">
+                </div>
+                <div class="image-caption">图片</div>
+            </figure>
+<blockquote>
+<p>我的主域名是<code>stanye.com</code>, 我的博客域名是<code>stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是这地方填写的都是<code>https://stanye.com/</code></p>
+</blockquote>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>因为indigo已经支持gitalk(不支持请更新到最新代码), 需要配置<code>_config.yml</code></p>
+<blockquote>
+<p>以我的github<code>github.com/stanye/blog</code>为例</p>
+</blockquote>
+<pre><code><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="string">//</span> <span class="string">github用户名</span></span><br><span class="line"><span class="attr">  owner:</span> <span class="string">stanye</span></span><br><span class="line">  <span class="string">//</span> <span class="string">仓库名</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">blog</span></span><br><span class="line">  <span class="string">//</span> <span class="string">上一步OAuth</span> <span class="string">Application生成的</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">b7ecea36c7957fdadfb6</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="number">95</span><span class="string">dddf9298936c42c983f727c2f40c118d30a147</span></span><br></pre></td></tr></table></figure>
+</code></pre>
         </div>
 
         <blockquote class="post-copyright">
@@ -264,7 +287,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/aliyun/">aliyun</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/centOS/">centOS</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/gitalk/">gitalk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/hexo-indigo-theme/">hexo-indigo-theme</a></li></ul>
 
 
             
@@ -274,7 +297,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html&title=《aliyun-centos-fix》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html&title=《记录博客切换成gitalk的Error/no Issues问题》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -284,22 +307,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html&title=《aliyun-centos-fix》 — 夜夜空里&source=这几天体验了下安骑士, 发现裸奔有些警告, 做了一些修复." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html&title=《记录博客切换成gitalk的Error/no Issues问题》 — 夜夜空里&source=常见问题不做累述，记录几个配置心得" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《aliyun-centos-fix》 — 夜夜空里&url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html&via=https://stanye.com/blog" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《记录博客切换成gitalk的Error/no Issues问题》 — 夜夜空里&url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html&via=https://stanye.com/blog" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -319,21 +342,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/blog/2019/05/13/switch-to-gitalk.html" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">记录博客切换成gitalk的Error/no Issues问题</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html" id="post-next" class="post-nav-link">
+      <a href="/blog/2019/04/26/aliyun-centos-fix.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">使用git rebase对commits进行（合并/拆分/修改作者信息）</h4>
+        <h4 class="title">aliyun-centos-fix</h4>
       </a>
     </div>
   
@@ -456,7 +472,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html&title=《aliyun-centos-fix》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html&title=《记录博客切换成gitalk的Error/no Issues问题》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -466,22 +482,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html&title=《aliyun-centos-fix》 — 夜夜空里&source=这几天体验了下安骑士, 发现裸奔有些警告, 做了一些修复." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html&title=《记录博客切换成gitalk的Error/no Issues问题》 — 夜夜空里&source=常见问题不做累述，记录几个配置心得" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《aliyun-centos-fix》 — 夜夜空里&url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html&via=https://stanye.com/blog" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《记录博客切换成gitalk的Error/no Issues问题》 — 夜夜空里&url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html&via=https://stanye.com/blog" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/05/13/switch-to-gitalk.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -492,7 +508,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aQW7DMAwEwPz/0+m5KCIvSTeApfEpaGNX48OWIvV6xdf7z/Xpt59+sn5mftfowsDAeCzjvbwSRrKI3vOTtWFgYJzD+PSH199ZR2fynPzeizVjYGBgxJ/X0ZlHMwYGBsY8cKNybRnQ1eDGwMDAyOMyj9p8G/zVvTgGBsYDGdWI/Obnf5lvYGBgPIrxLl7r4qwampOV/HoOBgbG1ow84PLHVdttvbIPAwPjHMYk4KpDzbzoTML9NU9rDAyMRzGq+8TevflCq+NSDAyMcxjV7eV3Fh2NMDEwMA5g9Br01XvvKi4vuoYYGBgHMKpRe9cBixxf3jFjYGBsx8iLv3mAzgvTi/8bGBgYWzOq28jeEYrb2nYYGBhbMyZzwKR9NhkzRNvX+TgTAwPjUYzq3nA+SMjDt7BoDAyMrRm97Wg1XvMyNIn1i9IQAwNjC0bvMER+wLR3jLUZshgYGJsykkX38NXXUX01GBgYpzHyJld1m3rvtrkQ4hgYGNsxqtGWF5QJvjrm/BjTGBgYBzB67ft8EdVDY3njDwMD40xGLy6rYV0tKC/uxcDA2JTRK9R6C6223vInYGBg7M2YNMKSR/dKxh4eAwNjb0a14ZVHXm+EkHwfAwPjTEZ+CKM6QsibdHn0N+cbGBgYhzGasRg/IQn90bvEwMA4gJE3znohvl7hzaUhBgbGQxh3HZiYvI7e+AEDA+MExmjr2CrjquPJvAmIgYGxHeMHptG8Kp1IVvAAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQW7DMAwEwPz/0+mlhwCtnSVltwg1OhWJa2lyWIgSH494PF/Gz09ePz96vvrOxx0DAwPjYxnP03H+TP7+84VW5/1ldgwMjA0YyfTnQZl/W53r/HkMDAyMo2eSgK7GLgYGBsYdgXtt1GJgYGCcM/IAzTeFSZn6D7U4BgbGBzJ6R2Z/8/ct9xsYGBgfxXgWx/p1wrXr+X4nBgbGaEYecL0DsvUyuLAeDAyMbRh5g1d+kZk0hyVzNXevGBgYH87oBV/1uK16nFdu6cDAwNiS0buqrIZ1XsS+CWsMDIzRjF7YVY/GVpaY/7gYGBhTGdXg67U7XBXlhzNiYGCMZuSNDkn49paY/6Bv/gsDA2M0I5k+WW5+DHffFQIGBsY8RrUErZaaeYGavOFNFY6BgTGasVJw9trIckyh2QIDA2NjRrKBy5fba8WItoYYGBhDGdUrw97E5baJlYGBgTGO0bwsbG0Hq41lhW0iBgbGaEY1UpNvV2K02n6BgYGxG6NXxPYO4KojWi0GBsY2jF5TRa8ho1dCH36OgYGxAaMapveVu83/xcDAGMrobdGqLRrnP0pSJEebQgwMjKGM9YOwaumbTN/DY2BgzGZcFbJVfBLWhRYNDAyMDRh58OVhWm01y6MfAwMDo7dFSy4d82AtUzEwMDCCOrj3TC9ko5tYDAyMcYy8qaL3bb5ZrB7kYWBg7MBYKR2TRrFeY0e+McXAwBjN+AI4SNE//kb1agAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 

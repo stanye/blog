@@ -1,3 +1,4 @@
+https://stanye.com/blog/2019/05/13/switch-to-gitalk.html
 https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html
 https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html
 https://stanye.com/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html

@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://stanye.com/blog/"/>
-  <updated>2019-05-13T08:29:46.582Z</updated>
+  <updated>2019-05-13T11:07:45.628Z</updated>
   <id>https://stanye.com/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录博客切换成gitalk的Error/no Issues问题</title>
+    <link href="https://stanye.com/blog/2019/05/13/switch-to-gitalk.html"/>
+    <id>https://stanye.com/blog/2019/05/13/switch-to-gitalk.html</id>
+    <published>2019-05-13T10:05:38.000Z</published>
+    <updated>2019-05-13T11:07:45.628Z</updated>
+    
+    <content type="html"><![CDATA[<p>常见问题不做累述，记录几个配置心得<br><a id="more"></a></p><h2 id="太长不看版"><a href="#太长不看版" class="headerlink" title="太长不看版"></a>太长不看版</h2><blockquote><p>我的主域名是<code>stanye.com</code>, 我的博客域名是<code>stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是OAuth申请的时候填的的都是<code>https://stanye.com/</code>(对应没域名的<code>stanye.github.io</code>)</p></blockquote><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的博客当前配置:</p><ol><li>使用<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>搭建博客</li><li>使用的主题是<a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">hexo-theme-indigo</a></li><li>使用的<code>valine</code>评论, 想要切换到<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">gitalk</a></li><li>使用了<code>github pages</code> / 使用了自己的<code>域名</code> / blog仓库<code>不是</code>github pages<code>主仓库</code></li></ol><h2 id="关于gitalk"><a href="#关于gitalk" class="headerlink" title="关于gitalk"></a>关于gitalk</h2><p>Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。使用 Github 帐号登录，界面干净整洁，最喜欢的一点是支持 MarkDown语法</p><p>主要特性：</p><ul><li>使用 Github 登录</li><li>支持多语言 [en, zh-CN, zh-TW, es-ES, fr]</li><li>支持个人或组织</li><li>无干扰模式（设置 distractionFreeMode 为 true 开启）</li><li>快捷键提交评论 （cmd|ctrl + enter）</li><li>支持MarkDown语法</li></ul><h2 id="创建OAuth-Application"><a href="#创建OAuth-Application" class="headerlink" title="创建OAuth Application"></a>创建OAuth Application</h2><p>用github账号创建了一个账号应用, 用户授权登录gitalk, <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击申请</a></p><blockquote><p>以我的域名<code>stanye.com</code>为例</p></blockquote><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://i.loli.net/2019/05/13/5cd94943e02c979364.png" alt="图片" title="">                </div>                <div class="image-caption">图片</div>            </figure><blockquote><p>我的主域名是<code>stanye.com</code>, 我的博客域名是<code>stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是这地方填写的都是<code>https://stanye.com/</code></p></blockquote><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>因为indigo已经支持gitalk(不支持请更新到最新代码), 需要配置<code>_config.yml</code></p><blockquote><p>以我的github<code>github.com/stanye/blog</code>为例</p></blockquote><pre><code><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="string">//</span> <span class="string">github用户名</span></span><br><span class="line"><span class="attr">  owner:</span> <span class="string">stanye</span></span><br><span class="line">  <span class="string">//</span> <span class="string">仓库名</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">blog</span></span><br><span class="line">  <span class="string">//</span> <span class="string">上一步OAuth</span> <span class="string">Application生成的</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">b7ecea36c7957fdadfb6</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="number">95</span><span class="string">dddf9298936c42c983f727c2f40c118d30a147</span></span><br></pre></td></tr></table></figure></code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;常见问题不做累述，记录几个配置心得&lt;br&gt;
+    
+    </summary>
+    
+      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="gitalk" scheme="https://stanye.com/blog/tags/gitalk/"/>
+    
+      <category term="hexo-indigo-theme" scheme="https://stanye.com/blog/tags/hexo-indigo-theme/"/>
+    
+      <category term="hexo" scheme="https://stanye.com/blog/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>aliyun-centos-fix</title>
@@ -596,9 +622,9 @@
       <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="javascript" scheme="https://stanye.com/blog/tags/javascript/"/>
-    
       <category term="jquery" scheme="https://stanye.com/blog/tags/jquery/"/>
+    
+      <category term="javascript" scheme="https://stanye.com/blog/tags/javascript/"/>
     
   </entry>
   
