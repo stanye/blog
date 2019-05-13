@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stanye.com/blog/blog/2018/12/23/some-basic-knowledge-while-learning-typescript.html</loc>
-    <lastmod>2019-05-10T10:15:19.762Z</lastmod>
+    <loc>https://stanye.com/blog/blog/2019/04/26/aliyun-centos-fix.html</loc>
+    <lastmod>2019-05-13T08:29:46.582Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2017/03/27/php-abstract-class.html</loc>
+    <lastmod>2019-05-13T07:38:47.392Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html</loc>
+    <lastmod>2019-05-13T07:04:19.091Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/11/12/js-basic.html</loc>
     <lastmod>2019-05-10T09:01:38.578Z</lastmod>
@@ -42,9 +48,6 @@
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager-pdf.html</loc>
     <lastmod>2019-04-26T08:48:07.002Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2019/04/26/aliyun-centos-fix.html</loc>
-    <lastmod>2019-04-26T08:39:31.525Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2017/04/29/sql-using.html</loc>
     <lastmod>2019-04-11T03:10:47.968Z</lastmod>
