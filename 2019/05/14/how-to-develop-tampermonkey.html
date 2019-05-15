@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="true">
+    
+    
+    
+    <meta name="baidu-site-verification" content="CplTHeEkDu" />
+    
+    
+    
+    <title>如何开发油猴脚本来block掘金用户 | 夜夜空里 | StanYe&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#279ce8">
+    
+    
+    <meta name="keywords" content="tampermonkey,jQuery">
+    <meta name="description" content="随着掘金用户不断增加，或多或少遇到”钢筋”用户。秉着眼不见为净的原则，在官方没有出屏蔽功能的情况下，利用油猴实现block用户。  使用 浏览器安装Tampermonkey扩展 访问脚本网站greasyfork.org安装本扩展 点击页面上脚本扩展的block按钮 https://github.com/stanye/UserScripts 欢迎提issue和PR">
+<meta name="keywords" content="tampermonkey,jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何开发油猴脚本来block掘金用户">
+<meta property="og:url" content="https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html">
+<meta property="og:site_name" content="夜夜空里">
+<meta property="og:description" content="随着掘金用户不断增加，或多或少遇到”钢筋”用户。秉着眼不见为净的原则，在官方没有出屏蔽功能的情况下，利用油猴实现block用户。  使用 浏览器安装Tampermonkey扩展 访问脚本网站greasyfork.org安装本扩展 点击页面上脚本扩展的block按钮 https://github.com/stanye/UserScripts 欢迎提issue和PR">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/15/16ab9112c6ba6f23?w=1234&h=874&f=png&s=202863">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/15/16ab751cc7adb0f6?w=428&h=228&f=png&s=20765">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/15/16ab90f9321dfd97?w=482&h=381&f=png&s=17999">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/15/16ab916e6a259310?w=358&h=150&f=png&s=25415">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/15/16ab9188f8539c4a?w=1552&h=676&f=png&s=185967">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/15/16ab9197d3331b25?w=1888&h=730&f=png&s=150873">
+<meta property="og:updated_time" content="2019-05-15T01:39:28.662Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何开发油猴脚本来block掘金用户">
+<meta name="twitter:description" content="随着掘金用户不断增加，或多或少遇到”钢筋”用户。秉着眼不见为净的原则，在官方没有出屏蔽功能的情况下，利用油猴实现block用户。  使用 浏览器安装Tampermonkey扩展 访问脚本网站greasyfork.org安装本扩展 点击页面上脚本扩展的block按钮 https://github.com/stanye/UserScripts 欢迎提issue和PR">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/5/15/16ab9112c6ba6f23?w=1234&h=874&f=png&s=202863">
+    
+        <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/blog/atom.xml">
+    
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+    <link rel="stylesheet" href="/blog/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="/blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/blog/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Stan Ye</h5>
+          <a href="mailto:xiaocooshy@foxmail.com" title="xiaocooshy@foxmail.com" class="mail">xiaocooshy@foxmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/stanye" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://twitter.com/StanYe_Coder" target="_blank" >
+                <i class="icon icon-lg icon-twitter"></i>
+                Twitter
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">如何开发油猴脚本来block掘金用户</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">如何开发油猴脚本来block掘金用户</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-05-14T15:32:51.000Z" itemprop="datePublished" class="page-time">
+  2019-05-14
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/IT技巧/">IT技巧</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实现方法"><span class="post-toc-number">2.</span> <span class="post-toc-text">实现方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tampermonkey中使用jQuery"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Tampermonkey中使用jQuery</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#只针对掘金站点"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">只针对掘金站点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用户id"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">用户id</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储和读取blockList"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">存储和读取blockList</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在页面中加按钮"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">在页面中加按钮</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#scope样式问题"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">scope样式问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给按钮增加点击事件"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">给按钮增加点击事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery获取dom早于vue请求数据并渲染"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">jQuery获取dom早于vue请求数据并渲染</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#发布"><span class="post-toc-number">3.</span> <span class="post-toc-text">发布</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#利用github的Webhooks同步发布到greasyfork"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">利用github的Webhooks同步发布到greasyfork</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小结"><span class="post-toc-number">4.</span> <span class="post-toc-text">小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TODO"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">TODO</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-how-to-develop-tampermonkey"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">如何开发油猴脚本来block掘金用户</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-05-14 23:32:51" datetime="2019-05-14T15:32:51.000Z"  itemprop="datePublished">2019-05-14</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/IT技巧/">IT技巧</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>随着掘金用户不断增加，或多或少遇到”钢筋”用户。秉着眼不见为净的原则，在官方没有出屏蔽功能的情况下，利用油猴实现block用户。</p>
+</blockquote>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li>浏览器安装<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">Tampermonkey</a>扩展</li>
+<li>访问脚本网站<a href="https://greasyfork.org/zh-CN/scripts/383029-juejin-gangjin-block" target="_blank" rel="noopener">greasyfork.org</a>安装本扩展</li>
+<li>点击页面上脚本扩展的<code>block</code>按钮</li>
+<li><a href="https://github.com/stanye/UserScripts" target="_blank" rel="noopener">https://github.com/stanye/UserScripts</a> 欢迎提issue和PR</li>
+</ol>
+<a id="more"></a>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><blockquote>
+<p>根据用户id用<code>jQuery</code>remove相关DOM<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">`.username[href="/user/<span class="subst">$&#123;id&#125;</span>"]`</span>).parents(<span class="string">'.item'</span>).remove();</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="Tampermonkey中使用jQuery"><a href="#Tampermonkey中使用jQuery" class="headerlink" title="Tampermonkey中使用jQuery"></a>Tampermonkey中使用jQuery</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// @require      https://code.jquery.com/jquery-3.3.1.min.js</span><br></pre></td></tr></table></figure>
+<h3 id="只针对掘金站点"><a href="#只针对掘金站点" class="headerlink" title="只针对掘金站点"></a>只针对掘金站点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// @include      /^https?:\/\/(\w+\.)?juejin\.im\//</span><br></pre></td></tr></table></figure>
+<h3 id="用户id"><a href="#用户id" class="headerlink" title="用户id"></a>用户id</h3><blockquote>
+<p>以我的为例 <a href="https://juejin.im/user/58f56b4b0ce463006bc084eb" target="_blank" rel="noopener">https://juejin.im/user/58f56b4b0ce463006bc084eb</a><br><code>58f56b4b0ce463006bc084eb</code>就是id</p>
+</blockquote>
+<h3 id="存储和读取blockList"><a href="#存储和读取blockList" class="headerlink" title="存储和读取blockList"></a>存储和读取blockList</h3><p><img src="https://user-gold-cdn.xitu.io/2019/5/15/16ab9112c6ba6f23?w=1234&amp;h=874&amp;f=png&amp;s=202863" alt=""><br>使用<code>localStorage</code>操作, 不做赘述</p>
+<h3 id="在页面中加按钮"><a href="#在页面中加按钮" class="headerlink" title="在页面中加按钮"></a>在页面中加按钮</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-gold-cdn.xitu.io/2019/5/15/16ab751cc7adb0f6?w=428&h=228&f=png&s=20765" alt="dropdown-menu" title="">
+                </div>
+                <div class="image-caption">dropdown-menu</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-gold-cdn.xitu.io/2019/5/15/16ab90f9321dfd97?w=482&h=381&f=png&s=17999" alt="action-box" title="">
+                </div>
+                <div class="image-caption">action-box</div>
+            </figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actionBox = $(<span class="string">'.user-info-block .action-box'</span>);</span><br><span class="line"><span class="keyword">if</span> (actionBox.has(<span class="string">'.big-block-btn'</span>).length === <span class="number">0</span>) &#123;</span><br><span class="line">    actionBox.append(<span class="string">`&lt;button <span class="subst">$&#123;scope&#125;</span> class="follow-btn btn big-block-btn" style="color: red;"&gt;Block&lt;/button&gt;`</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="scope样式问题"><a href="#scope样式问题" class="headerlink" title="scope样式问题"></a>scope样式问题</h3><p>掘金用了vue的scope，用jQuery新增的内容想要套用原来的样式需要获取到scope生成的hash</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-gold-cdn.xitu.io/2019/5/15/16ab916e6a259310?w=358&h=150&f=png&s=25415" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> scope = $(<span class="string">'.user-info-block .action-box'</span>)[<span class="number">0</span>].attributes.item(<span class="number">0</span>).nodeName;</span><br></pre></td></tr></table></figure>
+<h3 id="给按钮增加点击事件"><a href="#给按钮增加点击事件" class="headerlink" title="给按钮增加点击事件"></a>给按钮增加点击事件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#juejin'</span>).on(<span class="string">'click'</span>, <span class="string">'.block-btn'</span>, block);</span><br></pre></td></tr></table></figure>
+<h3 id="jQuery获取dom早于vue请求数据并渲染"><a href="#jQuery获取dom早于vue请求数据并渲染" class="headerlink" title="jQuery获取dom早于vue请求数据并渲染"></a>jQuery获取dom早于vue请求数据并渲染</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分页</span></span><br><span class="line">$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>, () =&gt; &#123;</span><br><span class="line">    startClear();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 第一次</span></span><br><span class="line">setTimeout(startClear, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>暂时没好想法,先<code>setTimeout</code>和<code>scroll</code></p>
+</blockquote>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><h3 id="利用github的Webhooks同步发布到greasyfork"><a href="#利用github的Webhooks同步发布到greasyfork" class="headerlink" title="利用github的Webhooks同步发布到greasyfork"></a>利用github的Webhooks同步发布到greasyfork</h3><ol>
+<li><a href="https://greasyfork.org/en/import" target="_blank" rel="noopener">初始化import脚本</a></li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-gold-cdn.xitu.io/2019/5/15/16ab9188f8539c4a?w=1552&h=676&f=png&s=185967" alt="初始化import脚本" title="">
+                </div>
+                <div class="image-caption">初始化import脚本</div>
+            </figure>
+<ol start="2">
+<li><a href="https://greasyfork.org/en/users/webhook-info" target="_blank" rel="noopener">开启webhook并应用</a></li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-gold-cdn.xitu.io/2019/5/15/16ab9197d3331b25?w=1888&h=730&f=png&s=150873" alt="开启webhook并应用" title="">
+                </div>
+                <div class="image-caption">开启webhook并应用</div>
+            </figure>
+<blockquote>
+<p>按提示在github仓库的<code>settings</code> -&gt; <code>webhooks</code>创建hook, 每次仓库更新就会同步更新到greasyfork</p>
+</blockquote>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><blockquote>
+<p>本意只是脑子一闪而过的idea，并付诸实现。</p>
+</blockquote>
+<blockquote>
+<p>良好的社区气氛还是需要大家共同努力的。</p>
+</blockquote>
+<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ol>
+<li>覆盖掘金全站的block脚本</li>
+<li>针对某条回复的block</li>
+<li>blockList管理</li>
+<li>代码不够优雅，需要去掉硬编码</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        转载请注明https://stanye.com/blog(虽然感觉没人会转/(ㄒoㄒ)/~~)
+        
+    </div>
+    
+    <footer>
+        <a href="https://stanye.com/blog">
+            <img src="/blog/img/avatar.jpg" alt="Stan Ye">
+            Stan Ye
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/tampermonkey/">tampermonkey</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html&title=《如何开发油猴脚本来block掘金用户》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html&title=《如何开发油猴脚本来block掘金用户》 — 夜夜空里&source=
+随着掘金用户不断增加，或多或少遇到”钢筋”用户。秉着眼不见为净的原则，在官方没有出屏蔽功能的情况下，利用油猴实现block用户。
+
+使用
+浏览器安装Ta..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何开发油猴脚本来block掘金用户》 — 夜夜空里&url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html&via=https://stanye.com/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2019/05/13/switch-to-gitalk.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">记录博客切换成gitalk的Error/no Issues问题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="comments" id="comments">
+      <div id="gitalk-container"></div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      <script>
+          var id = location.pathname
+          if (location.pathname.length > 50) {
+            id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
+          }
+          const gitalk = new Gitalk({
+            clientID: 'b7ecea36c7957fdadfb6',
+            clientSecret: '95dddf9298936c42c983f727c2f40c118d30a147',
+            repo: 'blog',
+            owner: 'stanye',
+            admin: ['stanye'],
+            id: id,      // Ensure uniqueness and length less than 50
+            title: document.title.split('|')[0],
+            distractionFreeMode: false  // Facebook-like distraction free mode
+          })
+  
+          gitalk.render('gitalk-container')
+      </script>
+  </section>
+  
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        么么哒~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/blog/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/blog/img/wechat.jpg" data-alipay="/blog/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a rel="nofollow" href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Stan Ye &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a  rel="nofollow" href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html&title=《如何开发油猴脚本来block掘金用户》 — 夜夜空里&pic=https://stanye.com/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html&title=《如何开发油猴脚本来block掘金用户》 — 夜夜空里&source=
+随着掘金用户不断增加，或多或少遇到”钢筋”用户。秉着眼不见为净的原则，在官方没有出屏蔽功能的情况下，利用油猴实现block用户。
+
+使用
+浏览器安装Ta..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何开发油猴脚本来block掘金用户》 — 夜夜空里&url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html&via=https://stanye.com/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACr0lEQVR42u3ay24bMRAEQP//TyvXAMHK3TOkoAC1JwPaB4sHku6Zn5/4ej1cf//a3vnv/U9veHr22IWHh4d3aOhPn3witdPx9Ov7d+ZjxsPDw7vNe1pRk3sS6qktJx8zHh4e3nfy2jtnU5Mfr/Hw8PD+L94mgGjxeHh4eN/Amx1tN1Hs+7Cjff+BrAUPDw8v5uXH3+/5+0p9Dw8PD29dVc/LV3nUuymM1aPFw8PDu8DLF9z88NoGE+1322gYDw8P7yxvFrnuA4XZ2+otCg8PD+8C79QRuT0Qz5b+fCrrecXDw8Mb8doQod08ZpOSI3+p7+Hh4eEd5eVtVTNMfkSOspN9BQ8PDw9v3Wu0X7KTrSKfyja8iLIWPDw8vGu8dsnOA4U2jHi6s9jY8PDw8C7wZgX7/UH57AG6fgoPDw9v8VQCmG0km183QQkeHh7ebd4s3m0bp86GxXXTFR4eHt7lfs52e9hMUDJZs43q2O6Hh4eHF/cjvYLrVBycv2GIxMPDwzvKy4eSNxm83wDypoT9VoGHh4d3gzfbGNrNI2/J2jSBRdsDHh4e3iFesrwmGfA+8N0Uw4adEXh4eHglb1bybz/fNhzMymaPOx4eHh7eZV5bysqPyLP2qWQbqCt7eHh4eAverJA/OxBvYotVoIyHh4f3QV6+0J+98+wKj4eHh/d5Xv7SWeGqPiLH48TDw8P7DC8viZ0qhhV1uVlcgoeHh3eU9yqvZKDt0j8rv0VlNjw8PLwLvHbBnZX2Nw0E7aSs9hM8PDy8srae/3vfNhC0TQZt2FH0R+Dh4eEd5a0am9ZVp3xUdasWHh4e3lfy2gaCJOpNvhiNEw8PD+8LePuFPnkqD4ujMAIPDw/vAm/TbjUrWW3C4uIreHh4eBd4s3/42xB2H/ter+/h4eHh/f6VP8pfDQGtR1+WAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/blog/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/blog/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/blog/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
