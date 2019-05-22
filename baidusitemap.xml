@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://stanye.com/blog/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html</loc>
+    <lastmod>2019-05-21T09:29:07.778Z</lastmod>
+  </url>  <url>
     <loc>https://stanye.com/blog/blog/2019/05/14/how-to-develop-tampermonkey.html</loc>
-    <lastmod>2019-05-15T01:39:28.662Z</lastmod>
+    <lastmod>2019-05-21T09:28:49.170Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/11/12/js-basic.html</loc>
+    <lastmod>2019-05-21T07:02:02.741Z</lastmod>
+  </url>  <url>
+    <loc>https://stanye.com/blog/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html</loc>
+    <lastmod>2019-05-20T09:43:51.642Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2019/05/13/switch-to-gitalk.html</loc>
     <lastmod>2019-05-13T11:07:45.628Z</lastmod>
@@ -12,12 +21,6 @@
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2017/03/27/php-abstract-class.html</loc>
     <lastmod>2019-05-13T07:38:47.392Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html</loc>
-    <lastmod>2019-05-13T07:04:19.091Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/11/12/js-basic.html</loc>
-    <lastmod>2019-05-10T09:01:38.578Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2017/06/05/rm-input-type-number-arrows.html</loc>
     <lastmod>2019-04-30T08:13:30.616Z</lastmod>
@@ -48,9 +51,6 @@
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</loc>
     <lastmod>2019-04-26T08:50:41.966Z</lastmod>
-  </url>  <url>
-    <loc>https://stanye.com/blog/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html</loc>
-    <lastmod>2019-04-26T08:49:27.948Z</lastmod>
   </url>  <url>
     <loc>https://stanye.com/blog/blog/2018/05/10/communicate-with-product-manager-pdf.html</loc>
     <lastmod>2019-04-26T08:48:07.002Z</lastmod>

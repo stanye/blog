@@ -51,7 +51,7 @@
 <meta property="og:site_name" content="夜夜空里">
 <meta property="og:description" content="接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-13T07:04:19.091Z">
+<meta property="og:updated_time" content="2019-05-20T09:43:51.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习TS的一些知识点总结2">
 <meta name="twitter:description" content="接上一篇，学习TS对JS的一些概念的补充，ES6一些设计的趋向于">
@@ -233,14 +233,22 @@
 </ul>
 <h2 id="抽象类-Abstract-Class"><a href="#抽象类-Abstract-Class" class="headerlink" title="抽象类(Abstract Class)"></a>抽象类(Abstract Class)</h2><ul>
 <li>抽象类不允许被实例化</li>
-<li>抽象方法必须在子类定义</li>
+<li>抽象方法必须在子类实现</li>
 </ul>
 <h2 id="接口-Interfaces"><a href="#接口-Interfaces" class="headerlink" title="接口(Interfaces)"></a>接口(Interfaces)</h2><ul>
 <li>描述对象的形象(Sharp)</li>
 <li>提取公共实现(implements)</li>
+<li><p>接口可以继承接口</p>
+  <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Company &#123;</span><br><span class="line">  alert();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> System <span class="keyword">extends</span> Company &#123;</span><br><span class="line">  isOpenSource();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接口可以继承类</p>
+  <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Size &#123;</span><br><span class="line">  x: <span class="built_in">number</span>;</span><br><span class="line">  y: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> System <span class="keyword">extends</span> Size &#123;</span><br><span class="line">  os: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h2 id="实现-implements"><a href="#实现-implements" class="headerlink" title="实现(implements)"></a>实现(implements)</h2><ul>
 <li>公共特性提取成接口（interfaces），用 <code>implements</code> 关键字来实现</li>
+<li><p>一个类可以有多个implements</p>
+  <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Mobile <span class="keyword">implements</span> System, Price, Company &#123;&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
         </div>
