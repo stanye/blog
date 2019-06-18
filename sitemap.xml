@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stanye.com/blog/2019/06/18/e3-game-wishList-2019.html</loc>
+    
+    <lastmod>2019-06-18T06:53:20.096Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stanye.com/blog/2018/11/12/ts-basics.html</loc>
+    
+    <lastmod>2019-05-28T09:57:23.214Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stanye.com/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html</loc>
     
     <lastmod>2019-05-21T09:29:07.778Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html</loc>
     
     <lastmod>2019-05-21T09:28:49.170Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://stanye.com/blog/2018/11/12/js-basic.html</loc>
-    
-    <lastmod>2019-05-21T07:02:02.741Z</lastmod>
     
   </url>
   
