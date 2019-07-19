@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://stanye.com/blog/"/>
-  <updated>2019-06-18T06:53:20.096Z</updated>
+  <updated>2019-07-19T07:27:49.247Z</updated>
   <id>https://stanye.com/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac更新系统引发apache403问题</title>
+    <link href="https://stanye.com/blog/2019/07/19/how-to-fix-apache-403.html"/>
+    <id>https://stanye.com/blog/2019/07/19/how-to-fix-apache-403.html</id>
+    <published>2019-07-19T07:18:32.000Z</published>
+    <updated>2019-07-19T07:27:49.247Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天无意中发现apache服务启动不起来，一直报403的错误。<br><a id="more"></a></p><h2 id="apache-403"><a href="#apache-403" class="headerlink" title="apache 403"></a>apache 403</h2><p>百度几个方案，都无法解决，最终在<a href="https://www.cnblogs.com/sqlsec/p/macapache.html" target="_blank" rel="noopener">Mac OS下开启自带的apache服务</a>文章里，解决：</p><blockquote><p>因为Mac版本升级导致了apache策略发生变更了，所以我们修改后还是会出现403无权访问的情况。<br>解决方法:备份原有的httpd.conf配置文件,把同级目录下的httpd.conf.pre-update 重命名为httpd.conf<br>其他配置照搬之前的（网站文档目录及端口ServerName的配置）</p></blockquote><h2 id="重启遇到的两个问题"><a href="#重启遇到的两个问题" class="headerlink" title="重启遇到的两个问题"></a>重启遇到的两个问题</h2><h3 id="AH00557-httpd-apr-sockaddr-info-get-failed-for…"><a href="#AH00557-httpd-apr-sockaddr-info-get-failed-for…" class="headerlink" title="AH00557: httpd: apr_sockaddr_info_get() failed for…"></a>AH00557: httpd: apr_sockaddr_info_get() failed for…</h3><h3 id="AH00558-httpd-Could-not-reliably-determine…"><a href="#AH00558-httpd-Could-not-reliably-determine…" class="headerlink" title="AH00558: httpd: Could not reliably determine…"></a>AH00558: httpd: Could not reliably determine…</h3><p>When restart the httpd.</p><p>Try:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/sbin/apachectl restart</span><br></pre></td></tr></table></figure><p>Don’t use:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure><h3 id="为什么会出现类似的问题呢"><a href="#为什么会出现类似的问题呢" class="headerlink" title="为什么会出现类似的问题呢"></a>为什么会出现类似的问题呢</h3><p>因为你电脑装了两个不同版本的Apache</p><h3 id="如果还有问题"><a href="#如果还有问题" class="headerlink" title="如果还有问题?"></a>如果还有问题?</h3><p>修改<code>/etc/apache2/httpd.conf</code><br>将<code>#ServerName www.example.com:80</code>的注释去掉<br>可以换成自己定义的域名</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天无意中发现apache服务启动不起来，一直报403的错误。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="apache" scheme="https://stanye.com/blog/tags/apache/"/>
+    
+      <category term="MacOS" scheme="https://stanye.com/blog/tags/MacOS/"/>
+    
+      <category term="Mojave" scheme="https://stanye.com/blog/tags/Mojave/"/>
+    
+  </entry>
   
   <entry>
     <title>E3游戏WishList2019</title>
@@ -214,9 +240,9 @@
       <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="Mojave" scheme="https://stanye.com/blog/tags/Mojave/"/>
-    
       <category term="MacOS" scheme="https://stanye.com/blog/tags/MacOS/"/>
+    
+      <category term="Mojave" scheme="https://stanye.com/blog/tags/Mojave/"/>
     
   </entry>
   
