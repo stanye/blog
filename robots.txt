@@ -7,5 +7,5 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Sitemap: https://stanye.com/blog/sitemap.xml
-Sitemap: https://stanye.com/blog/baidusitemap.xml
+Sitemap: https://www.stanye.com/blog/sitemap.xml
+Sitemap: https://www.stanye.com/blog/baidusitemap.xml

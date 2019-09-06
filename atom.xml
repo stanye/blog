@@ -5,9 +5,9 @@
   <subtitle>StanYe&#39;s blog</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://stanye.com/blog/"/>
+  <link href="https://www.stanye.com/blog/"/>
   <updated>2019-07-29T02:35:19.600Z</updated>
-  <id>https://stanye.com/blog/</id>
+  <id>https://www.stanye.com/blog/</id>
   
   <author>
     <name>Stan Ye</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>同步git本地分支和远程分支</title>
-    <link href="https://stanye.com/blog/2019/07/29/sync-git-local-branch-with-remote-branch.html"/>
-    <id>https://stanye.com/blog/2019/07/29/sync-git-local-branch-with-remote-branch.html</id>
+    <link href="https://www.stanye.com/blog/2019/07/29/sync-git-local-branch-with-remote-branch.html"/>
+    <id>https://www.stanye.com/blog/2019/07/29/sync-git-local-branch-with-remote-branch.html</id>
     <published>2019-07-29T02:28:32.000Z</published>
     <updated>2019-07-29T02:35:19.600Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+      <category term="IT技巧" scheme="https://www.stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="git" scheme="https://stanye.com/blog/tags/git/"/>
+      <category term="git" scheme="https://www.stanye.com/blog/tags/git/"/>
     
-      <category term="git branch" scheme="https://stanye.com/blog/tags/git-branch/"/>
+      <category term="git branch" scheme="https://www.stanye.com/blog/tags/git-branch/"/>
     
   </entry>
   
   <entry>
     <title>mac更新系统引发apache403问题</title>
-    <link href="https://stanye.com/blog/2019/07/19/how-to-fix-apache-403.html"/>
-    <id>https://stanye.com/blog/2019/07/19/how-to-fix-apache-403.html</id>
+    <link href="https://www.stanye.com/blog/2019/07/19/how-to-fix-apache-403.html"/>
+    <id>https://www.stanye.com/blog/2019/07/19/how-to-fix-apache-403.html</id>
     <published>2019-07-19T07:18:32.000Z</published>
     <updated>2019-07-19T07:27:49.247Z</updated>
     
@@ -55,21 +55,21 @@
     
     </summary>
     
-      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+      <category term="IT技巧" scheme="https://www.stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="apache" scheme="https://stanye.com/blog/tags/apache/"/>
+      <category term="apache" scheme="https://www.stanye.com/blog/tags/apache/"/>
     
-      <category term="MacOS" scheme="https://stanye.com/blog/tags/MacOS/"/>
+      <category term="MacOS" scheme="https://www.stanye.com/blog/tags/MacOS/"/>
     
-      <category term="Mojave" scheme="https://stanye.com/blog/tags/Mojave/"/>
+      <category term="Mojave" scheme="https://www.stanye.com/blog/tags/Mojave/"/>
     
   </entry>
   
   <entry>
     <title>E3游戏WishList2019</title>
-    <link href="https://stanye.com/blog/2019/06/18/e3-game-wishList-2019.html"/>
-    <id>https://stanye.com/blog/2019/06/18/e3-game-wishList-2019.html</id>
+    <link href="https://www.stanye.com/blog/2019/06/18/e3-game-wishList-2019.html"/>
+    <id>https://www.stanye.com/blog/2019/06/18/e3-game-wishList-2019.html</id>
     <published>2019-06-18T05:03:25.000Z</published>
     <updated>2019-06-18T06:53:20.096Z</updated>
     
@@ -81,17 +81,17 @@
     
     </summary>
     
-      <category term="Game" scheme="https://stanye.com/blog/categories/Game/"/>
+      <category term="Game" scheme="https://www.stanye.com/blog/categories/Game/"/>
     
     
-      <category term="E3" scheme="https://stanye.com/blog/tags/E3/"/>
+      <category term="E3" scheme="https://www.stanye.com/blog/tags/E3/"/>
     
   </entry>
   
   <entry>
     <title>如何开发油猴脚本来block掘金用户</title>
-    <link href="https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html"/>
-    <id>https://stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html</id>
+    <link href="https://www.stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html"/>
+    <id>https://www.stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html</id>
     <published>2019-05-14T15:32:51.000Z</published>
     <updated>2019-05-21T09:28:49.170Z</updated>
     
@@ -111,25 +111,25 @@
     
     </summary>
     
-      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+      <category term="IT技巧" scheme="https://www.stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="tampermonkey" scheme="https://stanye.com/blog/tags/tampermonkey/"/>
+      <category term="tampermonkey" scheme="https://www.stanye.com/blog/tags/tampermonkey/"/>
     
-      <category term="jQuery" scheme="https://stanye.com/blog/tags/jQuery/"/>
+      <category term="jQuery" scheme="https://www.stanye.com/blog/tags/jQuery/"/>
     
-      <category term="juejin.im" scheme="https://stanye.com/blog/tags/juejin-im/"/>
+      <category term="juejin.im" scheme="https://www.stanye.com/blog/tags/juejin-im/"/>
     
   </entry>
   
   <entry>
     <title>记录博客切换成gitalk的Error/no Issues问题</title>
-    <link href="https://stanye.com/blog/2019/05/13/switch-to-gitalk.html"/>
-    <id>https://stanye.com/blog/2019/05/13/switch-to-gitalk.html</id>
+    <link href="https://www.stanye.com/blog/2019/05/13/switch-to-gitalk.html"/>
+    <id>https://www.stanye.com/blog/2019/05/13/switch-to-gitalk.html</id>
     <published>2019-05-13T10:05:38.000Z</published>
-    <updated>2019-05-13T11:07:45.628Z</updated>
+    <updated>2019-09-06T06:24:11.114Z</updated>
     
-    <content type="html"><![CDATA[<p>常见问题不做累述，记录几个配置心得<br><a id="more"></a></p><h2 id="太长不看版"><a href="#太长不看版" class="headerlink" title="太长不看版"></a>太长不看版</h2><blockquote><p>我的主域名是<code>stanye.com</code>, 我的博客域名是<code>stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是OAuth申请的时候填的的都是<code>https://stanye.com/</code>(对应没域名的<code>stanye.github.io</code>)</p></blockquote><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的博客当前配置:</p><ol><li>使用<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>搭建博客</li><li>使用的主题是<a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">hexo-theme-indigo</a></li><li>使用的<code>valine</code>评论, 想要切换到<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">gitalk</a></li><li>使用了<code>github pages</code> / 使用了自己的<code>域名</code> / blog仓库<code>不是</code>github pages<code>主仓库</code></li></ol><h2 id="关于gitalk"><a href="#关于gitalk" class="headerlink" title="关于gitalk"></a>关于gitalk</h2><p>Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。使用 Github 帐号登录，界面干净整洁，最喜欢的一点是支持 MarkDown语法</p><p>主要特性：</p><ul><li>使用 Github 登录</li><li>支持多语言 [en, zh-CN, zh-TW, es-ES, fr]</li><li>支持个人或组织</li><li>无干扰模式（设置 distractionFreeMode 为 true 开启）</li><li>快捷键提交评论 （cmd|ctrl + enter）</li><li>支持MarkDown语法</li></ul><h2 id="创建OAuth-Application"><a href="#创建OAuth-Application" class="headerlink" title="创建OAuth Application"></a>创建OAuth Application</h2><p>用github账号创建了一个账号应用, 用户授权登录gitalk, <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击申请</a></p><blockquote><p>以我的域名<code>stanye.com</code>为例</p></blockquote><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://i.loli.net/2019/05/13/5cd94943e02c979364.png" alt="图片" title="">                </div>                <div class="image-caption">图片</div>            </figure><blockquote><p>我的主域名是<code>stanye.com</code>, 我的博客域名是<code>stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是这地方填写的都是<code>https://stanye.com/</code></p></blockquote><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>因为indigo已经支持gitalk(不支持请更新到最新代码), 需要配置<code>_config.yml</code></p><blockquote><p>以我的github<code>github.com/stanye/blog</code>为例</p></blockquote><pre><code><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="string">//</span> <span class="string">github用户名</span></span><br><span class="line"><span class="attr">  owner:</span> <span class="string">stanye</span></span><br><span class="line">  <span class="string">//</span> <span class="string">仓库名</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">blog</span></span><br><span class="line">  <span class="string">//</span> <span class="string">上一步OAuth</span> <span class="string">Application生成的</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">b7ecea36c7957fdadfb6</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="number">95</span><span class="string">dddf9298936c42c983f727c2f40c118d30a147</span></span><br></pre></td></tr></table></figure></code></pre>]]></content>
+    <content type="html"><![CDATA[<p>常见问题不做累述，记录几个配置心得<br><a id="more"></a></p><h2 id="太长不看版"><a href="#太长不看版" class="headerlink" title="太长不看版"></a>太长不看版</h2><blockquote><p>我的主域名是<code>www.stanye.com</code>, 我的博客域名是<code>www.stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是OAuth申请的时候填的的都是<code>https://www.stanye.com/</code>(对应没域名的<code>stanye.github.io</code>)</p></blockquote><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的博客当前配置:</p><ol><li>使用<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>搭建博客</li><li>使用的主题是<a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="noopener">hexo-theme-indigo</a></li><li>使用的<code>valine</code>评论, 想要切换到<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">gitalk</a></li><li>使用了<code>github pages</code> / 使用了自己的<code>域名</code> / blog仓库<code>不是</code>github pages<code>主仓库</code></li></ol><h2 id="关于gitalk"><a href="#关于gitalk" class="headerlink" title="关于gitalk"></a>关于gitalk</h2><p>Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。使用 Github 帐号登录，界面干净整洁，最喜欢的一点是支持 MarkDown语法</p><p>主要特性：</p><ul><li>使用 Github 登录</li><li>支持多语言 [en, zh-CN, zh-TW, es-ES, fr]</li><li>支持个人或组织</li><li>无干扰模式（设置 distractionFreeMode 为 true 开启）</li><li>快捷键提交评论 （cmd|ctrl + enter）</li><li>支持MarkDown语法</li></ul><h2 id="创建OAuth-Application"><a href="#创建OAuth-Application" class="headerlink" title="创建OAuth Application"></a>创建OAuth Application</h2><p>用github账号创建了一个账号应用, 用户授权登录gitalk, <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击申请</a></p><blockquote><p>以我的域名<code>stanye.com</code>为例</p></blockquote><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://i.loli.net/2019/05/13/5cd94943e02c979364.png" alt="图片" title="">                </div>                <div class="image-caption">图片</div>            </figure><blockquote><p>我的主域名是<code>stanye.com</code>, 我的博客域名是<code>stanye.com/blog/</code>, 虽然是给博客申请gitalk, 但是这地方填写的都是<code>https://stanye.com/</code></p></blockquote><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>因为indigo已经支持gitalk(不支持请更新到最新代码), 需要配置<code>_config.yml</code></p><blockquote><p>以我的github<code>github.com/stanye/blog</code>为例</p></blockquote><pre><code><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="string">//</span> <span class="string">github用户名</span></span><br><span class="line"><span class="attr">  owner:</span> <span class="string">stanye</span></span><br><span class="line">  <span class="string">//</span> <span class="string">仓库名</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">blog</span></span><br><span class="line">  <span class="string">//</span> <span class="string">上一步OAuth</span> <span class="string">Application生成的</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">b7ecea36c7957fdadfb6</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="number">95</span><span class="string">dddf9298936c42c983f727c2f40c118d30a147</span></span><br></pre></td></tr></table></figure></code></pre>]]></content>
     
     <summary type="html">
     
@@ -137,21 +137,21 @@
     
     </summary>
     
-      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+      <category term="IT技巧" scheme="https://www.stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="gitalk" scheme="https://stanye.com/blog/tags/gitalk/"/>
+      <category term="gitalk" scheme="https://www.stanye.com/blog/tags/gitalk/"/>
     
-      <category term="hexo-indigo-theme" scheme="https://stanye.com/blog/tags/hexo-indigo-theme/"/>
+      <category term="hexo-indigo-theme" scheme="https://www.stanye.com/blog/tags/hexo-indigo-theme/"/>
     
-      <category term="hexo" scheme="https://stanye.com/blog/tags/hexo/"/>
+      <category term="hexo" scheme="https://www.stanye.com/blog/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>aliyun-centos-fix</title>
-    <link href="https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html"/>
-    <id>https://stanye.com/blog/2019/04/26/aliyun-centos-fix.html</id>
+    <link href="https://www.stanye.com/blog/2019/04/26/aliyun-centos-fix.html"/>
+    <id>https://www.stanye.com/blog/2019/04/26/aliyun-centos-fix.html</id>
     <published>2019-04-26T08:22:09.000Z</published>
     <updated>2019-05-13T08:29:46.582Z</updated>
     
@@ -163,19 +163,19 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="centOS" scheme="https://stanye.com/blog/tags/centOS/"/>
+      <category term="centOS" scheme="https://www.stanye.com/blog/tags/centOS/"/>
     
-      <category term="aliyun" scheme="https://stanye.com/blog/tags/aliyun/"/>
+      <category term="aliyun" scheme="https://www.stanye.com/blog/tags/aliyun/"/>
     
   </entry>
   
   <entry>
     <title>使用git rebase对commits进行（合并/拆分/修改作者信息）</title>
-    <link href="https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html"/>
-    <id>https://stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</id>
+    <link href="https://www.stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html"/>
+    <id>https://www.stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-your-commits.html</id>
     <published>2019-04-04T09:55:32.000Z</published>
     <updated>2019-04-26T08:50:41.966Z</updated>
     
@@ -187,19 +187,19 @@
     
     </summary>
     
-      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+      <category term="IT技巧" scheme="https://www.stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="git" scheme="https://stanye.com/blog/tags/git/"/>
+      <category term="git" scheme="https://www.stanye.com/blog/tags/git/"/>
     
-      <category term="git rebase" scheme="https://stanye.com/blog/tags/git-rebase/"/>
+      <category term="git rebase" scheme="https://www.stanye.com/blog/tags/git-rebase/"/>
     
   </entry>
   
   <entry>
     <title>学习TS的一些知识点总结2</title>
-    <link href="https://stanye.com/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html"/>
-    <id>https://stanye.com/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html</id>
+    <link href="https://www.stanye.com/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html"/>
+    <id>https://www.stanye.com/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html</id>
     <published>2018-11-23T08:56:26.000Z</published>
     <updated>2019-05-20T09:43:51.642Z</updated>
     
@@ -211,19 +211,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="javascript" scheme="https://stanye.com/blog/tags/javascript/"/>
+      <category term="javascript" scheme="https://www.stanye.com/blog/tags/javascript/"/>
     
-      <category term="typescript" scheme="https://stanye.com/blog/tags/typescript/"/>
+      <category term="typescript" scheme="https://www.stanye.com/blog/tags/typescript/"/>
     
   </entry>
   
   <entry>
     <title>学习TS的一些知识点总结</title>
-    <link href="https://stanye.com/blog/2018/11/12/ts-basics.html"/>
-    <id>https://stanye.com/blog/2018/11/12/ts-basics.html</id>
+    <link href="https://www.stanye.com/blog/2018/11/12/ts-basics.html"/>
+    <id>https://www.stanye.com/blog/2018/11/12/ts-basics.html</id>
     <published>2018-11-12T06:14:26.000Z</published>
     <updated>2019-05-28T09:57:23.214Z</updated>
     
@@ -235,19 +235,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="javascript" scheme="https://stanye.com/blog/tags/javascript/"/>
+      <category term="javascript" scheme="https://www.stanye.com/blog/tags/javascript/"/>
     
-      <category term="typescript" scheme="https://stanye.com/blog/tags/typescript/"/>
+      <category term="typescript" scheme="https://www.stanye.com/blog/tags/typescript/"/>
     
   </entry>
   
   <entry>
     <title>升级macOS Mojave后问题汇总及解决办法</title>
-    <link href="https://stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html"/>
-    <id>https://stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</id>
+    <link href="https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html"/>
+    <id>https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</id>
     <published>2018-10-23T06:11:26.000Z</published>
     <updated>2019-04-26T08:51:24.283Z</updated>
     
@@ -261,19 +261,19 @@
     
     </summary>
     
-      <category term="IT技巧" scheme="https://stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
+      <category term="IT技巧" scheme="https://www.stanye.com/blog/categories/IT%E6%8A%80%E5%B7%A7/"/>
     
     
-      <category term="MacOS" scheme="https://stanye.com/blog/tags/MacOS/"/>
+      <category term="MacOS" scheme="https://www.stanye.com/blog/tags/MacOS/"/>
     
-      <category term="Mojave" scheme="https://stanye.com/blog/tags/Mojave/"/>
+      <category term="Mojave" scheme="https://www.stanye.com/blog/tags/Mojave/"/>
     
   </entry>
   
   <entry>
     <title>E3游戏WishList2018</title>
-    <link href="https://stanye.com/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html"/>
-    <id>https://stanye.com/blog/2018/06/11/E3游戏WishList.html</id>
+    <link href="https://www.stanye.com/blog/2018/06/11/E3%E6%B8%B8%E6%88%8FWishList.html"/>
+    <id>https://www.stanye.com/blog/2018/06/11/E3游戏WishList.html</id>
     <published>2018-06-11T04:26:25.000Z</published>
     <updated>2019-05-21T09:29:07.778Z</updated>
     
@@ -285,17 +285,17 @@
     
     </summary>
     
-      <category term="Game" scheme="https://stanye.com/blog/categories/Game/"/>
+      <category term="Game" scheme="https://www.stanye.com/blog/categories/Game/"/>
     
     
-      <category term="E3" scheme="https://stanye.com/blog/tags/E3/"/>
+      <category term="E3" scheme="https://www.stanye.com/blog/tags/E3/"/>
     
   </entry>
   
   <entry>
     <title>leetcode - 350. 两个数组的交集 II</title>
-    <link href="https://stanye.com/blog/2018/06/06/leetcode-350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II.html"/>
-    <id>https://stanye.com/blog/2018/06/06/leetcode-350-两个数组的交集-II.html</id>
+    <link href="https://www.stanye.com/blog/2018/06/06/leetcode-350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II.html"/>
+    <id>https://www.stanye.com/blog/2018/06/06/leetcode-350-两个数组的交集-II.html</id>
     <published>2018-06-06T03:41:43.000Z</published>
     <updated>2019-04-11T03:08:29.353Z</updated>
     
@@ -307,19 +307,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="leetcode" scheme="https://stanye.com/blog/tags/leetcode/"/>
+      <category term="leetcode" scheme="https://www.stanye.com/blog/tags/leetcode/"/>
     
-      <category term="algorithm" scheme="https://stanye.com/blog/tags/algorithm/"/>
+      <category term="algorithm" scheme="https://www.stanye.com/blog/tags/algorithm/"/>
     
   </entry>
   
   <entry>
     <title>Skeleton Screen - 骨架屏设计</title>
-    <link href="https://stanye.com/blog/2018/05/30/skeleton-screen.html"/>
-    <id>https://stanye.com/blog/2018/05/30/skeleton-screen.html</id>
+    <link href="https://www.stanye.com/blog/2018/05/30/skeleton-screen.html"/>
+    <id>https://www.stanye.com/blog/2018/05/30/skeleton-screen.html</id>
     <published>2018-05-30T03:00:00.000Z</published>
     <updated>2019-04-11T03:09:19.369Z</updated>
     
@@ -331,17 +331,17 @@
     
     </summary>
     
-      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <category term="产品设计" scheme="https://www.stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="skeleton screen" scheme="https://stanye.com/blog/tags/skeleton-screen/"/>
+      <category term="skeleton screen" scheme="https://www.stanye.com/blog/tags/skeleton-screen/"/>
     
   </entry>
   
   <entry>
     <title>技术型产品经理需要了解的知识点</title>
-    <link href="https://stanye.com/blog/2018/05/10/Technical-product-manager.html"/>
-    <id>https://stanye.com/blog/2018/05/10/Technical-product-manager.html</id>
+    <link href="https://www.stanye.com/blog/2018/05/10/Technical-product-manager.html"/>
+    <id>https://www.stanye.com/blog/2018/05/10/Technical-product-manager.html</id>
     <published>2018-05-10T11:11:22.000Z</published>
     <updated>2019-04-11T03:10:01.165Z</updated>
     
@@ -354,17 +354,17 @@
     
     </summary>
     
-      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <category term="产品设计" scheme="https://www.stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="PM" scheme="https://stanye.com/blog/tags/PM/"/>
+      <category term="PM" scheme="https://www.stanye.com/blog/tags/PM/"/>
     
   </entry>
   
   <entry>
     <title>产品经理沟通技巧(pdf)</title>
-    <link href="https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html"/>
-    <id>https://stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html</id>
+    <link href="https://www.stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html"/>
+    <id>https://www.stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html</id>
     <published>2018-05-10T11:07:10.000Z</published>
     <updated>2019-04-26T08:48:07.002Z</updated>
     
@@ -376,19 +376,19 @@
     
     </summary>
     
-      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <category term="产品设计" scheme="https://www.stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="PM" scheme="https://stanye.com/blog/tags/PM/"/>
+      <category term="PM" scheme="https://www.stanye.com/blog/tags/PM/"/>
     
-      <category term="ppt" scheme="https://stanye.com/blog/tags/ppt/"/>
+      <category term="ppt" scheme="https://www.stanye.com/blog/tags/ppt/"/>
     
   </entry>
   
   <entry>
     <title>产品经理如何与技术沟通</title>
-    <link href="https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html"/>
-    <id>https://stanye.com/blog/2018/05/10/communicate-with-product-manager.html</id>
+    <link href="https://www.stanye.com/blog/2018/05/10/communicate-with-product-manager.html"/>
+    <id>https://www.stanye.com/blog/2018/05/10/communicate-with-product-manager.html</id>
     <published>2018-05-10T11:07:10.000Z</published>
     <updated>2019-04-11T03:07:51.939Z</updated>
     
@@ -402,17 +402,17 @@
     
     </summary>
     
-      <category term="产品设计" scheme="https://stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <category term="产品设计" scheme="https://www.stanye.com/blog/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="PM" scheme="https://stanye.com/blog/tags/PM/"/>
+      <category term="PM" scheme="https://www.stanye.com/blog/tags/PM/"/>
     
   </entry>
   
   <entry>
     <title>high-concurrency-experience</title>
-    <link href="https://stanye.com/blog/2018/04/30/high-concurrency-experience.html"/>
-    <id>https://stanye.com/blog/2018/04/30/high-concurrency-experience.html</id>
+    <link href="https://www.stanye.com/blog/2018/04/30/high-concurrency-experience.html"/>
+    <id>https://www.stanye.com/blog/2018/04/30/high-concurrency-experience.html</id>
     <published>2018-04-30T06:41:42.000Z</published>
     <updated>2019-04-30T07:09:01.648Z</updated>
     
@@ -424,19 +424,19 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="redis" scheme="https://stanye.com/blog/tags/redis/"/>
+      <category term="redis" scheme="https://www.stanye.com/blog/tags/redis/"/>
     
-      <category term="nginx" scheme="https://stanye.com/blog/tags/nginx/"/>
+      <category term="nginx" scheme="https://www.stanye.com/blog/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>rm-input-type-number-arrows</title>
-    <link href="https://stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html"/>
-    <id>https://stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html</id>
+    <link href="https://www.stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html"/>
+    <id>https://www.stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html</id>
     <published>2017-06-05T07:18:18.000Z</published>
     <updated>2019-04-30T08:13:30.616Z</updated>
     
@@ -448,17 +448,17 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="css" scheme="https://stanye.com/blog/tags/css/"/>
+      <category term="css" scheme="https://www.stanye.com/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>Vue更新数组状态方法</title>
-    <link href="https://stanye.com/blog/2017/05/16/vue-update-array.html"/>
-    <id>https://stanye.com/blog/2017/05/16/vue-update-array.html</id>
+    <link href="https://www.stanye.com/blog/2017/05/16/vue-update-array.html"/>
+    <id>https://www.stanye.com/blog/2017/05/16/vue-update-array.html</id>
     <published>2017-05-16T06:58:53.000Z</published>
     <updated>2019-04-11T03:10:11.769Z</updated>
     
@@ -470,19 +470,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="vue" scheme="https://stanye.com/blog/tags/vue/"/>
+      <category term="vue" scheme="https://www.stanye.com/blog/tags/vue/"/>
     
-      <category term="array" scheme="https://stanye.com/blog/tags/array/"/>
+      <category term="array" scheme="https://www.stanye.com/blog/tags/array/"/>
     
   </entry>
   
   <entry>
     <title>mysql查重</title>
-    <link href="https://stanye.com/blog/2017/05/03/mysql-duplicate-checking.html"/>
-    <id>https://stanye.com/blog/2017/05/03/mysql-duplicate-checking.html</id>
+    <link href="https://www.stanye.com/blog/2017/05/03/mysql-duplicate-checking.html"/>
+    <id>https://www.stanye.com/blog/2017/05/03/mysql-duplicate-checking.html</id>
     <published>2017-05-03T06:30:20.000Z</published>
     <updated>2019-04-26T08:52:07.639Z</updated>
     
@@ -494,17 +494,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
+      <category term="mysql" scheme="https://www.stanye.com/blog/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>php&amp;引用</title>
-    <link href="https://stanye.com/blog/2017/04/29/php-cite.html"/>
-    <id>https://stanye.com/blog/2017/04/29/php-cite.html</id>
+    <link href="https://www.stanye.com/blog/2017/04/29/php-cite.html"/>
+    <id>https://www.stanye.com/blog/2017/04/29/php-cite.html</id>
     <published>2017-04-29T11:10:39.000Z</published>
     <updated>2019-04-26T08:52:25.490Z</updated>
     
@@ -516,17 +516,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="php" scheme="https://stanye.com/blog/tags/php/"/>
+      <category term="php" scheme="https://www.stanye.com/blog/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>使用using关键字对连接进行简化</title>
-    <link href="https://stanye.com/blog/2017/04/29/sql-using.html"/>
-    <id>https://stanye.com/blog/2017/04/29/sql-using.html</id>
+    <link href="https://www.stanye.com/blog/2017/04/29/sql-using.html"/>
+    <id>https://www.stanye.com/blog/2017/04/29/sql-using.html</id>
     <published>2017-04-29T06:39:10.000Z</published>
     <updated>2019-04-11T03:10:47.968Z</updated>
     
@@ -538,19 +538,19 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
+      <category term="mysql" scheme="https://www.stanye.com/blog/tags/mysql/"/>
     
-      <category term="using" scheme="https://stanye.com/blog/tags/using/"/>
+      <category term="using" scheme="https://www.stanye.com/blog/tags/using/"/>
     
   </entry>
   
   <entry>
     <title>mysql-simple-usage</title>
-    <link href="https://stanye.com/blog/2017/04/28/mysql-simple-usage.html"/>
-    <id>https://stanye.com/blog/2017/04/28/mysql-simple-usage.html</id>
+    <link href="https://www.stanye.com/blog/2017/04/28/mysql-simple-usage.html"/>
+    <id>https://www.stanye.com/blog/2017/04/28/mysql-simple-usage.html</id>
     <published>2017-04-28T06:16:57.000Z</published>
     <updated>2019-04-30T08:03:46.409Z</updated>
     
@@ -562,17 +562,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
+      <category term="mysql" scheme="https://www.stanye.com/blog/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>mysql给表赋权</title>
-    <link href="https://stanye.com/blog/2017/04/04/mysql-grant.html"/>
-    <id>https://stanye.com/blog/2017/04/04/mysql-grant.html</id>
+    <link href="https://www.stanye.com/blog/2017/04/04/mysql-grant.html"/>
+    <id>https://www.stanye.com/blog/2017/04/04/mysql-grant.html</id>
     <published>2017-04-04T03:22:52.000Z</published>
     <updated>2019-04-11T03:08:48.884Z</updated>
     
@@ -584,17 +584,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
+      <category term="mysql" scheme="https://www.stanye.com/blog/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>css两行截取</title>
-    <link href="https://stanye.com/blog/2017/04/03/css-cut-2-line.html"/>
-    <id>https://stanye.com/blog/2017/04/03/css-cut-2-line.html</id>
+    <link href="https://www.stanye.com/blog/2017/04/03/css-cut-2-line.html"/>
+    <id>https://www.stanye.com/blog/2017/04/03/css-cut-2-line.html</id>
     <published>2017-04-03T08:30:22.000Z</published>
     <updated>2019-04-11T03:08:00.715Z</updated>
     
@@ -606,17 +606,17 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="css" scheme="https://stanye.com/blog/tags/css/"/>
+      <category term="css" scheme="https://www.stanye.com/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>table文字溢出控制</title>
-    <link href="https://stanye.com/blog/2017/04/03/css-fix-table-wrap.html"/>
-    <id>https://stanye.com/blog/2017/04/03/css-fix-table-wrap.html</id>
+    <link href="https://www.stanye.com/blog/2017/04/03/css-fix-table-wrap.html"/>
+    <id>https://www.stanye.com/blog/2017/04/03/css-fix-table-wrap.html</id>
     <published>2017-04-03T04:30:22.000Z</published>
     <updated>2019-04-11T03:08:07.053Z</updated>
     
@@ -628,19 +628,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="css" scheme="https://stanye.com/blog/tags/css/"/>
+      <category term="css" scheme="https://www.stanye.com/blog/tags/css/"/>
     
-      <category term="table" scheme="https://stanye.com/blog/tags/table/"/>
+      <category term="table" scheme="https://www.stanye.com/blog/tags/table/"/>
     
   </entry>
   
   <entry>
     <title>php file_put_contents 函数</title>
-    <link href="https://stanye.com/blog/2017/03/28/php-file_put_contents.html"/>
-    <id>https://stanye.com/blog/2017/03/28/php-file_put_contents.html</id>
+    <link href="https://www.stanye.com/blog/2017/03/28/php-file_put_contents.html"/>
+    <id>https://www.stanye.com/blog/2017/03/28/php-file_put_contents.html</id>
     <published>2017-03-28T01:21:11.000Z</published>
     <updated>2019-04-11T03:08:59.547Z</updated>
     
@@ -652,17 +652,17 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="php" scheme="https://stanye.com/blog/tags/php/"/>
+      <category term="php" scheme="https://www.stanye.com/blog/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>sql note</title>
-    <link href="https://stanye.com/blog/2017/03/27/sql-join.html"/>
-    <id>https://stanye.com/blog/2017/03/27/sql-join.html</id>
+    <link href="https://www.stanye.com/blog/2017/03/27/sql-join.html"/>
+    <id>https://www.stanye.com/blog/2017/03/27/sql-join.html</id>
     <published>2017-03-27T10:30:22.000Z</published>
     <updated>2019-04-26T08:53:39.763Z</updated>
     
@@ -674,19 +674,19 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="mysql" scheme="https://stanye.com/blog/tags/mysql/"/>
+      <category term="mysql" scheme="https://www.stanye.com/blog/tags/mysql/"/>
     
-      <category term="sql" scheme="https://stanye.com/blog/tags/sql/"/>
+      <category term="sql" scheme="https://www.stanye.com/blog/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>php抽象类</title>
-    <link href="https://stanye.com/blog/2017/03/27/php-abstract-class.html"/>
-    <id>https://stanye.com/blog/2017/03/27/php-abstract-class.html</id>
+    <link href="https://www.stanye.com/blog/2017/03/27/php-abstract-class.html"/>
+    <id>https://www.stanye.com/blog/2017/03/27/php-abstract-class.html</id>
     <published>2017-03-27T06:56:20.000Z</published>
     <updated>2019-05-13T07:38:47.392Z</updated>
     
@@ -701,19 +701,19 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="php" scheme="https://stanye.com/blog/tags/php/"/>
+      <category term="php" scheme="https://www.stanye.com/blog/tags/php/"/>
     
-      <category term="abstract class" scheme="https://stanye.com/blog/tags/abstract-class/"/>
+      <category term="abstract class" scheme="https://www.stanye.com/blog/tags/abstract-class/"/>
     
   </entry>
   
   <entry>
     <title>jQuery判断页面滚动到底/到顶</title>
-    <link href="https://stanye.com/blog/2016/09/30/jquery-scrollTop.html"/>
-    <id>https://stanye.com/blog/2016/09/30/jquery-scrollTop.html</id>
+    <link href="https://www.stanye.com/blog/2016/09/30/jquery-scrollTop.html"/>
+    <id>https://www.stanye.com/blog/2016/09/30/jquery-scrollTop.html</id>
     <published>2016-09-30T07:12:19.000Z</published>
     <updated>2019-04-30T08:04:12.018Z</updated>
     
@@ -725,19 +725,19 @@
     
     </summary>
     
-      <category term="FrontEnd" scheme="https://stanye.com/blog/categories/FrontEnd/"/>
+      <category term="FrontEnd" scheme="https://www.stanye.com/blog/categories/FrontEnd/"/>
     
     
-      <category term="jquery" scheme="https://stanye.com/blog/tags/jquery/"/>
+      <category term="jquery" scheme="https://www.stanye.com/blog/tags/jquery/"/>
     
-      <category term="javascript" scheme="https://stanye.com/blog/tags/javascript/"/>
+      <category term="javascript" scheme="https://www.stanye.com/blog/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>regex in my program</title>
-    <link href="https://stanye.com/blog/2016/07/15/regex-used.html"/>
-    <id>https://stanye.com/blog/2016/07/15/regex-used.html</id>
+    <link href="https://www.stanye.com/blog/2016/07/15/regex-used.html"/>
+    <id>https://www.stanye.com/blog/2016/07/15/regex-used.html</id>
     <published>2016-07-15T03:41:43.000Z</published>
     <updated>2019-04-30T08:04:59.954Z</updated>
     
@@ -749,10 +749,10 @@
     
     </summary>
     
-      <category term="BackEnd" scheme="https://stanye.com/blog/categories/BackEnd/"/>
+      <category term="BackEnd" scheme="https://www.stanye.com/blog/categories/BackEnd/"/>
     
     
-      <category term="regex" scheme="https://stanye.com/blog/tags/regex/"/>
+      <category term="regex" scheme="https://www.stanye.com/blog/tags/regex/"/>
     
   </entry>
   
