@@ -1,7 +1,7 @@
 https://www.stanye.com/blog/2019/10/09/what-is-low-code-platform.html
 https://www.stanye.com/blog/2019/07/29/sync-git-local-branch-with-remote-branch.html
 https://www.stanye.com/blog/2019/07/19/how-to-fix-apache-403.html
-https://www.stanye.com/blog/2019/06/18/e3-game-wishList-2019.html
+https://www.stanye.com/blog/2019/06/18/interview-part1.html
 https://www.stanye.com/blog/2019/05/14/how-to-develop-tampermonkey.html
 https://www.stanye.com/blog/2019/05/13/switch-to-gitalk.html
 https://www.stanye.com/blog/2019/04/26/aliyun-centos-fix.html
@@ -9,7 +9,6 @@ https://www.stanye.com/blog/2019/04/04/use-git-rebase-to-combine-split-resign-yo
 https://www.stanye.com/blog/2018/11/23/some-basic-knowledge-while-learning-typescript.html
 https://www.stanye.com/blog/2018/11/12/ts-basics.html
 https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html
-https://www.stanye.com/blog/2018/06/11/E3游戏WishList.html
 https://www.stanye.com/blog/2018/06/06/leetcode-350-两个数组的交集-II.html
 https://www.stanye.com/blog/2018/05/30/skeleton-screen.html
 https://www.stanye.com/blog/2018/05/10/Technical-product-manager.html
