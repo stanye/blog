@@ -12,8 +12,8 @@ https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html
 https://www.stanye.com/blog/2018/06/06/leetcode-350-两个数组的交集-II.html
 https://www.stanye.com/blog/2018/05/30/skeleton-screen.html
 https://www.stanye.com/blog/2018/05/10/Technical-product-manager.html
-https://www.stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html
 https://www.stanye.com/blog/2018/05/10/communicate-with-product-manager.html
+https://www.stanye.com/blog/2018/05/10/communicate-with-product-manager-pdf.html
 https://www.stanye.com/blog/2018/04/30/high-concurrency-experience.html
 https://www.stanye.com/blog/2017/06/05/rm-input-type-number-arrows.html
 https://www.stanye.com/blog/2017/05/16/vue-update-array.html
