@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html</loc>
+    
+    <lastmod>2019-11-18T08:50:15.524Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</loc>
+    
+    <lastmod>2019-11-18T08:45:16.298Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.stanye.com/blog/2019/06/18/interview-part1.html</loc>
     
     <lastmod>2019-11-13T03:32:47.536Z</lastmod>
@@ -124,13 +138,6 @@
     <loc>https://www.stanye.com/blog/2017/05/03/mysql-duplicate-checking.html</loc>
     
     <lastmod>2019-04-26T08:52:07.639Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html</loc>
-    
-    <lastmod>2019-04-26T08:51:24.283Z</lastmod>
     
   </url>
   

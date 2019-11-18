@@ -36,25 +36,25 @@
     
     
     
-    <title>升级macOS Mojave后问题汇总及解决办法 | 夜夜空里 | StanYe&#39;s blog</title>
+    <title>升级macOS Catalina后问题汇总及解决办法 | 夜夜空里 | StanYe&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#279ce8">
     
     
-    <meta name="keywords" content="MacOS,Mojave">
-    <meta name="description" content="搜狗问题描述：系统升级之后发现断断续续一直鼠标在转圈 解决方案：搜狗升级到`4.8`之后解决问题">
-<meta name="keywords" content="MacOS,Mojave">
+    <meta name="keywords" content="MacOS,Catalina">
+    <meta name="description" content="Xcode打不开问题描述：系统升级之后发现xcode打不开，提示`An unknown error occurred. See the install log for more details` 解决方案：在Application里右键`Xcode`，在Contents/Resources/Packages里删除`MobileDevice.pkg`和`MobileDeviceDevelopment">
+<meta name="keywords" content="MacOS,Catalina">
 <meta property="og:type" content="article">
-<meta property="og:title" content="升级macOS Mojave后问题汇总及解决办法">
-<meta property="og:url" content="https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html">
+<meta property="og:title" content="升级macOS Catalina后问题汇总及解决办法">
+<meta property="og:url" content="https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html">
 <meta property="og:site_name" content="夜夜空里">
-<meta property="og:description" content="搜狗问题描述：系统升级之后发现断断续续一直鼠标在转圈 解决方案：搜狗升级到`4.8`之后解决问题">
+<meta property="og:description" content="Xcode打不开问题描述：系统升级之后发现xcode打不开，提示`An unknown error occurred. See the install log for more details` 解决方案：在Application里右键`Xcode`，在Contents/Resources/Packages里删除`MobileDevice.pkg`和`MobileDeviceDevelopment">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-18T08:45:16.298Z">
+<meta property="og:updated_time" content="2019-11-18T08:50:15.524Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="升级macOS Mojave后问题汇总及解决办法">
-<meta name="twitter:description" content="搜狗问题描述：系统升级之后发现断断续续一直鼠标在转圈 解决方案：搜狗升级到`4.8`之后解决问题">
+<meta name="twitter:title" content="升级macOS Catalina后问题汇总及解决办法">
+<meta name="twitter:description" content="Xcode打不开问题描述：系统升级之后发现xcode打不开，提示`An unknown error occurred. See the install log for more details` 解决方案：在Application里右键`Xcode`，在Contents/Resources/Packages里删除`MobileDevice.pkg`和`MobileDeviceDevelopment">
     
         <link rel="alternate" type="application/atom+xml" title="夜夜空里" href="/blog/atom.xml">
     
@@ -154,7 +154,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">升级macOS Mojave后问题汇总及解决办法</div>
+        <div class="flex-col header-title ellipsis">升级macOS Catalina后问题汇总及解决办法</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -176,11 +176,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">升级macOS Mojave后问题汇总及解决办法</h1>
+        <h1 class="title">升级macOS Catalina后问题汇总及解决办法</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-10-23T06:11:26.000Z" itemprop="datePublished" class="page-time">
-  2018-10-23
+                <time datetime="2019-11-18T06:11:26.000Z" itemprop="datePublished" class="page-time">
+  2019-11-18
 </time>
 
 
@@ -201,18 +201,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搜狗"><span class="post-toc-number">1.</span> <span class="post-toc-text">搜狗</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#zsh"><span class="post-toc-number">2.</span> <span class="post-toc-text">zsh</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#VSCode"><span class="post-toc-number">3.</span> <span class="post-toc-text">VSCode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Wechat和Tim"><span class="post-toc-number">4.</span> <span class="post-toc-text">Wechat和Tim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git丢失"><span class="post-toc-number">5.</span> <span class="post-toc-text">Git丢失</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo"><span class="post-toc-number">6.</span> <span class="post-toc-text">Hexo</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Xcode打不开"><span class="post-toc-number">1.</span> <span class="post-toc-text">Xcode打不开</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-macOS-Mojave-problems-and-solutions"
+<article id="post-macOS-Catalina-problems-and-solutions"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">升级macOS Mojave后问题汇总及解决办法</h1>
+        <h1 class="post-card-title">升级macOS Catalina后问题汇总及解决办法</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-10-23 14:11:26" datetime="2018-10-23T06:11:26.000Z"  itemprop="datePublished">2018-10-23</time>
+            <time class="post-time" title="2019-11-18 14:11:26" datetime="2019-11-18T06:11:26.000Z"  itemprop="datePublished">2019-11-18</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/IT技巧/">IT技巧</a></li></ul>
@@ -227,20 +227,11 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="搜狗"><a href="#搜狗" class="headerlink" title="搜狗"></a>搜狗</h2><pre><code>问题描述：系统升级之后发现断断续续一直鼠标在转圈
-解决方案：搜狗升级到`4.8`之后解决问题
+            <h2 id="Xcode打不开"><a href="#Xcode打不开" class="headerlink" title="Xcode打不开"></a>Xcode打不开</h2><pre><code>问题描述：系统升级之后发现xcode打不开，提示`An unknown error occurred. See the install log for more details`
+解决方案：在Application里右键`Xcode`，在Contents/Resources/Packages里删除`MobileDevice.pkg`和`MobileDeviceDevelopment.pkg`
+原因：这两个包过期不守信
+邪道：将系统时间改为`2019年10月1日`也能解决问题
 </code></pre><a id="more"></a>
-<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><pre><code>问题描述：升级后使用iTerm出现乱码，原生terminal没问题
-解决方案：iTerms2 -&gt; Preferences -&gt; Advanced -&gt; 搜索LC_CTYPE -&gt; value值设置`zh_CN.UTF-8`
-</code></pre><h2 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h2><pre><code>问题描述：字体变细
-解决方案：命令行输入`defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-</code></pre><h2 id="Wechat和Tim"><a href="#Wechat和Tim" class="headerlink" title="Wechat和Tim"></a>Wechat和Tim</h2><pre><code>问题描述：输入框焦点容易丢失，必须手动点击程序
-解决方案：升级最新版Wechat和Tim
-</code></pre><h2 id="Git丢失"><a href="#Git丢失" class="headerlink" title="Git丢失"></a>Git丢失</h2><pre><code>问题描述：更新后git没了
-解决方案：命令行输入`xcode-select –install`
-</code></pre><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><pre><code>问题描述：写这篇文字的时候，居然发现生成的页面英文的地方被转成日文
-解决方案：_config.yml文件language设置`zh-Hans`
-</code></pre>
         </div>
 
         <blockquote class="post-copyright">
@@ -270,7 +261,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/MacOS/">MacOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Mojave/">Mojave</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Catalina/">Catalina</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/MacOS/">MacOS</a></li></ul>
 
 
             
@@ -280,7 +271,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html&title=《升级macOS Mojave后问题汇总及解决办法》 — 夜夜空里&pic=https://www.stanye.com/blog/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html&title=《升级macOS Catalina后问题汇总及解决办法》 — 夜夜空里&pic=https://www.stanye.com/blog/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -290,24 +281,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html&title=《升级macOS Mojave后问题汇总及解决办法》 — 夜夜空里&source=搜狗问题描述：系统升级之后发现断断续续一直鼠标在转圈
-解决方案：搜狗升级到`4.8`之后解决问题
-" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html&title=《升级macOS Catalina后问题汇总及解决办法》 — 夜夜空里&source=Xcode打不开问题描述：系统升级之后发现xcode打不开，提示`An unknown error occurred. See the install l..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《升级macOS Mojave后问题汇总及解决办法》 — 夜夜空里&url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html&via=https://www.stanye.com/blog" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《升级macOS Catalina后问题汇总及解决办法》 — 夜夜空里&url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html&via=https://www.stanye.com/blog" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -327,21 +316,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/blog/2018/11/12/ts-basics.html" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">学习TS的一些知识点总结</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/blog/2018/06/06/leetcode-350-两个数组的交集-II.html" id="post-next" class="post-nav-link">
+      <a href="/blog/2019/10/09/what-is-low-code-platform.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">leetcode - 350. 两个数组的交集 II</h4>
+        <h4 class="title">何为低代码平台</h4>
       </a>
     </div>
   
@@ -464,7 +446,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html&title=《升级macOS Mojave后问题汇总及解决办法》 — 夜夜空里&pic=https://www.stanye.com/blog/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html&title=《升级macOS Catalina后问题汇总及解决办法》 — 夜夜空里&pic=https://www.stanye.com/blog/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -474,24 +456,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html&title=《升级macOS Mojave后问题汇总及解决办法》 — 夜夜空里&source=搜狗问题描述：系统升级之后发现断断续续一直鼠标在转圈
-解决方案：搜狗升级到`4.8`之后解决问题
-" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html&title=《升级macOS Catalina后问题汇总及解决办法》 — 夜夜空里&source=Xcode打不开问题描述：系统升级之后发现xcode打不开，提示`An unknown error occurred. See the install l..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《升级macOS Mojave后问题汇总及解决办法》 — 夜夜空里&url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html&via=https://www.stanye.com/blog" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《升级macOS Catalina后问题汇总及解决办法》 — 夜夜空里&url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html&via=https://www.stanye.com/blog" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.stanye.com/blog/2018/10/23/macOS-Mojave-problems-and-solutions.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.stanye.com/blog/2019/11/18/macOS-Catalina-problems-and-solutions.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -502,7 +482,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvElEQVR42u3aQXLDIAwF0N7/0u22MxnDlwRJFs+rTJraPBaAv/TzE1+/L9f/759+ub7D633y7w9feHh4eOOhVxn5X5PvX+/z9Hk9Zjw8PLzbvKcVdf2b9Wqcbwn5lOVjxsPDw/seXrLcr6cjH+h6DHh4eHjfz8sHPTlY51OMh4eH91leL2ZNDtz5Ybr6+XDWgoeHhxfzeuHCZz9fqe/h4eHhjavq1RJXddvI49rehYeHh3eD12sdyI/d1SC4F3Nsfo+Hh4d3gTd51T/1X73ooVBUw8PDwzvE673qr7eESekrL4wl4TIeHh7eDV61oSqZlGoYUW3Jyo/peHh4eDd4Cab64GqLwOQ+m6nEw8PDu8zLo4S8lNVrw+pN8ai+h4eHh1fkVY/CeXtWNYStxrubKcbDw8N7C6/X8FResltPLMcZeHh4eBd4eQtUHgrkR+FeS0F528DDw8O7wEuOwtXYN1nQ8wC32u6wqfLh4eHhDXj5sCbfVFuvevd/PEzj4eHhHeUlMWvvKJzcMy99TRoR8PDw8M7yeu1W1XJ+NZKoPvFxq8DDw8O7wDsbPUyoeTtCHhzj4eHh3eDlh+leYFENZw9vFXh4eHgXeHmUMN9OkqiiV07bbEJ4eHh4R3nzmHUylPzpvWnCw8PDu8GbY/JGgV4gW226wsPDw/sUrzr06uLeTJrzctd8p8LDw8MLeHmpKY9xc2S16aqw2eDh4eFd4/XaofKl/0bRCw8PD+/9vN/ilTy+Nyn5xlPYrvDw8PAu8Hqv/fPoIY9018d9PDw8vE/xks1gMsTe0t+LkjdvDHh4eHhHeckhuLpM59M3uTaHdTw8PLwv4FULVL3CWDWA2Byp8fDw8L6AlzcQTKYsGUOl2IeHh4d3klcNI5JD9gSQx7ibIAMPDw/vAm/+wp+3F6ynr3d8x8PDw3sj7w/pqB0paB3i9AAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACr0lEQVR42u3aQW7CQAwFUO5/abqt1Ib+P45bKr2sUAjJvFnExvbjER/PT8fXM5/Pt99+Pf/6iY+NAw8PD2+w9Ktl5dckm5JsX7u5l3fAw8PDW+Nd3TRZevLt1d2e5ZGvGQ8PD+/dePPzeYqMh4eH9995efr7+g55+BltNx4eHt4ar02CE+pZITjf7ptrLXh4eHgxL09q3+fzSn8PDw8Pb9xVT164SZBol9W2uy5Xi4eHh7fAyx/fFiDywYJkDZPEHQ8PD2+b1y4rx0+2LD/zzRPx8PDw1njJi/tsmLUt3Z6Fgcvr8fDw8BZ4bYMqCQ/tcttEPF8nHh4e3r28Sbt9XvzNxwXyIHH4Yzw8PLyYl1yUlx7yBLdNzdtE/4foh4eHh3crL29QTcYLkoW2rbI6yOHh4eGNeW376q4m1uRuRYKOh4eHdxMveWVPhgOSVLgNUXmwwcPDw/sd3l5xNk+480baD5/x8PDwFnjzv/qTdLkNS2clYzw8PLwNXl5oaMus7SLaYDCi4uHh4R3x2uQ1b/nfVQLOyxPf3BMPDw9vgde+aiclifl9DrcSDw8P71beXU2peUbfDm9F3+Lh4eEt8M4S6MmyJsl6W8LAw8PD2+O1f/InhYlJ42rSMMPDw8Pb47Wv8ry0cXZlO3R1OCuBh4eHV/LaQah5ityWQiYJPR4eHt4ebwOWJ9OTAICHh4f3V7x8ifO0u87xj4oUeHh4eBu8Z3m0g1nFHpfNsNfrwcPDw9vjtS/fdlCgTanbUBS1u/Dw8PAWePlAQJ6Inw0NTDp4h4k1Hh4e3oBX1zAWirnF4NRZrQUPDw/vDXhn41Znhd2zsQM8PDy8d+DlJdQ8POTFiDzpx8PDw9vmtQ87Cxhtkfdsy/Dw8PC2ee0f/jwY5MXfJMmeJOt4eHh4N/E+AKMKVLlFfRX1AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
